@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="taxationApp">
+<head>
+	<meta name="Keywords" content="捷迅财税服务网" />
+    <meta name="Description" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>我的订单|捷迅财税服务网</title>
+	<link rel="shortcut icon" href="/taxation-web/images/favicon.ico" type="image/x-icon">
+	<link href="/taxation-web/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="/taxation-web/css/style.css" rel="stylesheet" type="text/css">
+	<link href="/taxation-web/css/common.css" rel="stylesheet" type="text/css">
+	<link href="/pagecss/member.css" rel="stylesheet" type="text/css">
+	<link href="/pagecss/member/orderlist.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<!-- PJH 1102 begin 顶部导航 -->
+	<div id="top-nav" data-ng-include="'/taxation-web/views/common/header.html'" data-ng-controller="HeaderController" ></div>
+	<div class="clearfix"></div>
+	
+	<!-- JustFresh 2017-03-20 begin 面包屑导航部分开始 -->
+	<div data-ng-include="'userTopNavigation.html'" data-ng-controller="UserTopNavController" ></div>
+	<!-- JustFresh 2017-03-20 end 面包屑导航部分结束 -->
+
+	<!-- JustFresh 2017-03-20 begin 用户中心主体部分 -->
+	<div class="ucenter pjh-container">
+	
+		<div data-ng-include="'userUcenterLeft.html'" data-ng-controller="UserUcenterLeftController" ></div>
+	
+		<div class="box pull-right" ng-controller="OrderListController">
+			<div class="order-list">
+				<ul class="tab-nav">
+					<li class="selected"><a href="orderlist.html?optype=all">我的订单</a></li>
+					<li><a href="waitPay.html?optype=waitPay">待付款</a><em>3</em></li>
+					<li><a href="waitDeliver.html?optype=waitDeliver">待发货<em>6</em></a></li>
+					<li><a href="waitReceipt.html?optype=waitReceipt">待收货<em>2</em></a></li>
+					<li><a href="finished.html?optype=finished">已完成</a></li>
+				</ul>
+				<div class="clearfix"></div>
+				<ul class="tab-panel">
+					<li class="selected">
+						<table width="100%">
+							<thead>
+								<tr>
+									<th>服务商</th>
+									<th>订单号</th>
+									<th>服务名</th>
+									<th>订单金额</th>
+									<th>下单时间</th>
+									<th>交易状态</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<a href="store.html">
+											<img src="/taxation-web/images/goods2.jpg" />
+										</a>
+									</td>
+									<td>9000000000516501</td>
+									<td>铜仁***税务代理</td>
+									<td>1200.00</td>
+									<td>2017-03-20 15:02</td>
+									<td>
+										待付款<br/>
+										<a href="order.html">订单详情</a>
+									</td>
+									<td>
+										<a href="order.html">删除</a><br/>
+										<a href="order.html">分享</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="store.html">
+											<img src="/taxation-web/images/goods1.jpg" />
+										</a>
+									</td>
+									<td>9000000000516501</td>
+									<td>铜仁***税务代理</td>
+									<td>1200.00</td>
+									<td>2017-03-20 15:02</td>
+									<td>
+										待付款<br/>
+										<a href="order.html">订单详情</a>
+									</td>
+									<td>
+										<a href="order.html">删除</a><br/>
+										<a href="order.html">分享</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="store.html">
+											<img src="/taxation-web/images/goods2.jpg" />
+										</a>
+									</td>
+									<td>9000000000516501</td>
+									<td>铜仁***税务代理</td>
+									<td>1200.00</td>
+									<td>2017-03-20 15:02</td>
+									<td>
+										待付款<br/>
+										<a href="order.html">订单详情</a>
+									</td>
+									<td>
+										<a href="order.html">删除</a><br/>
+										<a href="order.html">分享</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="store.html">
+											<img src="/taxation-web/images/goods1.jpg" />
+										</a>
+									</td>
+									<td>9000000000516501</td>
+									<td>铜仁***税务代理</td>
+									<td>1200.00</td>
+									<td>2017-03-20 15:02</td>
+									<td>
+										待付款<br/>
+										<a href="order.html">订单详情</a>
+									</td>
+									<td>
+										<a href="order.html">删除</a><br/>
+										<a href="order.html">分享</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="store.html">
+											<img src="/taxation-web/images/goods2.jpg" />
+										</a>
+									</td>
+									<td>9000000000516501</td>
+									<td>铜仁***税务代理</td>
+									<td>1200.00</td>
+									<td>2017-03-20 15:02</td>
+									<td>
+										待付款<br/>
+										<a href="order.html">订单详情</a>
+									</td>
+									<td>
+										<a href="order.html">删除</a><br/>
+										<a href="order.html">分享</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="store.html">
+											<img src="/taxation-web/images/goods1.jpg" />
+										</a>
+									</td>
+									<td>9000000000516501</td>
+									<td>铜仁***税务代理</td>
+									<td>1200.00</td>
+									<td>2017-03-20 15:02</td>
+									<td>
+										待付款<br/>
+										<a href="order.html">订单详情</a>
+									</td>
+									<td>
+										<a href="order.html">删除</a><br/>
+										<a href="order.html">分享</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="store.html">
+											<img src="/taxation-web/images/goods2.jpg" />
+										</a>
+									</td>
+									<td>9000000000516501</td>
+									<td>铜仁***税务代理</td>
+									<td>1200.00</td>
+									<td>2017-03-20 15:02</td>
+									<td>
+										待付款<br/>
+										<a href="order.html">订单详情</a>
+									</td>
+									<td>
+										<a href="order.html">删除</a><br/>
+										<a href="order.html">分享</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="store.html">
+											<img src="/taxation-web/images/goods1.jpg" />
+										</a>
+									</td>
+									<td>9000000000516501</td>
+									<td>铜仁***税务代理</td>
+									<td>1200.00</td>
+									<td>2017-03-20 15:02</td>
+									<td>
+										待付款<br/>
+										<a href="order.html">订单详情</a>
+									</td>
+									<td>
+										<a href="order.html">删除</a><br/>
+										<a href="order.html">分享</a>
+									</td>
+								</tr>
+								<tr class="paging">
+									<td colspan="6">
+										<span><a href="orderlist.html">首页</a></span>
+										<span><a href="orderlist.html">上一页</a></span>
+										<span><a href="orderlist.html" class="selected">1</a></span>
+										<span><a href="orderlist.html">2</a></span>
+										<span><a href="orderlist.html">3</a></span>
+										<span><a href="orderlist.html">下一页</a></span>
+										<span><a href="orderlist.html">尾页</a></span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<!-- JustFresh 2017-03-20 end 用户中心主体部分 -->
+
+	<!-- PJH 1113 begin 友情链接及版权部分 -->
+	<div data-ng-include="'/taxation-web/views/common/footer.html'" data-ng-controller="FooterController" ></div>
+	<!-- PJH 1113 end 友情链接及版权部分 -->
+	<script type="text/javascript" src="/taxation-web/js/scripts/jquery.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/scripts/common.js"></script>
+
+
+	<!-- angular js api-->
+	<script type="text/javascript" src="/taxation-web/js/angular/angular.min.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/angular/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/angular/angular-toastr.tpls.js"></script>
+	
+	<script type="text/javascript" src="/taxation-web/js/angular/angular-sanitize.min.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/angular/angular-touch.min.js"></script>
+
+	<script type="text/javascript" src="/taxation-web/js/angular/ocLazyLoad.min.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/angular/angular-file-upload.min.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/angular/ui-bootstrap-tpls.min.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/angular/ui-select/select.min.js"></script>
+	<script type="text/javascript" src="/taxation-web/plugin/pagination/js/pagination.js"></script>
+	
+	<!-- local js -->
+	<script type="text/javascript" src="/taxation-web/js/main.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/controller/userController.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/service/userService.js"></script>
+</body>
+</html>

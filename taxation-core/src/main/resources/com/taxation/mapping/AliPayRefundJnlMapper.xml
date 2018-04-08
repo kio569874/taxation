@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.taxation.dao.AliPayRefundJnlDao" >
+  <resultMap id="BaseResultMap" type="com.taxation.bean.AliPayRefundJnlEntity" >
+    <id column="refund_id" property="refundId" jdbcType="VARCHAR" />
+    <result column="order_pay_id" property="orderPayId" jdbcType="VARCHAR" />
+    <result column="out_request_no" property="outRequestNo" jdbcType="VARCHAR" />
+    <result column="refund_amount" property="refundAmount" jdbcType="DECIMAL" />
+    <result column="refund_time" property="refundTime" jdbcType="TIMESTAMP" />
+    <result column="refund_status" property="refundStatus" jdbcType="CHAR" />
+    <result column="refund_reason" property="refundReason" jdbcType="VARCHAR" />
+    <result column="operator_id" property="operatorId" jdbcType="VARCHAR" />
+    <result column="gmt_refund_pay" property="gmtRefundPay" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.taxation.bean.AliPayRefundJnlEntity" extends="BaseResultMap" >
+    <result column="notify_info" property="notifyInfo" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    refund_id, order_pay_id, out_request_no, refund_amount, refund_time, refund_status, 
+    refund_reason, operator_id, gmt_refund_pay, create_time, update_time
+  </sql>
+  <sql id="Blob_Column_List" >
+    notify_info
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from t_alipay_refund_jnl
+    where refund_id = #{refundId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from t_alipay_refund_jnl
+    where refund_id = #{refundId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.taxation.bean.AliPayRefundJnlEntity" >
+    insert into t_alipay_refund_jnl (refund_id, order_pay_id, out_request_no, 
+      refund_amount, refund_time, refund_status, 
+      refund_reason, operator_id, gmt_refund_pay, 
+      create_time, update_time, notify_info
+      )
+    values (#{refundId,jdbcType=VARCHAR}, #{orderPayId,jdbcType=VARCHAR}, #{outRequestNo,jdbcType=VARCHAR}, 
+      #{refundAmount,jdbcType=DECIMAL}, #{refundTime,jdbcType=TIMESTAMP}, #{refundStatus,jdbcType=CHAR}, 
+      #{refundReason,jdbcType=VARCHAR}, #{operatorId,jdbcType=VARCHAR}, #{gmtRefundPay,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{notifyInfo,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.taxation.bean.AliPayRefundJnlEntity" >
+    insert into t_alipay_refund_jnl
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="refundId != null" >
+        refund_id,
+      </if>
+      <if test="orderPayId != null" >
+        order_pay_id,
+      </if>
+      <if test="outRequestNo != null" >
+        out_request_no,
+      </if>
+      <if test="refundAmount != null" >
+        refund_amount,
+      </if>
+      <if test="refundTime != null" >
+        refund_time,
+      </if>
+      <if test="refundStatus != null" >
+        refund_status,
+      </if>
+      <if test="refundReason != null" >
+        refund_reason,
+      </if>
+      <if test="operatorId != null" >
+        operator_id,
+      </if>
+      <if test="gmtRefundPay != null" >
+        gmt_refund_pay,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="notifyInfo != null" >
+        notify_info,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="refundId != null" >
+        #{refundId,jdbcType=VARCHAR},
+      </if>
+      <if test="orderPayId != null" >
+        #{orderPayId,jdbcType=VARCHAR},
+      </if>
+      <if test="outRequestNo != null" >
+        #{outRequestNo,jdbcType=VARCHAR},
+      </if>
+      <if test="refundAmount != null" >
+        #{refundAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="refundTime != null" >
+        #{refundTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="refundStatus != null" >
+        #{refundStatus,jdbcType=CHAR},
+      </if>
+      <if test="refundReason != null" >
+        #{refundReason,jdbcType=VARCHAR},
+      </if>
+      <if test="operatorId != null" >
+        #{operatorId,jdbcType=VARCHAR},
+      </if>
+      <if test="gmtRefundPay != null" >
+        #{gmtRefundPay,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="notifyInfo != null" >
+        #{notifyInfo,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.taxation.bean.AliPayRefundJnlEntity" >
+    update t_alipay_refund_jnl
+    <set >
+      <if test="orderPayId != null" >
+        order_pay_id = #{orderPayId,jdbcType=VARCHAR},
+      </if>
+      <if test="outRequestNo != null" >
+        out_request_no = #{outRequestNo,jdbcType=VARCHAR},
+      </if>
+      <if test="refundAmount != null" >
+        refund_amount = #{refundAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="refundTime != null" >
+        refund_time = #{refundTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="refundStatus != null" >
+        refund_status = #{refundStatus,jdbcType=CHAR},
+      </if>
+      <if test="refundReason != null" >
+        refund_reason = #{refundReason,jdbcType=VARCHAR},
+      </if>
+      <if test="operatorId != null" >
+        operator_id = #{operatorId,jdbcType=VARCHAR},
+      </if>
+      <if test="gmtRefundPay != null" >
+        gmt_refund_pay = #{gmtRefundPay,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="notifyInfo != null" >
+        notify_info = #{notifyInfo,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where refund_id = #{refundId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.taxation.bean.AliPayRefundJnlEntity" >
+    update t_alipay_refund_jnl
+    set order_pay_id = #{orderPayId,jdbcType=VARCHAR},
+      out_request_no = #{outRequestNo,jdbcType=VARCHAR},
+      refund_amount = #{refundAmount,jdbcType=DECIMAL},
+      refund_time = #{refundTime,jdbcType=TIMESTAMP},
+      refund_status = #{refundStatus,jdbcType=CHAR},
+      refund_reason = #{refundReason,jdbcType=VARCHAR},
+      operator_id = #{operatorId,jdbcType=VARCHAR},
+      gmt_refund_pay = #{gmtRefundPay,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      notify_info = #{notifyInfo,jdbcType=LONGVARCHAR}
+    where refund_id = #{refundId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.taxation.bean.AliPayRefundJnlEntity" >
+    update t_alipay_refund_jnl
+    set order_pay_id = #{orderPayId,jdbcType=VARCHAR},
+      out_request_no = #{outRequestNo,jdbcType=VARCHAR},
+      refund_amount = #{refundAmount,jdbcType=DECIMAL},
+      refund_time = #{refundTime,jdbcType=TIMESTAMP},
+      refund_status = #{refundStatus,jdbcType=CHAR},
+      refund_reason = #{refundReason,jdbcType=VARCHAR},
+      operator_id = #{operatorId,jdbcType=VARCHAR},
+      gmt_refund_pay = #{gmtRefundPay,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where refund_id = #{refundId,jdbcType=VARCHAR}
+  </update>
+</mapper>

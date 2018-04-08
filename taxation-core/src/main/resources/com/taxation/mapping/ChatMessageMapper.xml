@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.taxation.dao.ChatMessageDao">
+  <resultMap id="BaseResultMap" type="com.taxation.bean.ChatMessageEntity">
+    <result column="chat_message_id" jdbcType="VARCHAR" property="chatMessageId" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="provider_id" jdbcType="VARCHAR" property="providerId" />
+    <result column="create_time" jdbcType="DATE" property="createTime" />
+    <result column="send_falg" jdbcType="CHAR" property="sendFalg" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.taxation.bean.ChatMessageEntity">
+    <result column="context" jdbcType="LONGVARBINARY" property="context" />
+  </resultMap>
+  <sql id="Blob_Column_List">
+    context
+  </sql>
+  <insert id="insert" parameterType="com.taxation.bean.ChatMessageEntity">
+    insert into t_chat_message (chat_message_id, user_id, provider_id, 
+      create_time, send_falg, context
+      )
+    values (#{chatMessageId,jdbcType=VARCHAR}, #{userId,jdbcType=VARCHAR}, #{providerId,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=DATE}, #{sendFalg,jdbcType=CHAR}, #{context,jdbcType=LONGVARBINARY}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.taxation.bean.ChatMessageEntity">
+    insert into t_chat_message
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="chatMessageId != null">
+        chat_message_id,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="providerId != null">
+        provider_id,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="sendFalg != null">
+        send_falg,
+      </if>
+      <if test="context != null">
+        context,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="chatMessageId != null">
+        #{chatMessageId,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="providerId != null">
+        #{providerId,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=DATE},
+      </if>
+      <if test="sendFalg != null">
+        #{sendFalg,jdbcType=CHAR},
+      </if>
+      <if test="context != null">
+        #{context,jdbcType=LONGVARBINARY},
+      </if>
+    </trim>
+  </insert>
+</mapper>

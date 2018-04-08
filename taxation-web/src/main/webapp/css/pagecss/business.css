@@ -1,0 +1,171 @@
+/**
+ * 
+ * 
+ */
+.steps{border-bottom: 2px solid #e6e6e6;margin-top: 35px;height: 81px;margin-bottom: 40px;}
+.steps ul{width: 1190px;margin-left: 5px;}
+.steps ul li{float: left;width: 170px;text-align: center;}
+.steps ul li.selected{border-bottom: 3px solid #00a1cc;color: #333;}
+.steps ul li i{font-size: 30px;}
+.steps ul li p{margin: 5px 0px;font-size: 14px;}
+.steps ul li p.num{margin-bottom: -13px;width: 24px;height: 24px;background-color: #999;border-radius: 50%;font-size: 12px;line-height: 24px;margin-left: 73px;color: #fff;margin-top: 10px;}
+.steps ul li.selected i{font-weight: bold;color: #00a1cc;}
+.steps ul li.selected p{font-weight: bold;color: #00a1cc;}
+.steps ul li.selected p.num{background-color: #00a1cc;color: #fff;}
+
+.title{height: 20px;border-bottom: 1px solid #e3e3e3;}
+.title .info{width: 160px;text-align: center;margin-left: 520px;height: 40px;line-height: 40px;background-color: #fff;font-size: 20px;font-weight: bold;color: #666;}
+
+.box{width: 1100px;margin-top: 15px;margin-left: 50px;}
+.box ul.services li{border: 1px solid #f0f0f0;cursor: pointer;float: left;background-color: #f0f0f0;width: 190px;margin-left: 25px;margin-bottom: 25px;border-radius: 10px;}
+.box ul.services li:hover{border: 1px solid #00a1cc;}
+.box ul.services li img{width: 160px;margin: 15px 15px 0px;}
+.box ul.services li .name{margin: 0px 15px;width: 160px;text-align: center;font-size: 14px;}
+.box ul.services li .name a{color: #333;}
+.box ul.services li .price{margin: 0px 15px;}
+.box ul.services li .price strong{color: #C33610;}
+.box ul.services li .star{margin: 0px 15px 15px;}
+.box ul.services li.selected{background-color: #00a1cc;}
+.box ul.services li.selected .name a,.box ul.services li.selected .price,.box ul.services li.selected .price strong,.box ul.services li.selected .star{color: #fff;}
+
+.box .box-form{border: 1px solid #e3e3e3;margin-bottom: 30px;}
+.box .box-form .input-line{height: 50px;line-height: 50px;border-bottom: 1px solid #e3e3e3;}
+.box .box-form .input-line span.check-block{margin-left: 10px;border: 1px solid #e3e3e3;cursor: pointer;height: 38px;display: inline-block;width: 120px;text-align: center;line-height: 38px;}
+.box .box-form .input-line span.check-block:hover{border: 1px solid #00a1cc;}
+.box .box-form .input-line span.selected{background-color: #00a1cc;color: #fff;}
+.box .box-form .input-line .input-select{margin-left: 10px;min-width: 120px;height: 35px;padding-left: 5px;}
+.box .box-form .input-line .input-textarea{margin-left: 10px;width: 800px;display: block;float: right;margin: 10px 132px 10px 10px;height: 180px;padding: 5px;}
+.box .box-form .input-line .input-file{margin-left: 10px;}
+
+.box.box-form.normal tr td div.progress{background-color: #f5f5f5;border-radius: 4px;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;height: 20px;margin-bottom: 20px;overflow: hidden;}
+.box.box-form.normal tr td div.progress.progressbar{background-color: #428bca;box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15) inset;color: #fff;float: left;font-size: 12px;height: 100%;text-align: center;transition: width 0.6s ease 0s;width: 0;}
+
+.box .box-form .colspan{text-align: center;font-weight: bold;color: #333;}
+.box .box-form .input-line label{width: 110px;border-right: 1px solid #e3e3e3;display: inline-block;padding-left: 30px;font-weight: bold;}
+.box .box-form .input-line .input-text{padding: 5px 10px;height: 22px;border: 1px solid #e3e3e3;margin-left: 10px;width: 600px;}
+.operation{width: 1000px;margin: 0px 100px 40px;text-align: center;}
+.operation a{display: inline-block;width: 200px;height: 35px;line-height: 35px;}
+.operation a.prev{border: 1px solid #00a1cc;color: #00a1cc;text-align: center;margin-right: 10px;}
+.operation a.next{border: 1px solid #00a1cc;background-color: #00a1cc;color: #fff;}
+
+.box .box-form table{}
+.box .box-form table tr{border-bottom: 1px solid #e3e3e3;}
+.box .box-form table tr th,.box .box-form table tr td{padding: 10px 15px;}
+.box .box-form table tbody.normal tr td:first-child{width: 110px;border-right: 1px solid #e3e3e3;font-weight: bold;}
+.box .box-form table tbody.special > tr td:first-child{width: 50%;border-right: 1px solid #e3e3e3;}
+
+/**
+ * @system: Jxcms;
+ * @desc: 购物步骤CSS;
+ * @author: JustFresh;
+ * @time: 2017-06-15 23:36;
+ */
+.buy-step{margin-top: 15px;}
+.buy-step header ul{width: 840px;margin-top: 25px;}
+.buy-step header ul li{float: left;font-size: 12px;vertical-align: top;letter-spacing: normal;word-spacing: normal;display: inline-block;width: 20%;
+    height: 70px;position: relative;z-index: 1;text-align: center;}
+.buy-step header ul li i{font-size: 25px;}
+.buy-step header ul li .hr{background-color: #DDD;width: 100%;height: 1px;border: none 0;position: absolute;z-index: 1;top: 35px;left: 0;}
+.buy-step header ul li p{color: #666;text-align: center;width: 100%;height: 24px;position: absolute;z-index: 2;left: 0;overflow: hidden;}
+.buy-step header ul li sub{background-color: #FFF;width: 8px;height: 8px;margin-left: -3px;border: solid 1px #CCC;border-radius: 4px;position: absolute;z-index: 2;top: 30px;left: 50%;}
+.buy-step header ul li.current,.buy-step ul li.current p{color: #c33610;font-weight: bold;}
+.buy-step header ul li.current .hr{background-color: #c33610;}
+.buy-step header ul li.current sub{background-color: #c33610;border: 1px solid #f30;box-shadow: 0px 0px 5px #f30;}
+.buy-step .main{margin-top: 35px;}
+.buy-step .main .title h3{color: #666;font-size: 25px;font-weight: bold;margin: 0px;padding: 0px;}
+.buy-step .main .title p{color: #999;margin: 3px;}
+.buy-step .main table{border-top: 2px solid #999;margin-top: 20px;border-left: 1px solid #e3e3e3;border-right: 1px solid #e3e3e3;}
+.buy-step .main table thead{background-color: #f0f0f0;}
+.buy-step .main table thead tr td{height: 40px;line-height: 40px;}
+.buy-step .main table thead tr.provider-info{background-color: #DAF0FE;border-top: 1px solid #e3e3e3;border-bottom: 1px solid #e3e3e3;}
+.buy-step .main table tbody tr{border-bottom: 1px solid #e3e3e3;}
+.buy-step .main table tbody tr td{height: 50px;line-height: 50px;}
+.buy-step .main table tbody tr td input.check-radio{margin-left: 15px;}
+.buy-step .main table tbody tr td .thumb{width: 30px;height: 30px;border-radius: 2px;margin: 5px 20px -10px 5px;display: inline-block;}
+.buy-step .main table tbody tr td a.opt{border: 1px solid #e3e3e3;display: inline-block;width: 22px;height: 22px;padding: 0px;line-height: 20px;text-align: center;font-size: 16px;}
+.buy-step .main table tbody tr td a.opt.reduce{margin: 0px -4px;}
+.buy-step .main table tbody tr td a.opt.add{margin: 0px -4px;}
+.buy-step .main table tbody tr td input.number{padding-left: 5px;width: 40px;outline: none;border: 1px solid #e3e3e3;height: 20px;margin-top: -4px;}
+.buy-step .main table tfoot{border-bottom: 2px solid #999;}
+.buy-step .main table tfoot tr td{height: 50px;line-height: 50px;text-align: right;}
+.buy-step .main table tfoot tr td b{color: #c33610;}
+
+.buy-step .main .order-info{border: 1px solid #e3e3e3;border-bottom: 2px solid #999;margin-top: 20px;}
+.buy-step .main .order-info .receipt-info{padding: 15px;border-bottom: 1px solid #e3e3e3;width: 1170px;}
+.buy-step .main .order-info .receipt-info h3{margin: 0px;}
+.buy-step .main .order-info .receipt-info h3 a{margin-left: 8px;font-size: 12px;color: #c33610;font-weight: normal;}
+.buy-step .main .order-info .receipt-info p{margin: 0px;}
+.buy-step .main .order-info .receipt-info p span{margin-right: 10px;}
+.buy-step .main .order-info .receipt-info ul.receipt-info-list{margin-top: 5px;}
+.buy-step .main .order-info .receipt-info ul.receipt-info-list li{height: 30px;line-height: 30px;}
+.buy-step .main .order-info .receipt-info form.add-address{margin: 10px;}
+.buy-step .main .order-info .receipt-info form.add-address .form-group{margin-bottom: 10px;}
+.buy-step .main .order-info .receipt-info form.add-address .form-group label{line-height: 30px;width: 80px;display: inline-block;text-align: right;margin-right: 15px;}
+.buy-step .main .order-info .receipt-info form.add-address .form-group label em{color: #c33610;margin-right: 3px;}
+.buy-step .main .order-info .receipt-info form.add-address .form-group .input-text{outline: none;border: 1px solid #e3e3e3;height: 30px;width: 600px;padding-left: 10px;}
+.buy-step .main .order-info .receipt-info form.add-address .form-group .input-select{outline: none;border: 1px solid #e3e3e3;height: 30px;width: 150px;padding-left: 10px;}
+a.save-receipt-info{display: inline-block;background-color: #c33610;color: #fff;padding: 10px 50px;margin: 5px 0px 15px 30px;}
+
+.buy-step .main .order-info .pay-info{padding: 15px;border-bottom: 1px solid #e3e3e3;width: 1170px;height: 50px;}
+.buy-step .main .order-info .pay-info h3{margin: 0px;}
+.buy-step .main .order-info .pay-info ul li{cursor: pointer;float: left;margin-right: 10px;margin-top: 10px;padding: 5px 10px;background-color: #f0f0f0;border: 1px solid #e3e3e3;}
+.buy-step .main .order-info .pay-info ul li.selected{border: 1px solid #c33610;}
+.buy-step .main .order-info .pay-info ul li img{height: 25px;}
+.buy-step .main .order-info .order-services-info{padding: 15px;width: 1170px;}
+.buy-step .main table tbody tr.messages td label{margin-left: 15px;}
+.buy-step .main table tbody tr.messages td textarea{margin-top: 15px;width: 1000px;padding: 5px;}
+.buy-step .main table tfoot p{margin: 5px 25px 0px;line-height: 20px;}
+.buy-step .main table tfoot p:first-child{margin-top: 15px;}
+.buy-step .main table tfoot p:last-child{margin-bottom: 15px;}
+a.go-next{margin-top: 20px;display: inline-block;background-color: #c33610;color: #fff;padding: 12px 60px;margin-bottom: 30px;}
+
+.buy-step .main .ensure-info{background-color: #fafafa;margin-top: 10px;padding-bottom: 25px;}
+.buy-step .main .ensure-info i.success{font-size: 75px;display: block;color: #78c340;float: left;margin: 50px 30px;}
+.buy-step .main .ensure-info .detail{}
+.buy-step .main .ensure-info .detail h4{font-size: 18px;margin-top: 40px;}
+.buy-step .main .ensure-info .detail p a{margin-left: 5px;color: #c33610;}
+.buy-step .main .go-pay a{display: inline-block;background-color: #c33610;color: #fff;padding: 8px 30px;float: right;margin-top: 20px;}
+.buy-step .main .go-pay a:hover{background-color: #6D1F0B;}
+
+#modalBg{display: none;position: fixed;width: 100%;height: 100%;background-color: rgba(0,0,0,0.3);z-index: 4;left: 0px;top: 0px;}
+#addAddressDialog{display: none;position: fixed;z-index: 5;width: 600px;height: 450px;border: 10px solid #999;box-shadow: 0px 0px 40px #fff;left: 50%;margin-left: -300px;top: 150px;background-color: #fff;}
+#addAddressDialog .dialog-header{width: 100%;background-color: #c33610;height: 50px;}
+#addAddressDialog .dialog-header img{height: 30px;margin: 10px;}
+#addAddressDialog .dialog-header a{position: absolute;right: 10px;top: 10px;color: #fff;font-size: 20px;}
+#addAddressDialog .dialog-body h4{color: #c33610;margin: 10px 15px;}
+#addAddressDialog .dialog-body form{}
+#addAddressDialog .dialog-body form .form-group{margin-bottom: 15px;}
+#addAddressDialog .dialog-body form .form-group label{display: inline-block;text-align: right;width: 100px;margin-right: 10px;}
+#addAddressDialog .dialog-body form .form-group label em{margin-right: 4px;color: #c33610;}
+#addAddressDialog .dialog-body form .form-group .input-text{outline: none;padding-left: 10px;height: 35px;width: 440px;border: 1px solid #e3e3e3;}
+#addAddressDialog .dialog-body form .form-group .select-text{width: 148px;height: 35px;padding: 5px;}
+#addAddressDialog .dialog-body form .form-group textarea{width: 440px;height: 60px;border: 1px solid #e3e3e3;outline: none;padding: 5px;}
+#addAddressDialog .dialog-footer a.save-address-btn{display: block;background-color: #c33610;color: #fff;margin: 0px 30px;text-align: center;height: 45px;line-height: 45px;}
+
+#updateAddressDialog{display: none;position: fixed;z-index: 5;width: 600px;height: 500px;border: 10px solid #999;box-shadow: 0px 0px 40px #fff;left: 50%;margin-left: -300px;top: 150px;background-color: #fff;}
+#updateAddressDialog .dialog-header{width: 100%;background-color: #c33610;height: 50px;}
+#updateAddressDialog .dialog-header img{height: 30px;margin: 10px;}
+#updateAddressDialog .dialog-header a{position: absolute;right: 10px;top: 10px;color: #fff;font-size: 20px;}
+#updateAddressDialog .dialog-body h4{color: #c33610;margin: 10px 15px;}
+#updateAddressDialog .dialog-body form{}
+#updateAddressDialog .dialog-body form .form-group{margin-bottom: 15px;}
+#updateAddressDialog .dialog-body form .form-group label{display: inline-block;text-align: right;width: 100px;margin-right: 10px;}
+#updateAddressDialog .dialog-body form .form-group label em{margin-right: 4px;color: #c33610;}
+#updateAddressDialog .dialog-body form .form-group .input-text{outline: none;padding-left: 10px;height: 35px;width: 440px;border: 1px solid #e3e3e3;}
+#updateAddressDialog .dialog-body form .form-group .select-text{width: 148px;height: 35px;padding: 5px;}
+#updateAddressDialog .dialog-body form .form-group textarea{width: 440px;height: 60px;border: 1px solid #e3e3e3;outline: none;padding: 5px;}
+#updateAddressDialog .dialog-footer a.save-address-btn{display: block;background-color: #c33610;color: #fff;margin: 0px 30px;text-align: center;height: 45px;line-height: 45px;}
+
+#alterPayWayDialog{display: none;position: fixed;z-index: 5;width: 600px;height: 450px;border: 10px solid #999;box-shadow: 0px 0px 40px #fff;left: 50%;margin-left: -300px;top: 150px;background-color: #fff;}
+#alterPayWayDialog .dialog-header{width: 100%;background-color: #c33610;height: 50px;}
+#alterPayWayDialog .dialog-header img{height: 30px;margin: 10px;}
+#alterPayWayDialog .dialog-header a{position: absolute;right: 10px;top: 10px;color: #fff;font-size: 20px;}
+#alterPayWayDialog .dialog-body h4{color: #c33610;margin: 10px 15px;}
+#alterPayWayDialog .dialog-body form{}
+#alterPayWayDialog .dialog-body form .form-group{margin-bottom: 15px;}
+#alterPayWayDialog .dialog-body form .form-group label{display: inline-block;text-align: right;width: 100px;margin-right: 10px;}
+#alterPayWayDialog .dialog-body form .form-group label em{margin-right: 4px;color: #c33610;}
+#alterPayWayDialog .dialog-body form .form-group .input-text{outline: none;padding-left: 10px;height: 35px;width: 440px;border: 1px solid #e3e3e3;}
+#alterPayWayDialog .dialog-body form .form-group .select-text{width: 148px;height: 35px;padding: 5px;}
+#alterPayWayDialog .dialog-body form .form-group textarea{width: 440px;height: 60px;border: 1px solid #e3e3e3;outline: none;padding: 5px;}
+#alterPayWayDialog .dialog-footer a.save-address-btn{display: block;background-color: #c33610;color: #fff;margin: 0px 30px;text-align: center;height: 45px;line-height: 45px;}

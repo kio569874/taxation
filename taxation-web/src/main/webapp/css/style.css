@@ -1,0 +1,40 @@
+/**
+ * @描述：通用CSS文件
+ * @作者：彭建红
+ * @时间：2015-11-02 17:52
+ * @版本：beta 1.0
+ */
+body { font: normal 12px/22px Arial, Verdana, Lucida, Helvetica, simsun, sans-serif;margin: 0px;padding: 0px;color: #999; }
+table { border-collapse: collapse; border-spacing: 0; empty-cells: show; text-align: left; font-size: 12px; }
+th, td { border-collapse: collapse; }
+ol, ul { list-style: none; margin: 0px;padding: 0px;}
+form { margin: 0px; }
+a { text-decoration: none;color: #645F5F; font-family: Arial, Helvetica; }
+a:hover { text-decoration: none; color: #ee7000; }
+a img { border: none; }
+input, select, form images, button { vertical-align: middle; }
+images { border: 0; }
+button { cursor: pointer; }
+.pull-left { float: left; }
+.pull-right { float: right; }
+.clearfix { clear: both; }
+.hide{ display: none; }
+.show{display: block;}
+.show-inline{display: inline;}
+.pjh-container{width: 1200px;margin: auto;}
+.border-right{border-right:1px solid #F0F0F0;}
+.border-top{border-top:1px solid #F0F0F0;}
+.border-left{border-left:1px solid #F0F0F0;}
+.border-bottom{border-bottom:1px solid #F0F0F0;}
+.border-all{border: 1px solid #F0F0F0;}
+.del-line{text-decoration:line-through;}
+
+.bg-danger{background-color: #f30;}
+.bg-success{background-color: #009f3b;}
+.bg-warning{background-color: #ff9000;}
+.bg-info{background-color: #46b8da;}
+
+.color-success{color: #009f3b;}
+.color-danger{color: #f30;}
+.color-warning{color: #ff9000;}
+.color-info{color: #46b8da;}

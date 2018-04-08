@@ -1,0 +1,66 @@
+<html ng-app="myApp">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="捷讯咨询" />
+<meta name="description" content="捷讯咨询" />
+<meta name="author" content="JustFresh" />
+<title>捷讯咨询</title>
+<link rel="stylesheet" href="../css/bootstrap.css" />
+<link rel="stylesheet" href="../css/mui.css" />
+<link rel="stylesheet" href="../css/font-awesome.min.css" />
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="../css/common.css" />
+<link rel="stylesheet" href="../pagecss/index.css" />
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+	<!-- JustFresh 2017-06-30 begin 引入顶部公共顶部导航 -->
+	<div id="header" class="container-fluid" ui-view="header"></div>
+	<!-- JustFresh 2017-06-30 begin 引入顶部公共顶部导航 -->
+	
+	<div class="clearfix"></div>
+	<div class="main">
+		<!-- JustFresh 2017-07-01 左侧导航 -->
+		<div id="left_nav" ui-view="left_nav"></div>
+		<!-- JustFresh 2017-07-01 左侧导航 -->
+		
+		<!-- JustFresh 2017-07-01 主体部分 -->
+		<div class="content pull-right" id="home" ui-view="home"></div> 
+		<!-- JustFresh 2017-07-01 主体部分 -->
+		<div class="clearfix"></div>
+	</div>
+	
+	<!-- JustFresh 2017-06-23 引入入口JS（后续用作模块化） -->
+	<script src="../config.js" type="text/javascript" charset="utf-8"></script>
+	<!-- JustFresh 2017-06-23 引入Jquery -->
+	<script src="../js/scripts/jquery2.1.1.js" type="text/javascript" charset="utf-8"></script>
+	<!-- JustFresh 2017-06-23 引入layer.js -->
+	<script src="../js/scripts/layer.js" type="text/javascript" charset="utf-8"></script>
+	<!-- JustFresh 2017-06-23 引入layer.js -->
+	<script src="../js/scripts/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	
+	<!-- JustFresh 2017-06-23 引入Angular.js -->
+	<script src="../js/angular/angular.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/angular/angular-ui-router.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/angular/ocLazyLoad.min.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/scripts/common-router.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/controller/commonController.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script src="../js/service/systemUserService.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/controller/systemUserController.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script src="../js/service/payConfigService.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/controller/payConfigController.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script src="../js/service/smsConfigService.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/controller/smsConfigController.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script src="../js/service/cityAreaService.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/controller/cityAreaController.js" type="text/javascript" charset="utf-8"></script>
+	
+</body>
+</html>

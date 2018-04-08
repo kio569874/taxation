@@ -1,0 +1,55 @@
+
+<!-- JustFresh 20170615 begin 分步骤生成订单开始 -->
+<div class="buy-step pjh-container">
+	<header class="ncc-head-layout">
+	<div class="site-logo"><a href="index.html">
+		<img src="/taxation-web/images/logo2.png" class="pull-left"></a></div>
+	    <ul class="pull-right">
+		  	<li class="current"><i class="fa fa-edit"></i>
+		    <p>确认订单信息</p>
+		    <sub></sub>
+		    <div class="hr"></div>
+		  	</li>
+		  <li class="current"><i class="fa fa-credit-card"></i>
+		    <p>订单支付</p>
+		    <sub></sub>
+		    <div class="hr"></div>
+		  </li>
+		  <li class=""><i class="fa fa-heart"></i>
+		    <p>订单完成</p>
+		    <sub></sub>
+		    <div class="hr"></div>
+		  </li>
+		   <li class=""><i class="fa fa-comment"></i>
+		    <p>评价</p>
+		    <sub></sub>
+		    <div class="hr"></div>
+		  </li>
+		</ul>
+	  </header>
+
+	<div class="clearfix"></div>
+
+	<div class="main">
+		<div class="title">
+			<h3>订单支付</h3>
+		</div>
+		<div class="ensure-info">
+			<i class="fa fa-check-circle-o success"></i>
+			<div class="detail pull-left">
+				<h4>订单已提交，请尽快付款！！！</h4>
+				<p>订单编号：{{params.orderNo}}</p>
+				<p>支付方式：
+					<span ng-if="params.payType =='2'">微信支付</span>
+					<span ng-if="params.payType =='1'">支付宝支付</span>&nbsp;&nbsp;&nbsp;&nbsp;[<a href="javascript:void (0);" ng-click="changePayWay(params.payType)">更改支付方式</a>]
+				</p>
+				<p>应付金额：￥{{params.orderAmount}}</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="go-pay">
+			<a href="javascript:void (0);" ng-click="payForService(params.payType)"><i class="fa fa-paypal"></i> 去付款</a>
+		</div>
+	</div>
+</div>
+<!-- JustFresh 20170615 begin 分步骤生成订单结束 -->

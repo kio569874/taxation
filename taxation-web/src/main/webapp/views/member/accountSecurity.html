@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="taxationApp">
+<head>
+	<meta name="Keywords" content="捷迅财税服务网" />
+    <meta name="Description" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>账户安全|捷迅财税服务网</title>
+	<link rel="shortcut icon" href="/taxation-web/images/favicon.ico" type="image/x-icon">
+	<link href="/taxation-web/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="/taxation-web/css/style.css" rel="stylesheet" type="text/css">
+	<link href="/taxation-web/css/common.css" rel="stylesheet" type="text/css">
+	<link href="../assets/pagecss/member.css" rel="stylesheet" type="text/css">
+	<link href="../assets/pagecss/member/accountSecurity.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<!-- PJH 1102 begin 顶部导航 -->
+	<div id="top-nav" data-ng-include="'/taxation-web/views/common/header.html'" data-ng-controller="HeaderController" ></div>
+	<div class="clearfix"></div>
+	
+	<!-- JustFresh 2017-03-20 begin 面包屑导航部分开始 -->
+	<div data-ng-include="'userTopNavigation.html'" data-ng-controller="UserTopNavController" ></div>
+	<!-- JustFresh 2017-03-20 end 面包屑导航部分结束 -->
+
+
+	<!-- JustFresh 2017-03-20 begin 用户中心主体部分 -->
+	<div class="ucenter pjh-container">
+	
+		<div data-ng-include="'userUcenterLeft.html'" data-ng-controller="UserUcenterLeftController" ></div>
+	
+		<div class="box pull-right" ng-controller="UserAccountSecurityController">
+			<ul class="tab-nav">
+				<li class="selected"><a href="javascript: void(0)">账号安全</a></li>
+			</ul>
+			<div class="clearfix"></div>
+			<h4>你的账户信息</h4>
+			<div class="baseinfo">
+				<div class="head">
+					<img src="../assets/taxation-web/images/head.jpg" class="thumb pull-left" />
+					<div class="ext pull-left">
+						<p>登录账号： <span class="info" ng-model="securityUserInfo.userAccount" >{{securityUserInfo.userAccount}}</span></p>
+						<p>绑定邮箱： <span class="info" ng-model="securityUserInfo.userEmail" >{{securityUserInfo.userEmail}}</span></p>
+						<p>手机号码： <span class="info" ng-model="securityUserInfo.userPhone" >{{securityUserInfo.userPhone}}</span></p>
+						<p>上次登录： <span class="info" ng-model="securityUserInfo.lastLoginTime" >{{securityUserInfo.lastLoginTime.time| date:'yyyy年MM月dd日 HH:mm:ss'}}</span>　|　IP地址:<span class="info" ng-model="securityUserInfo.lastLoginIp" >{{securityUserInfo.lastLoginIp}}</span> （不是您登录的？请立即“
+							<a ng-click="gotoUpPwd()">更改密码</a>
+						”）。</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="security-container">
+				<div class="title">你的安全服务</div>
+				<div class="block">
+					当前安全等级：<strong ng-if="securityUserInfo.userEmail ==''">中</strong><strong ng-if="securityUserInfo.userEmail !=''">高</strong>(建议您开启全部安全设置，以保障账户及资金安全)
+				</div>
+				<div class="block">
+					<div class="icon pull-left">
+						<i class="fa fa-lock color-success"></i>
+					</div>
+					<div class="item pull-left">
+						<h5>登录密码</h5>
+						<h6 class="color-success">已设置</h6>
+					</div>
+					<div class="info pull-left">
+						安全性高的密码可以使账号更安全。建议您定期更换密码，且设置一个包含数字和字母，并长度超过6位以上的密码，为保证您的账户安全，只有在您绑定邮箱或手机后才可以修改密码。
+					</div>
+					<div class="opt pull-left">
+						<a ng-click="gotoUpPwd()"  href="javascript: void(0)" class="bg-info">修改密码</a>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="block">
+					<div class="icon pull-left">
+						<i class="fa fa-envelope-o"></i>
+					</div>
+					<div class="item pull-left">
+						<h5>邮箱绑定</h5>
+						<h6 ng-if="securityUserInfo.userEmail != ''" class="color-success">已绑定</h6>
+						<h6 ng-if="securityUserInfo.userEmail == ''" class="color-danger">未绑定</h6>
+					</div>
+					<div class="info pull-left">
+						进行邮箱验证后，可用于接收敏感操作的身份验证信息，以及订阅更优惠商品的促销邮件。
+					</div>
+					<div class="opt pull-left">
+						<a ng-if="securityUserInfo.userEmail != ''" href="javascript: void(0)" ng-click="gotoUpdateEmail()" class="bg-info">修改邮箱</a>
+						<a ng-if="securityUserInfo.userEmail == ''" href="javascript: void(0)" ng-click="gotoBindEmail()" class="bg-warning">绑定邮箱</a>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="block">
+					<div class="icon pull-left">
+						<i class="fa fa-mobile"></i>
+					</div>
+					<div class="item pull-left">
+						<h5>手机绑定</h5>
+						<h6 ng-if="securityUserInfo.userPhone != ''" class="color-success">已绑定</h6>
+						<h6 ng-if="securityUserInfo.userPhone == ''" class="color-danger">未绑定</h6>
+					</div>
+					<div class="info pull-left">
+						进行手机验证后，可用于接收敏感操作的身份验证信息，以及进行积分消费的验证确认，非常有助于保护您的账号和账户财产安全。
+					</div>
+					<div class="opt pull-left">
+						<a ng-if="securityUserInfo.userPhone != ''" href="bindMobile.html" class="bg-info">修改手机</a>
+						<a ng-if="securityUserInfo.userPhone == ''" href="bindMobile.html" class="bg-warning">修改手机</a>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<!-- JustFresh 2017-03-20 end 用户中心主体部分 -->
+
+	<!-- PJH 1113 begin 友情链接及版权部分 -->
+	<div data-ng-include="'/taxation-web/views/common/footer.html'" data-ng-controller="FooterController" ></div>
+	<!-- PJH 1113 end 友情链接及版权部分 -->
+	<script type="text/javascript" src="/taxation-web/js/scripts/jquery.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/scripts/common.js"></script>
+
+
+	<!-- angular js api-->
+	<script type="text/javascript" src="/taxation-web/js/angular/angular.min.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/angular/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/angular/angular-toastr.tpls.js"></script>
+	
+	<script type="text/javascript" src="/taxation-web/js/angular/angular-sanitize.min.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/angular/angular-touch.min.js"></script>
+
+	<script type="text/javascript" src="/taxation-web/js/angular/ocLazyLoad.min.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/angular/angular-file-upload.min.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/angular/ui-bootstrap-tpls.min.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/angular/ui-select/select.min.js"></script>
+	<script type="text/javascript" src="/taxation-web/plugin/pagination/js/pagination.js"></script>
+	
+	<!-- local js -->
+	<script type="text/javascript" src="/taxation-web/js/main.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/controller/userController.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/service/userService.js"></script>
+</body>
+</html>

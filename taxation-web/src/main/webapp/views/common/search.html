@@ -1,0 +1,77 @@
+<!-- 搜索框 -->
+<div id="top-search">
+	<div class="search-form">
+		<div class="header-search-tab">
+			<ul>
+				<li class="selected" data-action="#">服务商</li>
+				<li data-action="http://cu.manmanbuy.com/searchall.aspx">服务名</li>
+			</ul>
+			<i></i>
+		</div>
+		<form action="" method="get">
+			<input id="skey" class="skey" onblur="if(this.value=='')this.value='请输入您想要搜索的服务商或服务';this.style.color='#A9A9A9'" onfocus="this.style.color='#A9A9A9'" onclick="if(this.value=='请输入您想要搜索的服务商或服务')this.value='';this.style.color='#000';" onkeydown="if(this.value=='请输入您想要搜索的服务商或服务')this.value='';this.style.color='#000';" value="请输入您想要搜索的服务商或服务" name="key" autocomplete="off">
+			<input type="button" value="搜 索" name="btnSearch" class="btnSearch" />
+		</form>
+	</div>
+	<div class="clearfix"></div>
+	<div class="search-key-words">
+		<div class="pull-left">热门搜索：</div>
+		<ul class="pull-left">
+			<li class="pull-left"><a href="javascript: void(0)">财税服务</a></li>
+			<li style="margin:0px 2px;float:left;">&nbsp;</li>
+			<li class="pull-left"><a href="javascript: void(0)">公司注册</a></li>
+			<li style="margin:0px 2px;float:left;">&nbsp;</li>
+		</ul>
+	</div>
+</div>
+<!-- 购物车下拉 -->
+<div id="top-cart" class="pull-right">
+	<div class="cart-bd">
+		<i class="tc-left"></i>
+		<i class="tc-right">></i>
+		<i class="tc-count">5</i>
+		<a href="javascript: void(0)" target="_blank">我的购物车</a>
+	</div>
+	<div class="cart-hd">
+		<div class="title border-bottom">最新加入的商品</div>
+		<ul class="cart-goods-list">
+			<li>
+				<div class="good-thumb pull-left">
+					<a href="javascript: void(0)"><img src="/taxation-web/images/goods2.jpg" /></a>
+				</div>
+				<div class="good-name pull-left">
+					<a href="javascript: void(0)">
+						财税服务
+					</a>
+				</div>
+				<div class="cart-opt pull-right">
+					<span class="goods-price">￥100.00 * 1</span><br/>
+					<a href="javascript: void(0)">删除</a>
+				</div>
+			</li>
+			<li>
+				<div class="clearfix"></div>
+				<div class="good-thumb pull-left">
+					<a href="javascript: void(0)"><img src="/taxation-web/images/goods2.jpg" /></a>
+				</div>
+				<div class="good-name pull-left">
+					<a href="javascript: void(0)">
+						财税服务
+					</a>
+				</div>
+				<div class="cart-opt pull-right">
+					<span class="goods-price">￥1000.00 * 1</span><br/>
+					<a href="javascript: void(0)">删除</a>
+				</div>
+			</li>
+		</ul>
+		<div class="go-to-cart">
+			<div class="cart-count pull-left">
+				共 <em>2</em> 种商品 总计金额 <em>1100.00</em> 元
+			</div>
+			<div class="go pull-right">
+				<a href="javascript: void(0)">去结算</a>
+			</div>
+		</div>
+	</div>
+</div>

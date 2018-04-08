@@ -1,0 +1,25 @@
+/**
+ * 
+ */
+.steps{height: 46px;border-bottom: 2px solid #e6e6e6;position: relative;margin-top: 35px;font-size: 16px;font-weight: bold;}
+.steps ul{width: 720px;margin-left: 240px;}
+.steps ul li{width: 150px;padding-left: 30px;float: left;height: 46px;line-height: 45px;}
+.steps ul li.selected{border-bottom: 2px solid #ff9000;color: #333;}
+.steps ul li i{font-size: 12px;margin-right: 2px;border-radius: 50%;width: 22px;height: 22px;display: inline-block;background-color: #999;line-height: 22px;color: #fff;text-align: center;}
+.steps ul li.selected i{background-color: #ff9000;}
+
+.find-pwd-box{width: 720px;}
+.find-pwd-box h5{padding-left: 240px;}
+
+.input-form{width: 720px;margin-left: 240px;margin-top: 45px;color: #666;font-size: 14px;font-weight: bold;margin-bottom: 80px;}
+.input-form .input-block{margin-bottom: 20px;}
+.input-form .input-block .input-text{padding: 8px;width: 284px;}
+.input-form .input-block select{height: 35px;width: 70px;}
+.input-form .input-block .id-card{width: 225px;}
+.input-form .input-block .check-code{padding: 8px;}
+.input-form label{width: 100px;display: inline-block;text-align: right;margin-right: 10px;}
+.input-form .input-btn{background-color: #e3e3e3;border: none;width: 140px;height: 35px;color: #666;display: inline-block;text-align: center;line-height: 35px;}
+.input-form .time-limit-btn{background-color: #ff9000;border: none;width: 140px;height: 35px;color: #fff;display: inline-block;text-align: center;line-height: 35px;}
+.input-form a{color: #ff9000;}
+.input-form .input-block .warning{color: #f30;font-size: 12px;}
+.input-form .input-block .info{font-weight: normal;}

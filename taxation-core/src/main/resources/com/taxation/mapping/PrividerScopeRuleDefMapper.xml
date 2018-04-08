@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.taxation.dao.PrividerScopeRuleDefDao" >
+  <resultMap id="BaseResultMap" type="com.taxation.bean.PrividerScopeRuleDefEntity" >
+    <id column="rule_code" property="ruleCode" jdbcType="VARCHAR" />
+    <result column="rule_name" property="ruleName" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    rule_code, rule_name
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_privider_scope_rule_def
+    where rule_code = #{ruleCode,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from t_privider_scope_rule_def
+    where rule_code = #{ruleCode,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.taxation.bean.PrividerScopeRuleDefEntity" >
+    insert into t_privider_scope_rule_def (rule_code, rule_name)
+    values (#{ruleCode,jdbcType=VARCHAR}, #{ruleName,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.taxation.bean.PrividerScopeRuleDefEntity" >
+    insert into t_privider_scope_rule_def
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="ruleCode != null" >
+        rule_code,
+      </if>
+      <if test="ruleName != null" >
+        rule_name,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="ruleCode != null" >
+        #{ruleCode,jdbcType=VARCHAR},
+      </if>
+      <if test="ruleName != null" >
+        #{ruleName,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.taxation.bean.PrividerScopeRuleDefEntity" >
+    update t_privider_scope_rule_def
+    <set >
+      <if test="ruleName != null" >
+        rule_name = #{ruleName,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where rule_code = #{ruleCode,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.taxation.bean.PrividerScopeRuleDefEntity" >
+    update t_privider_scope_rule_def
+    set rule_name = #{ruleName,jdbcType=VARCHAR}
+    where rule_code = #{ruleCode,jdbcType=VARCHAR}
+  </update>
+</mapper>

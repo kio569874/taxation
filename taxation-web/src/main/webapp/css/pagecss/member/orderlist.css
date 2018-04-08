@@ -1,0 +1,23 @@
+/**
+ * [radius description]
+ * @type {[type]}
+ */
+.ucenter .box .order-list{}
+.ucenter .box .order-list .tab-nav{width: 100%;border-bottom: 1px solid #f0f0f0;height: 33px;margin-bottom: 15px;}
+.ucenter .box .order-list .tab-nav li{position: relative;cursor: pointer;float: left;width: 100px;height: 33px;text-align: center;line-height: 33px;}
+.ucenter .box .order-list .tab-nav li.selected{border-bottom: 2px solid #C33610;line-height: 32px;height: 32px;}
+.ucenter .box .order-list .tab-nav li em{position: absolute;background-color: #C33610;padding: 3px 8px;line-height: 12px;font-size: 10px;color: #fff;border-radius: 10px;}
+.ucenter .box .order-list .tab-panel li{display: none;}
+.ucenter .box .order-list .tab-panel li.selected{display: block;}
+.ucenter .box .order-list .title h3{border-bottom: 1px solid #f0f0f0;padding: 0px 0px 10px;color: #C33610;}
+.ucenter .box .order-list .title h3 span{border-bottom: 2px solid #C33610;padding: 0px 35px 10px 0px;}
+.ucenter .box .order-list table{text-align: center;border: 1px solid #f0f0f0;}
+.ucenter .box .order-list table tr{border-bottom: 1px solid #f0f0f0;}
+.ucenter .box .order-list table tr th{padding: 10px 0px;}
+.ucenter .box .order-list table tr td{padding: 8px 0px;}
+.ucenter .box .order-list table tr td img{max-width: 50px;border-radius: 2px}
+.ucenter .box .order-list table thead{background-color: #f7f7f7;}
+.ucenter .box .order-list table tr.paging{}
+.ucenter .box .order-list table tr.paging span a{padding: 5px 13px;border: 1px solid #f0f0f0;}
+.ucenter .box .order-list table tr.paging span a.selected{background-color: #C33610;color: #fff;}
+.ucenter .box .order-list table tr.paging span a:hover{background-color: #C33610;color: #fff;}

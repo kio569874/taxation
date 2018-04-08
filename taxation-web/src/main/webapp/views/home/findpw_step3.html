@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="taxationApp">
+<head>
+	<meta name="Keywords" content="捷迅财税服务网" />
+    <meta name="Description" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>账户注册|捷迅财税服务网</title>
+	<link rel="shortcut icon" href="/taxation-web/images/favicon.ico" type="image/x-icon">
+	<link href="/taxation-web/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="/taxation-web/css/style.css" rel="stylesheet" type="text/css">
+	<link href="/taxation-web/css/common.css" rel="stylesheet" type="text/css">
+	<link href="/taxation-web/css/pagecss/findpwd.css" rel="stylesheet" type="text/css">
+	<link href="/taxation-web/css/angular/angular-toastr.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<!-- PJH 1102 begin 顶部导航 -->
+	<div id="top-nav" data-ng-include="'/taxation-web/views/common/header.html'" data-ng-controller="HeaderController" ></div>
+	<div class="clearfix"></div>
+	
+	<!-- PJH 1102 begin Logo和搜索框部分 -->
+	<div class="pjh-container">
+		<div id="logo">
+			<a href="javascript: void(0)"><img src="/taxation-web/images/logo.png" /></a>
+			<span style="font-size: 30px;font-weight: bold;color:#666;">找回密码</span>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+	<!-- JustFresh 2017-04-10 begin 注册主体部分 -->
+	<div class="pjh-container">
+		<div class="steps">
+			<ul>
+				<li class="selected">
+					<i>1</i><span>设置用户名</span>
+				</li>
+				<li class="selected">
+					<i>2</i><span>填写账号信息</span>
+				</li>
+				<li class="selected">
+					<i>3</i><span>密码修改成功</span>
+				</li>
+			</ul>
+		</div>
+		<div class="input-form" ng-controller="FindPwController3">
+			{{regResult}}
+			<a href="javascript: void(0)" ng-click="gotoLogin()">          跳转到主页</a>
+		</div>
+	</div>
+	<!-- JustFresh 2017-04-10 end 注册主体部分 -->
+
+	<!-- PJH 1113 begin 友情链接及版权部分 -->
+	<div data-ng-include="'/taxation-web/views/common/footer.html'" data-ng-controller="FooterController" ></div>
+	<!-- PJH 1113 end 友情链接及版权部分 -->
+	
+	<script type="text/javascript" src="/taxation-web/js/scripts/jquery.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/scripts/common.js"></script>
+	
+	<!-- angular js api-->
+	<script type="text/javascript" src="/taxation-web/js/angular/angular.min.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/angular/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/angular/angular-toastr.tpls.js"></script>
+	<!-- local js -->
+	<script type="text/javascript" src="/taxation-web/js/main.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/global.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/controller/userController.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/service/userService.js"></script>
+</body>
+</html>

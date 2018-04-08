@@ -1,0 +1,74 @@
+
+<!-- PJH 1102 begin Logo和搜索框部分 -->
+<div class="pjh-container">
+	<div id="logo">
+		<img src="/taxation-web/images/logo.png" />
+		<span style="font-size: 30px;font-weight: bold;color:#666;">欢迎登录</span>
+	</div>
+</div>
+<div class="clearfix"></div>
+
+<!-- PJH 1117 begin 登录部分 -->
+<div id="login-container">
+	<div class="pjh-container">
+		<div class="login-img pull-left">
+
+		</div>
+		<div class="login-box pull-right">
+			<div class="login-title">
+				<h3>用户登录</h3>
+			</div>
+			<div class="login-content" ng-controller="UserLoginController">
+				<form ng-submit="userLogin(user)" name="loginForm" novalidate="novalidate">
+					<table >
+						<tr>
+							<td align="right">用户名</td>
+							<td>
+								<input type="text" class="input-text" ng-class="has-error" ng-model="user.userAccount" name="userAccount" placeholder="请输入您的用户名" required/>
+							<span style="color:red" ng-show="(loginForm.userAccount.$dirty && loginForm.userAccount.$invalid && !registerForm.userAccount.$focused) || (loginForm.userAccount.$invalid && submitted )">
+								*<span ng-show="loginForm.userAccount.$error.required">用户名不能为空</span>
+							</span>
+							</td>
+						</tr>
+						<tr>
+							<td align="right">密码</td>
+							<td>
+								<input type="password" class="input-text" ng-model="user.userPassword" name="userPassword" placeholder="请输入登录密码" required/>
+							<span style="color:red" ng-show="(loginForm.userPassword.$dirty && loginForm.userPassword.$invalid && !registerForm.userPassword.$focused) || (loginForm.userPassword.$invalid && submitted )">
+								*<span ng-show="loginForm.userPassword.$error.required">密码不能为空</span>
+							</span>
+							</td>
+						</tr>
+						<tr>
+							<td align="right">验证码</td>
+							<td>
+								<input type="text" class="check-code" ng-model="user.verifyCode" name="verifyCode" style="vertical-align:middle;" required/>&nbsp;&nbsp;
+
+								<a ng-click="changeImg()" style="vertical-align: bottom;"><img id="img" ng-src="{{verifyCodeUrl}}" style="vertical-align:middle;"/></a>
+							<span style="color:red" ng-show="(loginForm.verifyCode.$dirty && loginForm.verifyCode.$invalid && !registerForm.username.$focused) || (loginForm.verifyCode.$invalid && submitted )">
+								*<span ng-show="loginForm.verifyCode.$error.required">请输入验证码</span>
+							</span>
+							</td>
+						</tr>
+						<tr>
+							<td align="right">&nbsp;</td>
+							<td>
+								<input type="submit" value="登 录" class="login-btn"/>
+								<input type="reset" value="重 置" class="reset-btn"/>
+							</td>
+						</tr>
+						<tr>
+							<td align="right">&nbsp;</td>
+							<td>&nbsp;&nbsp;&nbsp;
+								<a href="home/findpw_step1.html">忘记密码</a>
+								<a class="go-register" ui-sref="index.userregstep1">立即注册</a>
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="clearfix"></div>
+<!-- PJH 1117 end 登录部分 -->

@@ -1,0 +1,164 @@
+	<!-- JustFresh 2017-03-20 begin 面包屑导航部分开始 -->
+	<div id="brands" class="pjh-container">
+	<dl>
+		<dd><a href="javascript: void(0)" ng-click = "gotoIndex()"><i class="fa fa-home"></i> 首页</a></dd>
+		<dd class="split-sign"><i class="fa fa-angle-right"></i></dd>
+		<dd><a href="javascript: void(0)" ng-click = "gotoUcenter()">用户中心</a></dd>
+	</dl>
+	<div class="clearfix"></div>
+	</div>
+	<!-- JustFresh 2017-03-20 end 面包屑导航部分结束 -->
+
+	<!-- JustFresh 2017-03-20 begin 用户中心主体部分 -->
+	<div class="ucenter pjh-container" >
+		<!-- 用户中心左边 -->
+			<div class="left-layout pull-left">
+			<ul>
+				<li style="background-color: #f7f7f7;">
+					<div class="fold">
+						<a href="javascript: void(0)" ng-click="gotoUcenter()"><i class="fa fa-home"></i> 我的主页</a>
+					</div>
+					<dl>
+						<dd>
+							<a href="javascript: void(0)" ng-click="gotoBaseInfo()">基本信息</a>
+						</dd>
+						<dd>
+							<a href="javascript: void(0)" ng-click="gotoAccountSecurity()">账号安全</a>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<div class="fold">
+						<a href="javascript: void(0)"><i class="fa fa-reorder"></i> 订单中心</a>
+						<span class="fa fa-angle-up pull-right"></span>
+					</div>
+					<dl>
+						<dd>
+							<a href="javascript: void(0)" ng-click="gotoOrderList()">我的订单</a>
+						</dd>
+						<dd>
+							<a href="javascript: void(0)" ng-click="gotoMyJxComment()">评价晒单</a>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<div class="fold">
+						<a href="javascript: void(0)"><i class="fa fa-clone"></i> 关注中心</a>
+						<span class="fa fa-angle-up pull-right"></span>
+					</div>
+					<dl>
+						<dd>
+							<a href="javascript: void(0)" ng-click="gotoCollectGoods()">关注的商品</a>
+						</dd>
+						<dd>
+							<a href="javascript: void(0)" ng-click="gotoCollectStore()">关注的店铺</a>
+						</dd>
+						<dd>
+							<a href="javascript: void(0)" ng-click="gotoWatchHistory()">浏览历史</a>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<div class="fold">
+						<a href="javascript: void(0)"><i class="fa fa-user-secret"></i> 客户服务</a>
+						<span class="fa fa-angle-up pull-right"></span>
+					</div>
+					<dl>
+						<dd>
+							<a href="javascript: void(0)" ng-click="gotoNoPage()">退换货</a>
+						</dd>
+						<dd>
+							<a href="javascript: void(0)" ng-click="gotoNoPage()">价格保护</a>
+						</dd>
+						<dd>
+							<a href="javascript: void(0)" ng-click="gotoNoPage()">意见建议</a>
+						</dd>
+						<dd>
+							<a href="javascript: void(0)" ng-click="gotoNoPage()">购买咨询</a>
+						</dd>
+						<dd>
+							<a href="javascript: void(0)" ng-click="gotoNoPage()">交易纠纷</a>
+						</dd>
+						<dd>
+							<a href="javascript: void(0)" ng-click="gotoNoPage()">我的发票</a>
+						</dd>
+						<dd>
+							<a href="javascript: void(0)" ng-click="gotoNoPage()">举报中心</a>
+						</dd>
+					</dl>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="box pull-right" ng-controller="UcenterController">
+			<div class="basic-info">
+				<div class="head-thumb pull-left">
+					<img src="/taxation-web/images/head.jpg"/>
+					<em><a href="javascript: void(0)">5</a></em>
+				</div>
+				<div class="ext pull-left">
+					<p>
+						<em class="name">{{user.userMemberName}}</em>，欢迎您来到<em class="sitename">捷迅财税服务网</em>
+					</p>
+					<p>
+						<span class="last-login-time">
+							上次登录时间：
+							<i>{{lastTime}}</i>
+						</span>
+					</p>
+					<p>
+						<label class="update-head"><a href="upThumb.html"><i class="fa fa-camera-retro"></i> <i>修改头像</i></a></label>
+						<span class="split-line">|</span>
+						<label class="update-info"><i class="fa fa-edit"></i> <i><a href="baseinfo.html">修改资料</a></i></label>
+						<span class="split-line">|</span>
+						<label class="quit"><i class="fa fa-circle-o-notch"></i> <i><a href="">安全退出</a></i></label>
+					</p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<!-- JustFresh 2017-03-20 begin 最新交易订单列表 5条 -->
+			<div class="new-orders">
+				<div class="title">
+					<h3>
+						<span>最近交易</span>
+					</h3>
+				</div>
+				<table width="100%">
+					<thead>
+						<tr>
+							<th>服务商</th>
+							<th>订单号</th>
+							<th>用户</th>
+							<th>订单金额</th>
+							<th>下单时间</th>
+							<th>交易状态</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="order in orderList | limitTo:2 track by $index">
+							<td>
+								<a href="javascript: void(0)">
+									<img ng-src="/taxation-web/{{order.imageName}}"/>
+								</a>
+							</td>
+							<td>{{order.orderNo}}</td>
+							<td>{{order.userName}}</td>
+							<td>{{order.orderAmount | currency}}</td>
+							<td>{{order.createTime}}</td>
+							<td>{{order.payStatus}}<br/>
+								<a href="javascript: void(0)">订单详情</a>
+							</td>
+							<td>
+								<a href="javascript: void(0)">删除</a><br/>
+								<a href="javascript: void(0)">分享</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- JustFresh 2017-03-20 end 最新交易订单列表 5条 -->
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<!-- JustFresh 2017-03-20 end 用户中心主体部分 -->

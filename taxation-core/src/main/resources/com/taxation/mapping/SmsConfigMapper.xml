@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.taxation.dao.SmsConfigDao" >
+  <resultMap id="BaseResultMap" type="com.taxation.bean.SmsConfigEntity" >
+    <id column="sms_config_id" property="smsConfigId" jdbcType="VARCHAR" />
+    <result column="sms_key" property="smsKey" jdbcType="VARCHAR" />
+    <result column="sms_name" property="smsName" jdbcType="VARCHAR" />
+    <result column="sms_type" property="smsType" jdbcType="VARCHAR" />
+    <result column="sms_desc" property="smsDesc" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="CHAR" />
+    <result column="send_url" property="sendUrl" jdbcType="VARCHAR" />
+    <result column="rec_url" property="recUrl" jdbcType="VARCHAR" />
+    <result column="apikey" property="apikey" jdbcType="VARCHAR" />
+    <result column="mould_context" property="mouldContext" jdbcType="VARCHAR" />
+    <result column="valid_duration" property="validDuration" jdbcType="VARCHAR" />
+    <result column="impl_class" property="implClass" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    sms_config_id, sms_key, sms_name, sms_type, sms_desc, status, send_url, rec_url, 
+    apikey, mould_context, valid_duration, impl_class
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_sms_config
+    where sms_config_id = #{smsConfigId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from t_sms_config
+    where sms_config_id = #{smsConfigId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.taxation.bean.SmsConfigEntity" >
+    insert into t_sms_config (sms_config_id, sms_key, sms_name, 
+      sms_type, sms_desc, status, 
+      send_url, rec_url, apikey, 
+      mould_context, valid_duration, impl_class
+      )
+    values (#{smsConfigId,jdbcType=VARCHAR}, #{smsKey,jdbcType=VARCHAR}, #{smsName,jdbcType=VARCHAR}, 
+      #{smsType,jdbcType=VARCHAR}, #{smsDesc,jdbcType=VARCHAR}, #{status,jdbcType=CHAR}, 
+      #{sendUrl,jdbcType=VARCHAR}, #{recUrl,jdbcType=VARCHAR}, #{apikey,jdbcType=VARCHAR}, 
+      #{mouldContext,jdbcType=VARCHAR}, #{validDuration,jdbcType=VARCHAR}, #{implClass,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.taxation.bean.SmsConfigEntity" >
+    insert into t_sms_config
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="smsConfigId != null" >
+        sms_config_id,
+      </if>
+      <if test="smsKey != null" >
+        sms_key,
+      </if>
+      <if test="smsName != null" >
+        sms_name,
+      </if>
+      <if test="smsType != null" >
+        sms_type,
+      </if>
+      <if test="smsDesc != null" >
+        sms_desc,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="sendUrl != null" >
+        send_url,
+      </if>
+      <if test="recUrl != null" >
+        rec_url,
+      </if>
+      <if test="apikey != null" >
+        apikey,
+      </if>
+      <if test="mouldContext != null" >
+        mould_context,
+      </if>
+      <if test="validDuration != null" >
+        valid_duration,
+      </if>
+      <if test="implClass != null" >
+        impl_class,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="smsConfigId != null" >
+        #{smsConfigId,jdbcType=VARCHAR},
+      </if>
+      <if test="smsKey != null" >
+        #{smsKey,jdbcType=VARCHAR},
+      </if>
+      <if test="smsName != null" >
+        #{smsName,jdbcType=VARCHAR},
+      </if>
+      <if test="smsType != null" >
+        #{smsType,jdbcType=VARCHAR},
+      </if>
+      <if test="smsDesc != null" >
+        #{smsDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=CHAR},
+      </if>
+      <if test="sendUrl != null" >
+        #{sendUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="recUrl != null" >
+        #{recUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="apikey != null" >
+        #{apikey,jdbcType=VARCHAR},
+      </if>
+      <if test="mouldContext != null" >
+        #{mouldContext,jdbcType=VARCHAR},
+      </if>
+      <if test="validDuration != null" >
+        #{validDuration,jdbcType=VARCHAR},
+      </if>
+      <if test="implClass != null" >
+        #{implClass,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.taxation.bean.SmsConfigEntity" >
+    update t_sms_config
+    <set >
+      <if test="smsKey != null" >
+        sms_key = #{smsKey,jdbcType=VARCHAR},
+      </if>
+      <if test="smsName != null" >
+        sms_name = #{smsName,jdbcType=VARCHAR},
+      </if>
+      <if test="smsType != null" >
+        sms_type = #{smsType,jdbcType=VARCHAR},
+      </if>
+      <if test="smsDesc != null" >
+        sms_desc = #{smsDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=CHAR},
+      </if>
+      <if test="sendUrl != null" >
+        send_url = #{sendUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="recUrl != null" >
+        rec_url = #{recUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="apikey != null" >
+        apikey = #{apikey,jdbcType=VARCHAR},
+      </if>
+      <if test="mouldContext != null" >
+        mould_context = #{mouldContext,jdbcType=VARCHAR},
+      </if>
+      <if test="validDuration != null" >
+        valid_duration = #{validDuration,jdbcType=VARCHAR},
+      </if>
+      <if test="implClass != null" >
+        impl_class = #{implClass,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where sms_config_id = #{smsConfigId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.taxation.bean.SmsConfigEntity" >
+    update t_sms_config
+    set sms_key = #{smsKey,jdbcType=VARCHAR},
+      sms_name = #{smsName,jdbcType=VARCHAR},
+      sms_type = #{smsType,jdbcType=VARCHAR},
+      sms_desc = #{smsDesc,jdbcType=VARCHAR},
+      status = #{status,jdbcType=CHAR},
+      send_url = #{sendUrl,jdbcType=VARCHAR},
+      rec_url = #{recUrl,jdbcType=VARCHAR},
+      apikey = #{apikey,jdbcType=VARCHAR},
+      mould_context = #{mouldContext,jdbcType=VARCHAR},
+      valid_duration = #{validDuration,jdbcType=VARCHAR},
+      impl_class = #{implClass,jdbcType=VARCHAR}
+    where sms_config_id = #{smsConfigId,jdbcType=VARCHAR}
+  </update>
+  	<select id="querySmsConfigList" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from t_sms_config
+	</select>
+</mapper>

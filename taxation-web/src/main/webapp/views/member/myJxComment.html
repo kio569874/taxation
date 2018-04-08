@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="taxationApp">
+<head>
+	<meta name="Keywords" content="捷迅财税服务网" />
+    <meta name="Description" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>评价晒单|捷迅财税服务网</title>
+	<link rel="shortcut icon" href="/taxation-web/images/favicon.ico" type="image/x-icon">
+	<link href="/taxation-web/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="/taxation-web/css/style.css" rel="stylesheet" type="text/css">
+	<link href="/taxation-web/css/common.css" rel="stylesheet" type="text/css">
+	<link href="/taxation-web/css/pagecss/member.css" rel="stylesheet" type="text/css">
+	<link href="/taxation-web/css/pagecss/member/myJxComment.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!-- PJH 1102 begin 顶部导航 -->
+	<div id="top-nav" data-ng-include="'/taxation-web/views/common/header.html'" data-ng-controller="HeaderController" ></div>
+	<div class="clearfix"></div>
+	
+	<!-- JustFresh 2017-03-20 begin 面包屑导航部分开始 -->
+	<div data-ng-include="'userTopNavigation.html'" data-ng-controller="UserTopNavController" ></div>
+	<!-- JustFresh 2017-03-20 end 面包屑导航部分结束 -->
+
+	<!-- JustFresh 2017-03-20 begin 用户中心主体部分 -->
+	<div class="ucenter pjh-container">
+	
+		<div data-ng-include="'userUcenterLeft.html'" data-ng-controller="UserUcenterLeftController" ></div>
+		
+		<div class="box pull-right" ng-controller="MyJxCommentController">
+			<div class="order-list">
+				<ul class="tab-nav">
+					<li class="selected"><a href="orderlist.html?optype=all">待评价订单<em>3</em></a></li>
+					<li><a href="orderlist.html?optype=waitPay">待晒单<em>1</em></a></li>
+					<li><a href="orderlist.html?optype=finished">待追评</a></li>
+					<li><a href="orderlist.html?optype=recycle">已评价</a></li>
+				</ul>
+				<div class="clearfix"></div>
+				<ul class="tab-panel">
+					<li class="selected">
+						<table width="100%">
+							<thead>
+								<tr>
+									<th>订单详情</th>
+									<th>收货人</th>
+									<th>订单金额</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="sep-row">
+									<td colspan="4">
+										&nbsp;
+									</td>
+								</tr>
+								<tr class="tr-th">
+									<td colspan="4">
+										<span class="time">2017-03-20 15:02</span>
+										<span class="ordersn">
+											订单号：<em>9000000000516501</em>
+										</span>
+										<span class="store-info">
+											<a href="store.html">铜仁***税务代理</a>
+										</span>
+									</td>
+								</tr>
+								<tr class="tr-bd">
+									<td class="detail">
+										<a href="goods.html">
+											<img src="/taxation-web/images/goods2.jpg" class="thumb pull-left" />
+										</a>
+										<h4 class="pull-left">
+											<a href="../goods.html">
+												绅范（SHENFAN）风衣男 中长款学生连帽韩版潮流修身男装外套男大衣 不加绒 M
+											</a>
+										</h4>
+										<div class="num pull-left">
+											<i class="fa fa-remove"></i>1
+										</div>
+										<div class="clearfix"></div>
+									</td>
+									<td>
+										JustFresh
+									</td>
+									<td>
+										￥148.00
+									</td>
+									<td>
+										<a href="order.html">订单详情</a><br/>
+										<a href="comment.html" class="comment">评价</a>
+									</td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr class="sep-row">
+									<td colspan="4">
+										&nbsp;
+									</td>
+								</tr>
+								<tr class="tr-th">
+									<td colspan="4">
+										<span class="time">2017-03-20 15:02</span>
+										<span class="ordersn">
+											订单号：<em>9000000000516501</em>
+										</span>
+										<span class="store-info">
+											<a href="store.html">铜仁***税务代理</a>
+										</span>
+									</td>
+								</tr>
+								<tr class="tr-bd">
+									<td class="detail">
+										<a href="goods.html">
+											<img src="/taxation-web/images/goods2.jpg" class="thumb pull-left" />
+										</a>
+										<h4 class="pull-left">
+											<a href="../goods.html">
+												绅范（SHENFAN）风衣男 中长款学生连帽韩版潮流修身男装外套男大衣 不加绒 M
+											</a>
+										</h4>
+										<div class="num pull-left">
+											<i class="fa fa-remove"></i>1
+										</div>
+										<div class="clearfix"></div>
+									</td>
+									<td>
+										JustFresh
+									</td>
+									<td>
+										￥148.00
+									</td>
+									<td>
+										<a href="order.html">订单详情</a><br/>
+										<a href="comment.html" class="comment">评价</a>
+									</td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr class="sep-row">
+									<td colspan="4">
+										&nbsp;
+									</td>
+								</tr>
+								<tr class="tr-th">
+									<td colspan="4">
+										<span class="time">2017-03-20 15:02</span>
+										<span class="ordersn">
+											订单号：<em>9000000000516501</em>
+										</span>
+										<span class="store-info">
+											<a href="store.html">铜仁***税务代理</a>
+										</span>
+									</td>
+								</tr>
+								<tr class="tr-bd">
+									<td class="detail">
+										<a href="goods.html">
+											<img src="/taxation-web/images/goods2.jpg" class="thumb pull-left" />
+										</a>
+										<h4 class="pull-left">
+											<a href="../goods.html">
+												绅范（SHENFAN）风衣男 中长款学生连帽韩版潮流修身男装外套男大衣 不加绒 M
+											</a>
+										</h4>
+										<div class="num pull-left">
+											<i class="fa fa-remove"></i>1
+										</div>
+										<div class="clearfix"></div>
+									</td>
+									<td>
+										JustFresh
+									</td>
+									<td>
+										￥148.00
+									</td>
+									<td>
+										<a href="order.html">订单详情</a><br/>
+										<a href="comment.html" class="comment">评价</a>
+									</td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr class="sep-row">
+									<td colspan="4">
+										&nbsp;
+									</td>
+								</tr>
+								<tr class="tr-th">
+									<td colspan="4">
+										<span class="time">2017-03-20 15:02</span>
+										<span class="ordersn">
+											订单号：<em>9000000000516501</em>
+										</span>
+										<span class="store-info">
+											<a href="store.html">铜仁***税务代理</a>
+										</span>
+									</td>
+								</tr>
+								<tr class="tr-bd">
+									<td class="detail">
+										<a href="goods.html">
+											<img src="/taxation-web/images/goods2.jpg" class="thumb pull-left" />
+										</a>
+										<h4 class="pull-left">
+											<a href="../goods.html">
+												绅范（SHENFAN）风衣男 中长款学生连帽韩版潮流修身男装外套男大衣 不加绒 M
+											</a>
+										</h4>
+										<div class="num pull-left">
+											<i class="fa fa-remove"></i>1
+										</div>
+										<div class="clearfix"></div>
+									</td>
+									<td>
+										JustFresh
+									</td>
+									<td>
+										￥148.00
+									</td>
+									<td>
+										<a href="order.html">订单详情</a><br/>
+										<a href="comment.html" class="comment">评价</a>
+									</td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr class="sep-row">
+									<td colspan="4">
+										&nbsp;
+									</td>
+								</tr>
+								<tr class="tr-th">
+									<td colspan="4">
+										<span class="time">2017-03-20 15:02</span>
+										<span class="ordersn">
+											订单号：<em>9000000000516501</em>
+										</span>
+										<span class="store-info">
+											<a href="store.html">铜仁***税务代理</a>
+										</span>
+									</td>
+								</tr>
+								<tr class="tr-bd">
+									<td class="detail">
+										<a href="goods.html">
+											<img src="/taxation-web/images/goods2.jpg" class="thumb pull-left" />
+										</a>
+										<h4 class="pull-left">
+											<a href="../goods.html">
+												绅范（SHENFAN）风衣男 中长款学生连帽韩版潮流修身男装外套男大衣 不加绒 M
+											</a>
+										</h4>
+										<div class="num pull-left">
+											<i class="fa fa-remove"></i>1
+										</div>
+										<div class="clearfix"></div>
+									</td>
+									<td>
+										JustFresh
+									</td>
+									<td>
+										￥148.00
+									</td>
+									<td>
+										<a href="order.html">订单详情</a><br/>
+										<a href="comment.html" class="comment">评价</a>
+									</td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr class="sep-row">
+									<td colspan="4">
+										&nbsp;
+									</td>
+								</tr>
+								<tr class="tr-th">
+									<td colspan="4">
+										<span class="time">2017-03-20 15:02</span>
+										<span class="ordersn">
+											订单号：<em>9000000000516501</em>
+										</span>
+										<span class="store-info">
+											<a href="store.html">铜仁***税务代理</a>
+										</span>
+									</td>
+								</tr>
+								<tr class="tr-bd">
+									<td class="detail">
+										<a href="goods.html">
+											<img src="/taxation-web/images/goods2.jpg" class="thumb pull-left" />
+										</a>
+										<h4 class="pull-left">
+											<a href="../goods.html">
+												绅范（SHENFAN）风衣男 中长款学生连帽韩版潮流修身男装外套男大衣 不加绒 M
+											</a>
+										</h4>
+										<div class="num pull-left">
+											<i class="fa fa-remove"></i>1
+										</div>
+										<div class="clearfix"></div>
+									</td>
+									<td>
+										JustFresh
+									</td>
+									<td>
+										￥148.00
+									</td>
+									<td>
+										<a href="order.html">订单详情</a><br/>
+										<a href="comment.html" class="comment">评价</a>
+									</td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr class="sep-row">
+									<td colspan="4">
+										&nbsp;
+									</td>
+								</tr>
+								<tr class="tr-th">
+									<td colspan="4">
+										<span class="time">2017-03-20 15:02</span>
+										<span class="ordersn">
+											订单号：<em>9000000000516501</em>
+										</span>
+										<span class="store-info">
+											<a href="store.html">铜仁***税务代理</a>
+										</span>
+									</td>
+								</tr>
+								<tr class="tr-bd">
+									<td class="detail">
+										<a href="goods.html">
+											<img src="/taxation-web/images/goods2.jpg" class="thumb pull-left" />
+										</a>
+										<h4 class="pull-left">
+											<a href="../goods.html">
+												绅范（SHENFAN）风衣男 中长款学生连帽韩版潮流修身男装外套男大衣 不加绒 M
+											</a>
+										</h4>
+										<div class="num pull-left">
+											<i class="fa fa-remove"></i>1
+										</div>
+										<div class="clearfix"></div>
+									</td>
+									<td>
+										JustFresh
+									</td>
+									<td>
+										￥148.00
+									</td>
+									<td>
+										<a href="order.html">订单详情</a><br/>
+										<a href="comment.html" class="comment">评价</a>
+									</td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr class="sep-row">
+									<td colspan="4">
+										&nbsp;
+									</td>
+								</tr>
+								<tr class="tr-th">
+									<td colspan="4">
+										<span class="time">2017-03-20 15:02</span>
+										<span class="ordersn">
+											订单号：<em>9000000000516501</em>
+										</span>
+										<span class="store-info">
+											<a href="store.html">铜仁***税务代理</a>
+										</span>
+									</td>
+								</tr>
+								<tr class="tr-bd">
+									<td class="detail">
+										<a href="goods.html">
+											<img src="/taxation-web/images/goods2.jpg" class="thumb pull-left" />
+										</a>
+										<h4 class="pull-left">
+											<a href="../goods.html">
+												绅范（SHENFAN）风衣男 中长款学生连帽韩版潮流修身男装外套男大衣 不加绒 M
+											</a>
+										</h4>
+										<div class="num pull-left">
+											<i class="fa fa-remove"></i>1
+										</div>
+										<div class="clearfix"></div>
+									</td>
+									<td>
+										JustFresh
+									</td>
+									<td>
+										￥148.00
+									</td>
+									<td>
+										<a href="order.html">订单详情</a><br/>
+										<a href="comment.html" class="comment">评价</a>
+									</td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr class="sep-row">
+									<td colspan="4">
+										&nbsp;
+									</td>
+								</tr>
+								<tr class="tr-th">
+									<td colspan="4">
+										<span class="time">2017-03-20 15:02</span>
+										<span class="ordersn">
+											订单号：<em>9000000000516501</em>
+										</span>
+										<span class="store-info">
+											<a href="store.html">铜仁***税务代理</a>
+										</span>
+									</td>
+								</tr>
+								<tr class="tr-bd">
+									<td class="detail">
+										<a href="goods.html">
+											<img src="/taxation-web/images/goods2.jpg" class="thumb pull-left" />
+										</a>
+										<h4 class="pull-left">
+											<a href="../goods.html">
+												绅范（SHENFAN）风衣男 中长款学生连帽韩版潮流修身男装外套男大衣 不加绒 M
+											</a>
+										</h4>
+										<div class="num pull-left">
+											<i class="fa fa-remove"></i>1
+										</div>
+										<div class="clearfix"></div>
+									</td>
+									<td>
+										JustFresh
+									</td>
+									<td>
+										￥148.00
+									</td>
+									<td>
+										<a href="order.html">订单详情</a><br/>
+										<a href="comment.html" class="comment">评价</a>
+									</td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr class="sep-row">
+									<td colspan="4">
+										&nbsp;
+									</td>
+								</tr>
+								<tr class="tr-th">
+									<td colspan="4">
+										<span class="time">2017-03-20 15:02</span>
+										<span class="ordersn">
+											订单号：<em>9000000000516501</em>
+										</span>
+										<span class="store-info">
+											<a href="store.html">铜仁***税务代理</a>
+										</span>
+									</td>
+								</tr>
+								<tr class="tr-bd">
+									<td class="detail">
+										<a href="goods.html">
+											<img src="/taxation-web/images/goods2.jpg" class="thumb pull-left" />
+										</a>
+										<h4 class="pull-left">
+											<a href="../goods.html">
+												绅范（SHENFAN）风衣男 中长款学生连帽韩版潮流修身男装外套男大衣 不加绒 M
+											</a>
+										</h4>
+										<div class="num pull-left">
+											<i class="fa fa-remove"></i>1
+										</div>
+										<div class="clearfix"></div>
+									</td>
+									<td>
+										JustFresh
+									</td>
+									<td>
+										￥148.00
+									</td>
+									<td>
+										<a href="order.html">订单详情</a><br/>
+										<a href="comment.html" class="comment">评价</a>
+									</td>
+								</tr>
+							</tbody>
+							<tfooter>
+								<tr class="paging">
+									<td colspan="6">
+										<span><a href="orderlist.html">首页</a></span>
+										<span><a href="orderlist.html">上一页</a></span>
+										<span><a href="orderlist.html" class="selected">1</a></span>
+										<span><a href="orderlist.html">2</a></span>
+										<span><a href="orderlist.html">3</a></span>
+										<span><a href="orderlist.html">下一页</a></span>
+										<span><a href="orderlist.html">尾页</a></span>
+									</td>
+								</tr>
+							</tfooter>
+						</table>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<!-- JustFresh 2017-03-20 end 用户中心主体部分 -->
+
+	<!-- PJH 1113 begin 友情链接及版权部分 -->
+	<div data-ng-include="'/taxation-web/views/common/footer.html'" data-ng-controller="FooterController" ></div>
+	<!-- PJH 1113 end 友情链接及版权部分 -->
+	<script type="text/javascript" src="/taxation-web/js/scripts/jquery.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/scripts/common.js"></script>
+
+
+	<!-- angular js api-->
+	<script type="text/javascript" src="/taxation-web/js/angular/angular.min.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/angular/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/angular/angular-toastr.tpls.js"></script>
+	
+	<script type="text/javascript" src="/taxation-web/js/angular/angular-sanitize.min.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/angular/angular-touch.min.js"></script>
+
+	<script type="text/javascript" src="/taxation-web/js/angular/ocLazyLoad.min.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/angular/angular-file-upload.min.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/angular/ui-bootstrap-tpls.min.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/angular/ui-select/select.min.js"></script>
+	<script type="text/javascript" src="/taxation-web/plugin/pagination/js/pagination.js"></script>
+	
+	<!-- local js -->
+	<script type="text/javascript" src="/taxation-web/js/main.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/controller/userController.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/service/userService.js"></script>
+
+</body>
+</html>

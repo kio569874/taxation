@@ -1,0 +1,32 @@
+/**
+ * 
+ */
+
+.ucenter .box{}
+.ucenter .box .tab-nav{width: 100%;border-bottom: 1px solid #f0f0f0;height: 33px;margin-bottom: 15px;}
+.ucenter .box .tab-nav li{position: relative;cursor: pointer;float: left;width: 100px;height: 33px;text-align: center;line-height: 33px;}
+.ucenter .box .tab-nav li.selected{border-bottom: 2px solid #C33610;line-height: 32px;height: 32px;}
+.ucenter .box .tab-nav li em{position: absolute;background-color: #C33610;padding: 3px 8px;line-height: 12px;font-size: 10px;color: #fff;border-radius: 10px;}
+.ucenter .box .tab-panel li{display: none;}
+.ucenter .box .tab-panel li.selected{display: block;}
+
+.ucenter .box ul.watch-list{}
+.ucenter .box ul.watch-list li{position: relative;height: 120px;width: 100%;}
+.ucenter .box ul.watch-list li:hover{border: 2px solid #ff9000;}
+.ucenter .box ul.watch-list li .time{position: absolute;top: 10px;width: 120px;text-align: right;}
+.ucenter .box ul.watch-list li .point{border-radius: 50%;position: absolute;left: 130px;top: 12px;width: 15px;height: 15px;z-index: 3;background-color: #ccc;}
+.ucenter .box ul.watch-list li .goods{width: 800px;height: 120px;top: 0px;border-left: 2px solid #f0f0f0;position: absolute;left: 136px;z-index: 2;}
+.ucenter .box ul.watch-list li:hover .goods{border-left: 2px solid #ff9000;}
+.ucenter .box ul.watch-list li:hover .point{background-color: #f30;}
+.ucenter .box ul.watch-list li .goods .thumb{width: 90px;margin: 18px;}
+.ucenter .box ul.watch-list li .goods .detail h4{margin: 15px 0px 0px;}
+.ucenter .box ul.watch-list li .goods .detail p{line-height: 25px;margin: 0px;}
+.ucenter .box ul.watch-list li .opt{margin-top: 10px;}
+.ucenter .box ul.watch-list li .opt a{display: none;padding: 5px 25px;background: #ff9000;margin: 10px 15px;color: #fff;}
+.ucenter .box ul.watch-list li:hover .opt a{display: block;}
+
+
+.ucenter .box .paging{margin: 20px 0px;}
+.ucenter .box .paging ul li{float: left;}
+.ucenter .box .paging ul li a{padding: 5px 13px;border: 1px solid #f0f0f0;margin-right: 5px;}
+.ucenter .box .paging ul li.selected a{background-color: #f30;color: #fff;}

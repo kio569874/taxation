@@ -1,0 +1,28 @@
+<!-- PJH 1102 begin Logo和搜索框部分 -->
+<div class="pjh-container">
+	<div id="logo">
+		<a href="javascript: void(0)"><img src="/taxation-web/images/logo.png" /></a>
+		<span style="font-size: 30px;font-weight: bold;color:#666;">用户注册</span>
+	</div>
+</div>
+<div class="clearfix"></div>
+<!-- JustFresh 2017-04-10 begin 注册主体部分 -->
+<div class="pjh-container">
+	<div class="steps">
+		<ul>
+			<li class="selected">
+				<i>1</i><span>设置用户名</span>
+			</li>
+			<li class="selected">
+				<i>2</i><span>填写账号信息</span>
+			</li>
+			<li class="selected">
+				<i>3</i><span>注册成功</span>
+			</li>
+		</ul>
+	</div>
+	<div class="reg-form" ng-controller="UserRegisterController4">
+		{{regResult}}
+		<a href="javascript: void(0)" ng-click="gotoIndex()">          跳转到主页</a>
+	</div>
+</div>

@@ -1,0 +1,71 @@
+<!-- JustFresh 2017-04-10 begin 注册主体部分 -->
+<div class="pjh-container" ng-controller="ChooseServiceController">
+	<div class="steps">
+		<ul>
+			<li class="selected">
+				<i class="fa fa-male"></i>
+				<p>选择服务商</p>
+				<p class="num">1</p>
+			</li>
+			<li>
+				<i class="fa fa-database"></i>
+				<p>基本信息填写</p>
+				<p class="num">2</p>
+			</li>
+			<li>
+				<i class="fa fa-cubes"></i>
+				<p>生产经营地填写</p>
+				<p class="num">3</p>
+			</li>
+			<li>
+				<i class="fa fa-server"></i>
+				<p>选择支付类型</p>
+				<p class="num">4</p>
+			</li>
+			<li>
+				<i class="fa fa-upload"></i>
+				<p>附件上传</p>
+				<p class="num">5</p>
+			</li>
+			<li>
+				<i class="fa fa-child"></i>
+				<p>确认注册信息</p>
+				<p class="num">6</p>
+			</li>
+			<li>
+				<i class="fa fa-check"></i>
+				<p>注册成功</p>
+				<p class="num">7</p>
+			</li>
+		</ul>
+	</div>
+	<div class="clearfix"></div>
+	<div class="box">
+		<ul class="services">
+			<li ng-repeat="item in providerList" repeat-finish="renderFinish()">
+				<img src="/taxation-web/images/services/11.jpg" />
+				<div class="name">{{item.providerName}}</div>
+				<div class="price">
+					<strong><a href="javascript: void(0)" title="{{item.providerContext}}">{{item.providerContext| limitTo : 24}}...</a></strong>
+				</div>
+				<div class="providerIdClass">
+					<input type="hidden" value="{{item.providerId}}"/>
+				</div>
+				<div class="priceClass">
+					<input type="hidden" value="{{item.orderAmount}}"/>
+				</div>
+				<div class="serviceIdClass">
+					<input type="hidden" value="{{item.serviceId}}"/>
+				</div>
+
+			</li>
+		</ul>
+	</div>
+	<div class="clearfix"></div>
+	<div class="pjh-container"><div class="pull-right"><tm-pagination conf="paginationConf"></tm-pagination></div></div>
+	<div class="clearfix"></div>
+	<div class="operation">
+		<a href="javascript: void(0)" ng-click="resetChoose()" class="prev">重新选择服务商</a>
+		<a href="javascript: void(0)" ng-click="gotoBaseInfo()" class="next">信息正确，进入下一步</a>
+	</div>
+</div>

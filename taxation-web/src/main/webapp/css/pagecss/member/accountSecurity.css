@@ -1,0 +1,25 @@
+/**
+ * [radius description]
+ * @type {[type]}
+ */
+.ucenter .box{}
+.ucenter .box .tab-nav{width: 100%;border-bottom: 1px solid #f0f0f0;height: 33px;margin-bottom: 15px;}
+.ucenter .box .tab-nav li{position: relative;cursor: pointer;float: left;width: 100px;height: 33px;text-align: center;line-height: 33px;}
+.ucenter .box .tab-nav li.selected{border-bottom: 2px solid #C33610;line-height: 32px;height: 32px;}
+.ucenter .box .tab-nav li em{position: absolute;background-color: #C33610;padding: 3px 8px;line-height: 12px;font-size: 10px;color: #fff;border-radius: 10px;}
+.ucenter .box h4{margin: 0px;}
+.ucenter .box .thumb{margin: 5px 10px 10px 0px;}
+.ucenter .box .baseinfo p{line-height: 14px;}
+
+.ucenter .box .security-container{margin-top: 25px;width: 100%;border: 1px solid #f0f0f0;}
+.ucenter .box .security-container .title{background-color: #f7f7f7;padding: 7px 10px;border-bottom: 1px solid #f0f0f0;}
+.ucenter .box .security-container .block{padding: 30px 15px;border-bottom: 1px solid #f0f0f0;}
+.ucenter .box .security-container .block strong{font-size: 25px;color: #ff9000;}
+.ucenter .box .security-container .block .icon{margin-left: 25px;width: 80px;}
+.ucenter .box .security-container .block .icon i{font-size: 40px;}
+.ucenter .box .security-container .block .item{}
+.ucenter .box .security-container .block .item h5{margin: 0px;font-size: 20px;text-align: center;font-style: normal;}
+.ucenter .box .security-container .block .item h6{text-align: center;margin: 5px 0px;}
+.ucenter .box .security-container .block .info{margin-left: 30px;width: 500px;}
+.ucenter .box .security-container .block .opt{margin-left: 35px;margin-top: 10px;}
+.ucenter .box .security-container .block .opt a{padding: 8px 25px;color: #fff;}

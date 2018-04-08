@@ -1,0 +1,89 @@
+/**
+ * 
+ */
+#categorys .site-list li:last-child{border-bottom: none;}
+#categorys .site-list li dl{margin: -10px 0px 0px;padding: 0px;}
+#categorys .site-list li dl dd{line-height: 26px;width: 65px;margin: 0px;float: left;}
+#categorys .site-list li dl dd a{color: rgba(255,255,255,0.8);}
+
+#banner{margin-left: 220px;width: 790px;height: 340px;overflow: hidden;position: relative;}
+#banner .slider-box{}
+#banner .slider-box li{float: left;}
+#banner .slider-num{position: absolute;left: 50%;z-index: 3;bottom: 20px;margin-left: -70px;}
+#banner .slider-num li{float: left;width: 20px;height: 20px;background-color: #fff;margin-right: 10px;text-align: center;border-radius: 50%;}
+#banner .slider-num li.selected{background-color: #C33610;}
+#banner .prev{position: absolute;z-index: 3;left: 0px;font-size: 30px;color: #fff;top: 140px;background-color: rgba(0,0,0,0.3);width: 30px;text-align: center;height: 60px;line-height: 60px;}
+#banner .next{position: absolute;z-index: 3;right: 0px;font-size: 30px;color: #fff;top: 140px;background-color: rgba(0,0,0,0.3);width: 30px;text-align: center;height: 60px;line-height: 60px;}
+.right-float{width: 180px;height: 340px;border: 1px solid #f0f0f0;}
+.right-float .info{padding: 15px;border-bottom: 1px solid #f0f0f0;}
+.right-float .info .head{width: 50px;border-radius: 50%;}
+.right-float .info .ext{margin-left: 10px;}
+.right-float .info .ext h4{margin: 5px 0px 0px;padding: 0px;}
+.right-float .info .ext p{margin: 0px;}
+.right-float .info .link{margin-top: 15px;}
+.right-float .info .link a{padding: 5px 8px;border: 1px solid #C33610;font-size: 12px;color: #C33610;}
+.right-float .info .link a:hover{background-color: #C33610;color: #fff;}
+.right-float .tab{width: 100%;}
+.right-float .tab .tab-nav{width: 100%;border-bottom: 1px solid #f0f0f0;height: 35px;}
+.right-float .tab .tab-nav li{float: left;height: 35px;line-height: 35px;width: 60px;text-align: center;}
+.right-float .tab .tab-nav li.selected{border-bottom: 2px solid #c33610;color: #c33610;}
+.right-float .tab .tab-panel li{margin: 7px 10px 0px;}
+
+.navbar{margin-top: 15px;width: 1200px;height: 170px;overflow: hidden;position: relative;}
+.navbar a{position: absolute;z-index: 3;bottom: 3px;background-color: #C33610;padding: 10px 30px;color: #fff;margin: 20px 40px;display: block;text-align: center;border-radius: 2px;}
+
+.today-recommends{}
+.today-recommends dl dt,.today-recommends dl dd{float: left;margin-right: 10px;}
+.today-recommends dl dd{border: 1px solid #f0f0f0;margin: 0px;width: 203px;margin-left: -1px;height: 200px;}
+.today-recommends dl dd img{width: 180px;margin: 10px;}
+
+.floor{margin-top: 20px;}
+.floor h3{width: 100%;border-bottom: 2px solid #C33610;margin: 0px;}
+.floor h3 .title{font-size: 18px;padding: 8px;}
+.floor h3 .title a{color: #C33610;}
+.floor h3 ul li{float: left;font-size: 12px;font-weight: normal;border: 1px solid #e3e3e3;margin-right: 10px;padding: 2px 10px;border-radius: 20px;}
+.floor h3 ul li:hover{background-color: #C33610;}
+.floor h3 ul li:hover a{color: #fff;}
+.floor .list-ads{position: relative;width: 250px;height: 400px;}
+.floor .list-ads img{width: 250px;height: 402px;}
+.floor .list-ads ul{position: absolute;bottom: 20px;z-index: 3;width: 220px;left: 20px;}
+.floor .list-ads ul li{float: left;font-size: 12px;font-weight: normal;border: 1px solid #666;margin-right: 10px;border-radius: 5px;margin-top: 10px;}
+.floor .list-ads ul li a{padding: 4px 25px;display: block;}
+.floor .list-ads ul li:hover{background-color: #C33610;border: 1px solid #C33610;}
+.floor .list-ads ul li:hover a{color: #fff;}
+
+.floor .seller-list{width: 950px;}
+.floor .seller-list ul li{float: left;border-right: 1px solid #f0f0f0;border-bottom: 1px solid #f0f0f0;width: 315px;height: 200px;position: relative;}
+.floor .seller-list ul li .base-info img.head{width: 140px;margin: 15px 15px 0px;}
+.floor .seller-list ul li .base-info p{margin: 0px 15px;color: #C33610;font-size: 15px;}
+.floor .seller-list ul li .ext-info{width: 140px;}
+.floor .seller-list ul li .ext-info h4{margin: 15px 0px 5px;}
+.floor .seller-list ul li .ext-info p{margin: 0px;line-height: 22px;}
+.floor .seller-list ul li .ext-info a.contact{background-color: #f0f0f0;display: block;width: 120px;height: 30px;text-align: center;line-height: 30px;color: #555;margin-top: 5px;}
+.floor .seller-list ul li:hover .ext-info a.contact{background-color: #C33610;color: #fff;}
+
+#guessYourLike{margin-top: 20px;}
+#guessYourLike .title{height: 20px;border-bottom: 1px solid #e3e3e3;}
+#guessYourLike .title .info{width: 160px;text-align: center;margin-left: 520px;height: 40px;line-height: 40px;background-color: #fff;font-size: 20px;font-weight: bold;color: #666;}
+#guessYourLike ul{margin-top: 20px;}
+#guessYourLike ul li{border-radius: 5px;background: #f7f7f7;float: left;width: 190px;height: 270px;margin-right: 10px;margin-bottom: 10px;}
+#guessYourLike ul li .head{width: 100%;}
+#guessYourLike ul li h4{margin: 0px 10px;}
+#guessYourLike ul li p{margin: 0px 10px;}
+#guessYourLike ul li p .contact{background-color: #f0f0f0;color: #555;padding: 2px 12px;float: right;display: block;margin-top: -5px;border-radius: 3px;}
+#guessYourLike ul li:hover p .contact{background-color: #C33610;color: #fff;}
+
+#recommends{margin-top: 20px;}
+#recommends ul.tab-nav{border-bottom: 1px solid #e3e3e3;height: 35px;}
+#recommends ul.tab-nav li{float: left;height: 35px;line-height: 35px;width: 120px;text-align: center;}
+#recommends ul.tab-nav li.selected{border-bottom: 2px solid #C33610;}
+#recommends ul.tab-nav li.selected a{color: #C33610;font-weight: bold;}
+#recommends ul.tab-panel li{display: none;}
+#recommends ul.tab-panel li.selected{display: block;}
+#recommends ul.tab-panel li dl{margin: 10px 0px;padding: 0px;}
+#recommends ul.tab-panel li dl dd{border-radius: 5px;background: #f7f7f7;float: left;width: 230px;height: 305px;margin: 0px 10px 10px 0px;}
+#recommends ul.tab-panel li dl dd .head{width: 210px;margin: 10px 10px 0px;}
+#recommends ul.tab-panel li dl dd h4{margin: 0px 10px;}
+#recommends ul.tab-panel li dl dd p{margin: 0px 10px;}
+#recommends ul.tab-panel li dl dd p .contact{background-color: #f0f0f0;color: #555;padding: 2px 12px;float: right;display: block;margin-top: -5px;border-radius: 3px;}
+#recommends ul.tab-panel li dl dd:hover p .contact{background-color: #C33610;color: #fff;}

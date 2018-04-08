@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.taxation.dao.EnterpriseEnrollDao">
+  <resultMap id="BaseResultMap" type="com.taxation.bean.EnterpriseEnrollEntity">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="provider_id" jdbcType="VARCHAR" property="providerId" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="user_sex" jdbcType="CHAR" property="userSex" />
+    <result column="user_idcard" jdbcType="VARCHAR" property="userIdcard" />
+    <result column="user_phone" jdbcType="VARCHAR" property="userPhone" />
+    <result column="operate_site_nature" jdbcType="CHAR" property="operateSiteNature" />
+    <result column="produce_operate_type" jdbcType="CHAR" property="produceOperateType" />
+    <result column="province" jdbcType="VARCHAR" property="province" />
+    <result column="city" jdbcType="VARCHAR" property="city" />
+    <result column="area" jdbcType="VARCHAR" property="area" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, provider_id, user_id, user_name, user_sex, user_idcard, user_phone, operate_site_nature,
+    produce_operate_type, province, city, area, address
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_enterprise_enroll
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from t_enterprise_enroll
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.taxation.bean.EnterpriseEnrollEntity">
+    insert into t_enterprise_enroll (id, provider_id, user_id,
+    user_name, user_sex, user_idcard,
+    user_phone, operate_site_nature, produce_operate_type,
+    province, city, area,
+    address)
+    values (#{id,jdbcType=VARCHAR}, #{providerId,jdbcType=VARCHAR}, #{userId,jdbcType=VARCHAR},
+    #{userName,jdbcType=VARCHAR}, #{userSex,jdbcType=CHAR}, #{userIdcard,jdbcType=VARCHAR},
+    #{userPhone,jdbcType=VARCHAR}, #{operateSiteNature,jdbcType=CHAR}, #{produceOperateType,jdbcType=CHAR},
+    #{province,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, #{area,jdbcType=VARCHAR},
+    #{address,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.taxation.bean.EnterpriseEnrollEntity">
+    insert into t_enterprise_enroll
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="providerId != null">
+        provider_id,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="userName != null">
+        user_name,
+      </if>
+      <if test="userSex != null">
+        user_sex,
+      </if>
+      <if test="userIdcard != null">
+        user_idcard,
+      </if>
+      <if test="userPhone != null">
+        user_phone,
+      </if>
+      <if test="operateSiteNature != null">
+        operate_site_nature,
+      </if>
+      <if test="produceOperateType != null">
+        produce_operate_type,
+      </if>
+      <if test="province != null">
+        province,
+      </if>
+      <if test="city != null">
+        city,
+      </if>
+      <if test="area != null">
+        area,
+      </if>
+      <if test="address != null">
+        address,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="providerId != null">
+        #{providerId,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="userName != null">
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="userSex != null">
+        #{userSex,jdbcType=CHAR},
+      </if>
+      <if test="userIdcard != null">
+        #{userIdcard,jdbcType=VARCHAR},
+      </if>
+      <if test="userPhone != null">
+        #{userPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="operateSiteNature != null">
+        #{operateSiteNature,jdbcType=CHAR},
+      </if>
+      <if test="produceOperateType != null">
+        #{produceOperateType,jdbcType=CHAR},
+      </if>
+      <if test="province != null">
+        #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null">
+        #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="area != null">
+        #{area,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.taxation.bean.EnterpriseEnrollEntity">
+    update t_enterprise_enroll
+    <set>
+      <if test="providerId != null">
+        provider_id = #{providerId,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="userName != null">
+        user_name = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="userSex != null">
+        user_sex = #{userSex,jdbcType=CHAR},
+      </if>
+      <if test="userIdcard != null">
+        user_idcard = #{userIdcard,jdbcType=VARCHAR},
+      </if>
+      <if test="userPhone != null">
+        user_phone = #{userPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="operateSiteNature != null">
+        operate_site_nature = #{operateSiteNature,jdbcType=CHAR},
+      </if>
+      <if test="produceOperateType != null">
+        produce_operate_type = #{produceOperateType,jdbcType=CHAR},
+      </if>
+      <if test="province != null">
+        province = #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null">
+        city = #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="area != null">
+        area = #{area,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.taxation.bean.EnterpriseEnrollEntity">
+    update t_enterprise_enroll
+    set provider_id = #{providerId,jdbcType=VARCHAR},
+    user_id = #{userId,jdbcType=VARCHAR},
+    user_name = #{userName,jdbcType=VARCHAR},
+    user_sex = #{userSex,jdbcType=CHAR},
+    user_idcard = #{userIdcard,jdbcType=VARCHAR},
+    user_phone = #{userPhone,jdbcType=VARCHAR},
+    operate_site_nature = #{operateSiteNature,jdbcType=CHAR},
+    produce_operate_type = #{produceOperateType,jdbcType=CHAR},
+    province = #{province,jdbcType=VARCHAR},
+    city = #{city,jdbcType=VARCHAR},
+    area = #{area,jdbcType=VARCHAR},
+    address = #{address,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

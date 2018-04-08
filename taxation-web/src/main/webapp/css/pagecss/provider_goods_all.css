@@ -1,0 +1,65 @@
+/**
+ *
+ */
+#logo h3{color: #333;border-left: 1px solid #f0f0f0;margin-left: 15px;padding-left: 15px;height: 70px;line-height: 70px;margin-top: 15px;}
+#top-search{width: auto;margin-top: 25px;}
+#top-search .search-form form .btnSearch:hover{background-color: #80240C;}
+#top-search .search-form form .btnSearch-inner{background-color: #333;margin-left: -5px;}
+#top-search .search-form form .btnSearch-inner:hover{background-color: #000;}
+#navbar{border-bottom: 2px solid #c33610;height: 42px;}
+
+#hotRecommends{margin-top: 15px;background-color: #f0f0f0;}
+#hotRecommends .info{background-color: #c33610;width: 15px;padding: 27px 12px;color: #fff;font-size: 15px;font-weight: bold;}
+#hotRecommends .services{}
+#hotRecommends .services ul li{border: 1px solid #fff;width: 270px;border-radius: 1px;background-color: #fff;height: 120px;margin-right: 15px;float: left;margin-top: 11px;}
+#hotRecommends .services ul li:hover{border: 1px solid #c33610;}
+#hotRecommends .services ul li .thumb img{width: 100px;margin: 10px;}
+#hotRecommends .services ul li .opt{margin-right: 10px;}
+#hotRecommends .services ul li p{width: 140px;margin: 0px;}
+#hotRecommends .services ul li p.name{margin-top: 11px;}
+#hotRecommends .services ul li p.price{margin-top: 3px;font-size: 15px;font-weight: bold;color: #c33610;}
+#hotRecommends .services ul li p.buy-btn a{margin-top: 5px;display: inline-block;padding: 2px 12px;background-color: #f0f0f0;}
+#hotRecommends .services ul li:hover p.buy-btn a{background-color: #c33610;color: #fff;}
+
+#conditions{margin-top: 15px;border: 1px solid #f0f0f0;}
+#conditions .title{background-color: #f0f0f0;padding: 10px 15px;font-size: 14px;font-weight: bold;color: #333;}
+#conditions .title span{margin-right: 10px;}
+#conditions .title .category-name{color: #c33610;}
+#conditions .title span.total{font-weight: normal;font-size: 12px;}
+#conditions .box{width: 100%;}
+#conditions .box .con-line{border-bottom: 1px dashed #e3e3e3;}
+#conditions .box .con-line .name{height: 40px;line-height: 40px;padding-left: 20px;color: #333;width: 80px;}
+#conditions .box .con-line .list{width: 1100px;}
+#conditions .box .con-line .list li{float: left;margin: 10px 0px 0px 25px;}
+#conditions .box .con-line .list li.total a{background-color: #c33610;padding: 3px 12px;color: #fff;}
+
+#serviceList{margin-top: 15px;}
+#serviceList .sort{background-color: #f0f0f0;border-top: 2px solid #d3d3d3;padding: 15px 0px;}
+#serviceList .sort a{padding: 10px 20px;border-right: 1px solid #e3e3e3;}
+#serviceList .sort a.selected{color: #c33610;font-weight: bold;}
+#serviceList .sort .price-area-form{display: inline-block;margin-left: 20px;}
+#serviceList .sort .price-area-form .input-price{border: 1px solid #e3e3e3;width: 70px;height: 20px;}
+#serviceList .sort .price-area-form span{margin: 0px 10px;}
+#serviceList .sort .price-area-form .ensure{background-color: #e3e3e3;border: none;padding: 5px 15px;margin-left: 10px;}
+#serviceList .sort:hover .price-area-form .ensure{border-radius: 2px;background-color: #c33610;color: #fff;cursor: pointer;}
+#serviceList ul li{width: 240px;float: left;margin-top: 10px;height: 350px;}
+#serviceList ul li:hover{border: 1px solid #f0f0f0;width: 238px;height: 348px;box-shadow: 2px 2px 20px #e3e3e3;}
+#serviceList ul li img.head{width: 200px;margin: 20px 20px 0px;}
+#serviceList ul li h4{margin: 0px 20px;}
+#serviceList ul li .info{margin: 5px 20px 0px;}
+#serviceList ul li .info .price{color: #c33610;font-size: 14px;font-weight: bold;}
+#serviceList ul li .opt{margin: 2px 20px 0px;}
+#serviceList ul li .opt .buy-btn{margin-top: 5px;display: inline-block;padding: 2px 12px;border: 1px solid #f0f0f0;margin-right: 10px;}
+#serviceList ul li:hover .opt .buy-btn{background-color: #c33610;color: #fff;}
+#serviceList .append-more-services{width: 1200px;background-color: #f6f6f6;margin-top: 10px;text-align: center;font-size: 15px;padding: 15px 0px;font-weight: bold;margin-bottom: 20px;}
+
+#guessYourLike{margin-bottom: 20px;}
+#guessYourLike .title{height: 20px;border-bottom: 1px solid #e3e3e3;}
+#guessYourLike .title .info{width: 160px;text-align: center;margin-left: 520px;height: 40px;line-height: 40px;background-color: #fff;font-size: 20px;font-weight: bold;color: #666;}
+#guessYourLike ul{margin-top: 20px;}
+#guessYourLike ul li{border-radius: 5px;background: #f7f7f7;float: left;width: 190px;height: 270px;margin-right: 10px;margin-bottom: 10px;}
+#guessYourLike ul li .head{width: 100%;}
+#guessYourLike ul li h4{margin: 0px 10px;}
+#guessYourLike ul li p{margin: 0px 10px;}
+#guessYourLike ul li p .contact{background-color: #f0f0f0;color: #555;padding: 2px 12px;float: right;display: block;margin-top: -5px;border-radius: 3px;}
+#guessYourLike ul li:hover p .contact{background-color: #C33610;color: #fff;}

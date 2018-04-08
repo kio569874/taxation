@@ -1,0 +1,122 @@
+<meta charset="utf-8" ng-controller="CityAreaController"/>
+<link rel="stylesheet" href="../pagecss/city_area.css" />
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-12 col-md-12">
+			<ol class="breadcrumb">
+			  	<li><a ui-sref="index">控制台</a></li>
+			  	<li><a ui-sref="index">系统设置</a></li>
+			  	<li><a ui-sref="index.city_area">城市代码配置</a></li>
+			</ol>
+		</div>
+	</div>
+</div>
+
+<!-- JustFresh 顶部NAV切换及操作链接部分 -->
+<div class="container-fluid">
+	<div class="row">
+		<div class="tab-nav">
+			<ul class="pull-left">
+				<li class="selected"><a ui-sref="index.city_area">城市代码</a></li>
+			</ul>
+			<div class="opts pull-right">
+				<a ui-sref="index.city_area_mng" class="btn btn-success"><i class="fa fa-plus"></i> 添加城市代码</a>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+
+<!-- JustFresh 条件查询表单部分 -->
+<div class="conditions container-fluid">
+	<div class="row">
+		<div class="col-sm-12 col-md-12">
+			<div class="search-form pull-right">
+				<form ng-submit="searchPaging()">
+					<span class="form-element">
+						<label>城市名称：</label>
+						<input type="text" class="input-text" ng-model="paginationConf.pname" />
+					</span>
+					<span class="form-element">
+						<label>分页数：</label>
+						<select ng-init="pageNum=perPageOptions" class="input-select" ng-change="showPage(pagingInfo.order,pagingInfo.sort,pagingInfo.startIndex,paginationConf.rows)" ng-model="paginationConf.rows">
+							<option ng-selected="paginationConf.rows==num" value="{{num}}" ng-repeat="num in pageNum">--{{num}}--</option>
+						</select>
+					</span>
+					<span class="form-element">
+						<button type="submit" class="btn btn-warning"><i class="fa fa-search"></i> 搜索</button>
+					</span>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+<div class="main-body container-fluid">
+	<div class="row">
+		<div class="col-sm-12 col-md-12">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>&nbsp;</th>
+						<th>pid</th>
+						<th>pcode</th>
+						<th>pname</th>
+						<th>pshortname</th>
+						<th>plevel</th>
+						<th style="text-align: center;width: 200px;">操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="city_area in pagingInfo.list | orderBy : 'id' ">
+						<td><input type="checkbox" value="{{city_area.pid}}" name="cityAreaIds" /></td>
+						<td>{{city_area.pid}}</td>
+						<td>{{city_area.pcode}}</td>
+						<td>{{city_area.pname}}</td>
+						<td>{{city_area.pshortname}}</td>
+						<td>{{city_area.plevel}}</td>
+						<td>
+							<a ui-sref="index.city_area_mng({pid:city_area.pid})" class="btn-outline btn-outline-success">编辑</a>
+							<a ng-click="remove(city_area.pid)" class="btn-outline btn-outline-danger">删除</a>
+						</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="10">
+							<div class="paging-info pull-left">
+								<span class="total" style="margin-right: 20px;">共有{{pagingInfo.totalRecord}}条数据</span>
+								<span class="">第{{pagingInfo.currentPage}}/{{pagingInfo.totalPage}}页</span>
+							</div>
+							<ul class="pagination navigation pull-right" style="margin: 0px;">
+								<li ng-show="pagingInfo.currentPage > 1"><a ng-click="showPage(pagingInfo.order,pagingInfo.sort,pagingInfo.startIndex,pagingInfo.pageSize)">首页</a></li>
+								<li ng-show="pagingInfo.currentPage > 1"><a ng-click="showPage(pagingInfo.order,pagingInfo.sort,pagingInfo.previousPage,pagingInfo.pageSize)">上一页</a></li> 
+								<li ng-repeat="pageNum in pagingInfo.pageBar">
+									<a ng-if="pageNum == pagingInfo.currentPage" class="selected" ng-click="showPage(pagingInfo.order,pagingInfo.sort,pageNum,pagingInfo.pageSize)">{{pageNum}}</a>
+									<a ng-if="pageNum != pagingInfo.currentPage" ng-click="showPage(pagingInfo.order,pagingInfo.sort,pageNum,pagingInfo.pageSize)">{{pageNum}}</a>
+								</li>
+								<li ng-show="pagingInfo.currentPage < pagingInfo.totalPage"><a ng-click="showPage(pagingInfo.order,pagingInfo.sort,pagingInfo.nextPage,pagingInfo.pageSize)">下一页</a></li>
+								<li ng-show="pagingInfo.currentPage < pagingInfo.totalPage"><a ng-click="showPage(pagingInfo.order,pagingInfo.sort,pagingInfo.endIndex,pagingInfo.pageSize)">尾页</a></li>
+							</ul>
+						</td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+	</div>
+</div>
+
+<!-- JustFresh 底部操作按钮列表部分 -->
+<div class="clearfix"></div>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-12 col-md-12">
+			<div class="bottom-opts">
+				<input type="checkbox" name="checkall" ng-click="changeCheckboxStatus('cityAreaIds')" />
+				<a href="javascript: void(0)" ng-click="batchRemove('cityAreaIds')" class="btn-outline btn-outline-default">批量删除</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div style="height: 50px;width: 100%;"></div>

@@ -1,0 +1,45 @@
+<meta charset="utf-8" />
+<div class="left-nav pull-left">
+	<ul ng-controller="LeftNavController">
+		<!-- <li>
+			<a href=""><i class="fa fa-cog"></i> <span class="hidden-small">系统设置</span></a>
+			<dl>
+				<dd class="selected"><a href="/beadhouse-web/views/admin/channel_list.html"><i class="fa fa-circle-o"></i> <span class="hidden-small">栏目配置</span></a></dd>
+				<dd><a href="/beadhouse-web/views/admin/ads_list.html"><i class="fa fa-circle-o"></i> <span class="hidden-small">广告设置</span></a></dd>
+				<dd><a href="/beadhouse-web/views/admin/branch_list.html"><i class="fa fa-circle-o"></i> <span class="hidden-small">分院配置</span></a></dd>
+				<dd><a href="/beadhouse-web/views/admin/house_floor_list.html"><i class="fa fa-circle-o"></i> <span class="hidden-small">楼层配置</span></a></dd>
+				<dd><a href="/beadhouse-web/views/admin/house_list.html"><i class="fa fa-circle-o"></i> <span class="hidden-small">房屋信息配置</span></a></dd>
+				<dd><a href="/beadhouse-web/views/admin/storage_list.html"><i class="fa fa-circle-o"></i> <span class="hidden-small">库存信息配置</span></a></dd>
+				<dd><a href="/beadhouse-web/views/admin/links_list.html"><i class="fa fa-circle-o"></i> <span class="hidden-small">友情链接配置</span></a></dd>
+			</dl>
+		</li> -->
+		
+		<li ng-repeat="menu in adminList">
+			<a class="active" ng-if="menu.linkUrl==activeMenu" ui-sref="{{menu.linkUrl}}">
+				<i class="{{menu.icon}}"></i> 
+				<span class="hidden-small">{{menu.title}}</span>
+			</a>
+			<a ng-if="menu.linkUrl!=activeMenu" ui-sref="{{menu.linkUrl}}">
+				<i class="{{menu.icon}}"></i> 
+				<span class="hidden-small">{{menu.title}}</span>
+			</a>
+			<dl ng-if="menu.children != null">
+				<dd ng-repeat="child in menu.children">
+					<span ng-if="child.linkUrl==activeMenu">
+						<a ui-sref="{{child.linkUrl}}" class="active">
+							<i class="{{child.icon}}"></i> 
+							<span class="hidden-small">{{child.title}}</span>
+						</a>
+					</span>
+					<span ng-if="child.linkUrl!=activeMenu">
+						<a ui-sref="{{child.linkUrl}}">
+							<i class="{{child.icon}}""></i>
+							<span class="hidden-small">{{child.title}}</span>
+						</a>
+					</span>
+				</dd>
+			</dl>
+		</li>
+	</ul>
+	<div style="height: 50px;width: 100%;"></div>
+</div>

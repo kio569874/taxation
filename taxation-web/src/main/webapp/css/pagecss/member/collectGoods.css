@@ -1,0 +1,22 @@
+/**
+ * 
+ */
+.ucenter .box{}
+.ucenter .box .tab-nav{width: 100%;border-bottom: 1px solid #f0f0f0;height: 33px;margin-bottom: 15px;}
+.ucenter .box .tab-nav li{position: relative;cursor: pointer;float: left;width: 100px;height: 33px;text-align: center;line-height: 33px;}
+.ucenter .box .tab-nav li.selected{border-bottom: 2px solid #C33610;line-height: 32px;height: 32px;}
+.ucenter .box .tab-nav li em{position: absolute;background-color: #C33610;padding: 3px 8px;line-height: 12px;font-size: 10px;color: #fff;border-radius: 10px;}
+.ucenter .box .tab-panel li{display: none;}
+.ucenter .box .tab-panel li.selected{display: block;}
+
+.ucenter .box .list{}
+.ucenter .box .list li{width: 220px;height: 290px;position: relative;border: 1px solid #f0f0f0;float: left;margin-right: 10px;}
+.ucenter .box .list li .thumb{width: 200px;margin: 10px;}
+.ucenter .box .list li h5{margin: 0px 10px;font-size: 14px;}
+.ucenter .box .list li p{margin: 0px 10px;}
+.ucenter .box .list li p .del a{color: #ff9000;}
+
+.ucenter .box .paging{margin: 20px 0px;}
+.ucenter .box .paging ul li{float: left;}
+.ucenter .box .paging ul li a{padding: 5px 13px;border: 1px solid #f0f0f0;margin-right: 5px;}
+.ucenter .box .paging ul li.selected a{background-color: #f30;color: #fff;}

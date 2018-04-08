@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.taxation.dao.SmsCheckCodeDao" >
+  <resultMap id="BaseResultMap" type="com.taxation.bean.SmsCheckCodeEntity" >
+    <id column="sms_checkcode_id" property="smsCheckcodeId" jdbcType="VARCHAR" />
+    <result column="user_phone" property="userPhone" jdbcType="VARCHAR" />
+    <result column="sms_check_code" property="smsCheckCode" jdbcType="VARCHAR" />
+    <result column="sms_context" property="smsContext" jdbcType="VARCHAR" />
+    <result column="send_time" property="sendTime" jdbcType="TIMESTAMP" />
+    <result column="send_returncode" property="sendReturncode" jdbcType="VARCHAR" />
+    <result column="send_returnMessage" property="sendReturnmessage" jdbcType="VARCHAR" />
+    <result column="send_count" property="sendCount" jdbcType="INTEGER" />
+    <result column="send_fee" property="sendFee" jdbcType="VARCHAR" />
+    <result column="fee_unit" property="feeUnit" jdbcType="VARCHAR" />
+    <result column="send_id" property="sendId" jdbcType="VARCHAR" />
+    <result column="checkcode_type" property="checkcodeType" jdbcType="CHAR" />
+    <result column="check_time" property="checkTime" jdbcType="TIMESTAMP" />
+    <result column="check_result" property="checkResult" jdbcType="CHAR" />
+    <result column="check_error_num" property="checkErrorNum" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    sms_checkcode_id, user_phone, sms_check_code, sms_context, send_time, send_returncode, 
+    send_returnMessage, send_count, send_fee, fee_unit, send_id, checkcode_type, check_time, 
+    check_result, check_error_num, create_time
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_sms_checkcode
+    where sms_checkcode_id = #{smsCheckcodeId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from t_sms_checkcode
+    where sms_checkcode_id = #{smsCheckcodeId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.taxation.bean.SmsCheckCodeEntity" >
+    insert into t_sms_checkcode (sms_checkcode_id, user_phone, sms_check_code, 
+      sms_context, send_time, send_returncode, 
+      send_returnMessage, send_count, send_fee, 
+      fee_unit, send_id, checkcode_type, 
+      check_time, check_result, check_error_num, 
+      create_time)
+    values (#{smsCheckcodeId,jdbcType=VARCHAR}, #{userPhone,jdbcType=VARCHAR}, #{smsCheckCode,jdbcType=VARCHAR}, 
+      #{smsContext,jdbcType=VARCHAR}, #{sendTime,jdbcType=TIMESTAMP}, #{sendReturncode,jdbcType=VARCHAR}, 
+      #{sendReturnmessage,jdbcType=VARCHAR}, #{sendCount,jdbcType=INTEGER}, #{sendFee,jdbcType=VARCHAR}, 
+      #{feeUnit,jdbcType=VARCHAR}, #{sendId,jdbcType=VARCHAR}, #{checkcodeType,jdbcType=CHAR}, 
+      #{checkTime,jdbcType=TIMESTAMP}, #{checkResult,jdbcType=CHAR}, #{checkErrorNum,jdbcType=INTEGER}, 
+      #{createTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.taxation.bean.SmsCheckCodeEntity" >
+    insert into t_sms_checkcode
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="smsCheckcodeId != null" >
+        sms_checkcode_id,
+      </if>
+      <if test="userPhone != null" >
+        user_phone,
+      </if>
+      <if test="smsCheckCode != null" >
+        sms_check_code,
+      </if>
+      <if test="smsContext != null" >
+        sms_context,
+      </if>
+      <if test="sendTime != null" >
+        send_time,
+      </if>
+      <if test="sendReturncode != null" >
+        send_returncode,
+      </if>
+      <if test="sendReturnmessage != null" >
+        send_returnMessage,
+      </if>
+      <if test="sendCount != null" >
+        send_count,
+      </if>
+      <if test="sendFee != null" >
+        send_fee,
+      </if>
+      <if test="feeUnit != null" >
+        fee_unit,
+      </if>
+      <if test="sendId != null" >
+        send_id,
+      </if>
+      <if test="checkcodeType != null" >
+        checkcode_type,
+      </if>
+      <if test="checkTime != null" >
+        check_time,
+      </if>
+      <if test="checkResult != null" >
+        check_result,
+      </if>
+      <if test="checkErrorNum != null" >
+        check_error_num,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="smsCheckcodeId != null" >
+        #{smsCheckcodeId,jdbcType=VARCHAR},
+      </if>
+      <if test="userPhone != null" >
+        #{userPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="smsCheckCode != null" >
+        #{smsCheckCode,jdbcType=VARCHAR},
+      </if>
+      <if test="smsContext != null" >
+        #{smsContext,jdbcType=VARCHAR},
+      </if>
+      <if test="sendTime != null" >
+        #{sendTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sendReturncode != null" >
+        #{sendReturncode,jdbcType=VARCHAR},
+      </if>
+      <if test="sendReturnmessage != null" >
+        #{sendReturnmessage,jdbcType=VARCHAR},
+      </if>
+      <if test="sendCount != null" >
+        #{sendCount,jdbcType=INTEGER},
+      </if>
+      <if test="sendFee != null" >
+        #{sendFee,jdbcType=VARCHAR},
+      </if>
+      <if test="feeUnit != null" >
+        #{feeUnit,jdbcType=VARCHAR},
+      </if>
+      <if test="sendId != null" >
+        #{sendId,jdbcType=VARCHAR},
+      </if>
+      <if test="checkcodeType != null" >
+        #{checkcodeType,jdbcType=CHAR},
+      </if>
+      <if test="checkTime != null" >
+        #{checkTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="checkResult != null" >
+        #{checkResult,jdbcType=CHAR},
+      </if>
+      <if test="checkErrorNum != null" >
+        #{checkErrorNum,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.taxation.bean.SmsCheckCodeEntity" >
+    update t_sms_checkcode
+    <set >
+      <if test="userPhone != null" >
+        user_phone = #{userPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="smsCheckCode != null" >
+        sms_check_code = #{smsCheckCode,jdbcType=VARCHAR},
+      </if>
+      <if test="smsContext != null" >
+        sms_context = #{smsContext,jdbcType=VARCHAR},
+      </if>
+      <if test="sendTime != null" >
+        send_time = #{sendTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sendReturncode != null" >
+        send_returncode = #{sendReturncode,jdbcType=VARCHAR},
+      </if>
+      <if test="sendReturnmessage != null" >
+        send_returnMessage = #{sendReturnmessage,jdbcType=VARCHAR},
+      </if>
+      <if test="sendCount != null" >
+        send_count = #{sendCount,jdbcType=INTEGER},
+      </if>
+      <if test="sendFee != null" >
+        send_fee = #{sendFee,jdbcType=VARCHAR},
+      </if>
+      <if test="feeUnit != null" >
+        fee_unit = #{feeUnit,jdbcType=VARCHAR},
+      </if>
+      <if test="sendId != null" >
+        send_id = #{sendId,jdbcType=VARCHAR},
+      </if>
+      <if test="checkcodeType != null" >
+        checkcode_type = #{checkcodeType,jdbcType=CHAR},
+      </if>
+      <if test="checkTime != null" >
+        check_time = #{checkTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="checkResult != null" >
+        check_result = #{checkResult,jdbcType=CHAR},
+      </if>
+      <if test="checkErrorNum != null" >
+        check_error_num = #{checkErrorNum,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where sms_checkcode_id = #{smsCheckcodeId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.taxation.bean.SmsCheckCodeEntity" >
+    update t_sms_checkcode
+    set user_phone = #{userPhone,jdbcType=VARCHAR},
+      sms_check_code = #{smsCheckCode,jdbcType=VARCHAR},
+      sms_context = #{smsContext,jdbcType=VARCHAR},
+      send_time = #{sendTime,jdbcType=TIMESTAMP},
+      send_returncode = #{sendReturncode,jdbcType=VARCHAR},
+      send_returnMessage = #{sendReturnmessage,jdbcType=VARCHAR},
+      send_count = #{sendCount,jdbcType=INTEGER},
+      send_fee = #{sendFee,jdbcType=VARCHAR},
+      fee_unit = #{feeUnit,jdbcType=VARCHAR},
+      send_id = #{sendId,jdbcType=VARCHAR},
+      checkcode_type = #{checkcodeType,jdbcType=CHAR},
+      check_time = #{checkTime,jdbcType=TIMESTAMP},
+      check_result = #{checkResult,jdbcType=CHAR},
+      check_error_num = #{checkErrorNum,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP}
+    where sms_checkcode_id = #{smsCheckcodeId,jdbcType=VARCHAR}
+  </update>
+</mapper>

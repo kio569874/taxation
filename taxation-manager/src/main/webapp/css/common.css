@@ -1,0 +1,93 @@
+/**
+ * @desc: 公共CSS文件
+ * @time: 2017-06-23 12:17
+ * @autohor: JustFresh
+ * @version: v1.0.0
+ */
+body{}
+a{cursor: pointer;}
+#header{background-color: #333;height:50px;position: fixed;top: 0px;width: 100%;z-index: 3;color: #fff;}
+#header .logo{height: 50px;}
+#header h3{color: #fff;line-height: 50px;margin: 0px;padding: 0px;}
+#header .module-list{position: absolute;left: 15%;bottom: 0px;margin: 0px;padding: 0px;height: 35px;}
+#header .module-list li{list-style: none;float: left;margin-right: 10px;}
+#header .module-list li a{color: #fff;text-align: center;padding:8px 25px;display: inline-block;border-radius: 5px 5px 0px 0px;}
+#header .module-list li a:hover{color: #333;border-radius: 5px 5px 0px 0px;background-color: #fff;}
+#header .module-list li a.active{color: #333;background-color: #fff;}
+#header .module-list li.split-line{height: 15px;margin: 12px 25px;width: 1px;background-color: #fff;padding: 0px;}
+#header .opt ul li{list-style: none;float: left;text-align: center;padding:8px;}
+#header .opt ul li.split-line{height: 30px;margin: 10px 25px;width: 1px;background-color: #636161;padding: 0px;}
+#header .opt ul li a,#header .opt ul li a p{color: #fff;text-decoration: none;font-size: 12px;}
+#header .opt ul li i{display: block;font-size: 15px;}
+.main{height: 100%;overflow-y: hidden;position: relative;z-index: 2;width: 100%;margint-top: 50px;}
+.main .content{height: 100%;overflow-y: auto;width: 85%;margin-top: 50px;overflow-y: auto;overflow-x: hidden;padding-bottom: 50px;}
+.main .content .breadcrumb{margin-top: 15px;}
+.main .content .breadcrumb li a{color: #666;}
+/* 个人手写自适应样式部分 */
+@media(max-width:970px){
+	.main .left-nav{background-color: #666;height: 100%;overflow-y: auto;width: 15%;overflow-x: hidden;position: absolute;top: 50px;padding-bottom: 50px;}
+	.main .left-nav ul{margin: 0px;padding: 0px;}
+	.main .left-nav ul li{list-style: none;margin: 0px;border-bottom: 1px dotted #888888;}
+	.main .left-nav ul li a{color: #fff;padding: 15px;display: block;}
+	.main .left-nav ul li > a:hover,.main .left-nav ul li > a.active{background-color: #f0f0f0;color: #666;text-decoration: none;}
+	.main .left-nav ul li a > i{}
+	.main .left-nav ul li dl{margin-bottom: 0px;}
+	.main .left-nav ul li dl dd{margin: 0px;border-bottom: 1px dotted #888888;}
+	.main .left-nav ul li dl dd a{padding-left: 15px;}
+	.main .left-nav ul li dl dd a:hover{background-color: #f0f0f0;color: #666;text-decoration: none;}
+	.main .left-nav ul li dl dd a.active{background-color: #f0f0f0;color: #666;text-decoration: none;}
+	.main .left-nav ul li dl dd:first-child{border-top: 1px solid #888888;}
+	.main .left-nav ul li dl dd:last-child{padding-bottom: 0px;border-bottom: none;}
+	.main .left-nav ul li:last-child{border-bottom: none;}
+	.main .left-nav ul li span.hidden-small{display: none !important;}
+}
+@media(min-width:970px){
+	.main .left-nav{background-color: #666;height: 100%;overflow-y: auto;width: 15%;overflow-x: hidden;position: absolute;top: 50px;padding-bottom: 50px;}
+	.main .left-nav ul{margin: 0px;padding: 0px;}
+	.main .left-nav ul li{list-style: none;margin: 0px;border-bottom: 1px dotted #888888;}
+	.main .left-nav ul li a{color: #fff;padding: 15px;display: block;}
+	.main .left-nav ul li > a:hover,.main .left-nav ul li > a.active{background-color: #f0f0f0;color: #666;text-decoration: none;}
+	.main .left-nav ul li a > i{}
+	.main .left-nav ul li dl{margin-bottom: 0px;}
+	.main .left-nav ul li dl dd{margin: 0px;border-bottom: 1px dotted #f0f0f0;}
+	.main .left-nav ul li dl dd a{padding-left: 35px;}
+	.main .left-nav ul li dl dd a:hover{background-color: #f0f0f0;color: #666;text-decoration: none;}
+	.main .left-nav ul li dl dd a.active{background-color: #f0f0f0;color: #666;text-decoration: none;}
+	.main .left-nav ul li dl dd:first-child{border-top: 1px solid #f0f0f0;}
+	.main .left-nav ul li dl dd:last-child{padding-bottom: 0px;border-bottom: none;}
+	.main .left-nav ul li:last-child{border-bottom: none;}
+	.main .left-nav ul li span.hidden-small{display: inline-block !important;}
+}
+
+.tab-nav{border-bottom: 3px solid #333;margin: 0px 15px;}
+.tab-nav ul{margin: 0px;padding: 0px;}
+.tab-nav ul li{list-style: none;float: left;background-color: #f3f3f3;margin-right: 10px;}
+.tab-nav ul li a{color: #666;padding: 10px 30px;display: inline-block;}
+.tab-nav ul li.selected{background-color: #333;border-radius: 3px 3px 0px 0px;}
+.tab-nav ul li.selected a{color: #fff;}
+
+.search-form{margin-top: 15px;}
+.search-form .form-element{margin-left: 10px;color: #666;}
+.search-form .form-element .input-text,.search-form .form-element .input-select{padding: 8px;border: 1px solid #e3e3e3 !important;outline: none;color: #666;}
+
+.main-body{}
+.main-body table{width: 100%;border: 1px solid #e3e3e3;}
+.main-body table tr th,.main-body table tr td{padding-left: 8px;}
+.main-body table thead tr{background-color: #333;height: 40px;line-height: 40px;color: #fff;border: 1px solid #333;}
+.main-body table tbody tr{height: 40px;line-height: 40px;border-bottom: 1px solid #e3e3e3;}
+.main-body table tbody tr:hover{background-color: #f0f0f0;}
+.btn-outline{padding: 4px 10px;font-size: 12px;}
+.btn-outline.btn-outline-default{border: 1px solid #e3e3e3;color: #666;}
+.btn-outline.btn-outline-success{border: 1px solid #4cae4c;color: #4cae4c;}
+.btn-outline.btn-outline-primary{border: 1px solid #2e6da4;color: #2e6da4;}
+.btn-outline.btn-outline-info{border: 1px solid #46b8da;color: #46b8da;}
+.btn-outline.btn-outline-warning{border: 1px solid #eea236;color: #eea236;}
+.btn-outline.btn-outline-danger{border: 1px solid #d43f3a;color: #d43f3a;}
+.main-body table tfoot tr{}
+
+.main-body table .paging-info{margin: 8px; }
+.pagination li a.selected{background-color: #337ab7 !important;color: #fff !important;}
+
+.opt-form{margin-top: 15px;}
+
+.bottom-opts{margin-top: 15px;border: 1px solid #e3e3e3;padding: 10px;}

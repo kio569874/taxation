@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.taxation.dao.PrividerScopeRuleElementDao" >
+  <resultMap id="BaseResultMap" type="com.taxation.bean.PrividerScopeRuleElementEntity" >
+    <id column="rule_code" property="ruleCode" jdbcType="VARCHAR" />
+    <id column="element_code" property="elementCode" jdbcType="VARCHAR" />
+    <result column="scope_point" property="scopePoint" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    rule_code, element_code, scope_point
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.taxation.bean.PrividerScopeRuleElementEntity" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_privider_scope_rule_element
+    where rule_code = #{ruleCode,jdbcType=VARCHAR}
+      and element_code = #{elementCode,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.taxation.bean.PrividerScopeRuleElementEntity" >
+    delete from t_privider_scope_rule_element
+    where rule_code = #{ruleCode,jdbcType=VARCHAR}
+      and element_code = #{elementCode,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.taxation.bean.PrividerScopeRuleElementEntity" >
+    insert into t_privider_scope_rule_element (rule_code, element_code, scope_point
+      )
+    values (#{ruleCode,jdbcType=VARCHAR}, #{elementCode,jdbcType=VARCHAR}, #{scopePoint,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.taxation.bean.PrividerScopeRuleElementEntity" >
+    insert into t_privider_scope_rule_element
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="ruleCode != null" >
+        rule_code,
+      </if>
+      <if test="elementCode != null" >
+        element_code,
+      </if>
+      <if test="scopePoint != null" >
+        scope_point,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="ruleCode != null" >
+        #{ruleCode,jdbcType=VARCHAR},
+      </if>
+      <if test="elementCode != null" >
+        #{elementCode,jdbcType=VARCHAR},
+      </if>
+      <if test="scopePoint != null" >
+        #{scopePoint,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.taxation.bean.PrividerScopeRuleElementEntity" >
+    update t_privider_scope_rule_element
+    <set >
+      <if test="scopePoint != null" >
+        scope_point = #{scopePoint,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where rule_code = #{ruleCode,jdbcType=VARCHAR}
+      and element_code = #{elementCode,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.taxation.bean.PrividerScopeRuleElementEntity" >
+    update t_privider_scope_rule_element
+    set scope_point = #{scopePoint,jdbcType=VARCHAR}
+    where rule_code = #{ruleCode,jdbcType=VARCHAR}
+      and element_code = #{elementCode,jdbcType=VARCHAR}
+  </update>
+</mapper>

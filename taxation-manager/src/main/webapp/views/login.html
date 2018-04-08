@@ -1,0 +1,60 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="捷迅后台管理系统" />
+<meta name="description" content="捷迅后台管理系统" />
+<meta name="author" content="JustFresh" />
+<title>捷迅后台管理系统-用户登录</title>
+<!-- <link rel="shortcut icon" type="image/ico" href="http://www.sxdjgjy.com/myshop/favicon.ico"> -->
+<link rel="stylesheet" href="/taxation-manager/css/bootstrap.css" />
+<link rel="stylesheet" href="/taxation-manager/css/mui.css" />
+<link rel="stylesheet" href="/taxation-manager/css/font-awesome.min.css" />
+<link rel="stylesheet" href="/taxation-manager/css/style.css" />
+<link rel="stylesheet" href="/taxation-manager/css/common.css" />
+<link rel="stylesheet" href="/taxation-manager/pagecss/login.css" />
+</head>
+<body ng-app="myApp" ng-controller="AdminController" class="ie">
+	<div class="login-box">
+		<h3>捷讯软件管理后台</h3>
+		<div class="login">
+			<form name="loginForm">
+				<div class="form-group">
+					<label>登录名</label>
+					<input type="text" class="form-control" ng-model="admin.loginName" name="loginName" placeholder="请输入管理员登录名..." required />
+				</div>
+				<div class="form-group">
+					<label>密码</label>
+					<input type="password" class="form-control" ng-model="admin.password" name="password" placeholder="请输入管理员登录密码..."required >
+				</div>
+				<div class="form-group">
+					<label>验证码</label>
+					<div class="clearfix"></div>
+					<input type="text" class="form-control checkcode" ng-model="admin.checkcode" placeholder="请输入验证码..." name="checkcode" required ng-keyup="myKeyup($event)"/>
+					<a ng-click="changeImg()" style="vertical-align: bottom;"><img id="img" ng-src="{{verifyCodeUrl}}" style="vertical-align:middle;"/></a>
+					<div class="clearfix"></div>
+				</div>
+				<button type="button" class="btn btn-success btn-block" ng-click="login()"><i class="fa fa-rocket"></i> 登录</button>
+				
+				<button type="button" class="btn btn-success btn-block" ng-click="querySysTemUserList()"><i class="fa fa-rocket"></i> 测试</button>
+			</form>
+		</div>
+	</div>
+	
+	<!-- JustFresh 2017-06-23 引入入口JS（后续用作模块化） -->
+	<script src="/taxation-manager/config.js" type="text/javascript" charset="utf-8"></script>
+	<!-- JustFresh 2017-06-23 引入Jquery -->
+	<script src="/taxation-manager/js/scripts/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<!-- JustFresh 2017-06-23 引入MUI.js -->
+	<script src="/taxation-manager/js/scripts/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	
+	<!-- JustFresh 2017-06-23 引入Angular.js -->
+	<script src="/taxation-manager/js/angular/angular.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/taxation-manager/js/angular/angular-ui-router.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/taxation-manager/js/angular/ocLazyLoad.min.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script src="/taxation-manager/js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/taxation-manager/js/controller/adminController.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/taxation-manager/js/service/adminService.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

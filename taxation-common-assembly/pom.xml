@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.tax</groupId>
+    <artifactId>taxation</artifactId>
+    <version>1.0.0</version>
+  </parent>
+  <artifactId>taxation-common-assembly</artifactId>
+  <version>${taxation-common-assembly-version}</version>
+  <name>taxation-common-assembly</name>
+  <url>http://maven.apache.org</url>
+  <profiles>
+		<profile>
+			<id>release</id>
+			<properties>
+				<!-- 正式发布版本号：每个工程的版本都是独立定义的 -->
+				<taxation-common-assembly-version>1.0.0</taxation-common-assembly-version>
+			</properties>
+		</profile>
+	</profiles>
+  <properties>
+		<taxation-common-assembly-version>1.0.0</taxation-common-assembly-version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<build>
+	<plugins>
+		<plugin>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>3.2</version>
+			<configuration>
+				<source>1.8</source>
+				<target>1.8</target>
+			</configuration>
+		</plugin>
+		</plugins>
+		</build>
+</project>

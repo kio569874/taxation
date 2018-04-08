@@ -1,0 +1,76 @@
+<meta charset="utf-8" ng-controller="SystemUserMngController"/>
+<link rel="stylesheet" href="../pagecss/system_user.css" />
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-12 col-md-12">
+			<ol class="breadcrumb">
+			  	<li><a ui-sref="index">控制台</a></li>
+			  	<li><a ui-sref="index">系统设置</a></li>
+			  	<li><a ui-sref="index.system_user_mng">系统用户管理</a></li>
+			</ol>
+		</div>
+	</div>
+</div>
+
+<!-- JustFresh 顶部NAV切换及操作链接部分 -->
+<div class="container-fluid">
+	<div class="row">
+		<div class="tab-nav">
+			<ul class="pull-left">
+				<li ng-if="displaySystemUserId > 0" class="selected"><a ui-sref="index.system_user_mng({id:displaySystemUserId})">编辑系统用户</a></li>
+				<li ng-if="displaySystemUserId == null" class="selected"><a ui-sref="index.system_user_mng({id:''})">添加系统用户</a></li>
+				<li><a ui-sref="index.system_user">系统用户管理</a></li>
+			</ul>
+			<div class="opts pull-right">
+
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+<div class="opt-form container-fluid">
+	<div class="row">
+		<div class="col-sm-12 col-md-11">
+			<form ng-submit="submitSystemUserForm()">
+				<div class="form-group">
+					<label>用户编码</label>
+					<input type="hidden" class="form-control" ng-model="system_user_form.id" />
+					<input type="text" class="form-control" ng-model="system_user_form.userCode" placeholder="请填写用户编码..." />
+					<p class="help-block">用户编码必填</p>
+				</div>
+				<div class="form-group">
+					<label>用户密码</label>
+					<input type="password" class="form-control" ng-model="system_user_form.userPassword" placeholder="请填写用户密码..." />
+					<p class="help-block">用户密码必填</p>
+				</div>
+				<div class="form-group">
+					<label>用户名</label>
+					<input type="text" class="form-control" ng-model="system_user_form.userName" placeholder="请填写联系人姓名.." />
+				</div>
+				<div class="form-group">
+					<label>联系电话</label>
+					<input type="text" class="form-control" ng-model="system_user_form.userPhone" placeholder="请填写联系电话.." />
+				</div>
+				<div class="form-group">
+					<label>用户等级</label>
+					<input type="text" class="form-control" ng-model="system_user_form.userLevel" value="1" />
+				</div>
+				<div class="form-group">
+					<label>用户职称</label>
+					<input type="text" class="form-control" ng-model="system_user_form.userPosition" value="喷他kill" />
+				</div>
+				<div class="form-group">
+					<label>状态</label>
+					<select ng-init="disStatus=[{key:-1,value:'禁用'},{key:1,value:'启用'}]" ng-model="system_user_form.userStatus" class="form-control">
+						<option ng-selected="system_user_form.status==obj.key" value="{{obj.key}}" ng-repeat="obj in disStatus">--{{obj.value}}--</option>
+					</select>
+				</div>
+				<button type="submit" class="btn btn-success"><i class="fa fa-save"></i> 保存</button>
+			</form>
+		</div>	
+	</div>
+</div>
+
+<div style="height: 50px;width: 100%;"></div>

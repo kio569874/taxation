@@ -1,0 +1,7 @@
+1、taxation-core打包步骤
+	(1)cmd进入命令提示行，到D:\workspace\adminworkspace\taxation\taxation-core目录下面，执行 mvn package
+	(2)在target里面会生成taxation-core-1.0.0-assembly.tar.gz，解压出来后在taxation-core-1.0.0文件夹下面会有lib，bin，conf文件夹
+	(3)bin里面会有启动和停止的 .sh和.bat文件
+	
+	特别注意以下第四点
+	(4)如果启动报错，则可能是加载了两次spring的配置文件，导致dubbo:application多次注册报错。删除conf里面的META-INF文件夹(不是删除conf文件夹)。问题解决！

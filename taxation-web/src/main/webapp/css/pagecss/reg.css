@@ -1,0 +1,34 @@
+/**
+ * 
+ */
+.steps{height: 46px;border-bottom: 2px solid #e6e6e6;position: relative;margin-top: 35px;font-size: 16px;font-weight: bold;}
+.steps ul{width: 720px;margin-left: 240px;}
+.steps ul li{width: 150px;padding-left: 30px;float: left;height: 46px;line-height: 45px;}
+.steps ul li.selected{border-bottom: 2px solid #ff9000;color: #333;}
+.steps ul li i{font-size: 12px;margin-right: 2px;border-radius: 50%;width: 22px;height: 22px;display: inline-block;background-color: #999;line-height: 22px;color: #fff;text-align: center;}
+.steps ul li.selected i{background-color: #ff9000;}
+
+.reg-form{width: 720px;margin-left: 240px;margin-top: 45px;color: #666;font-size: 14px;font-weight: bold;margin-bottom: 80px;}
+.reg-form .input-block{margin-bottom: 20px;}
+.reg-form .input-block .input-text{padding: 8px;width: 300px;}
+.reg-form .input-block select{height: 35px;width: 70px;}
+.reg-form .input-block .id-card{width: 225px;}
+.reg-form .input-block .check-code{padding: 8px;}
+.reg-form label{width: 100px;display: inline-block;text-align: right;margin-right: 10px;}
+.reg-form .time-limit-btn{background-color: #ff9000;padding: 9px 20px;width: 60px;color: #fff;}
+.reg-form .time-limit-btn1{background-color: #CCCCCC;padding: 9px 15px;width: 60px;color: #fff;}
+.reg-form .input-btn{background-color: #e3e3e3;border: none;width: 140px;height: 35px;color: #666;display: inline-block;text-align: center;line-height: 35px;}
+.reg-form a{color: #ff9000;}
+.reg-form .input-block .warning{color: #f30;font-size: 12px;}
+.reg-form .input-block .info{font-weight: normal;}
+
+#dialogBg{display: none;position: fixed;width: 100%;height: 100%;z-index: 2;background-color: rgba(0,0,0,0.3);top: 0px;}
+#agreementDialog{display: none;position: fixed;width: 800px;height: 500px;border: 5px solid #999;z-index: 3;top: 150px;left: 50%;margin-left: -400px;box-shadow: 0px 0px 20px #666;background-color: #fff;}
+#agreementDialog h4{background-color: #f0f0f0;margin: 0px;padding: 10px;color: #333;}
+#agreementDialog .close-btn{position: absolute;right: 10px;top: 8px;font-size: 20px;}
+#agreementDialog .content{width: 770px;height: 368px;overflow-y: auto;padding: 15px;}
+#agreementDialog .content h5{text-align: center;margin: 0px;color: #333;}
+#agreementDialog .content p{line-height: 25px;}
+#agreementDialog .opt{width: 100%;position: absolute;bottom: 0px;height: 60px;text-align: center;}
+#agreementDialog .opt a.agree-btn{display: inline-block;background-color: #e22;color: #fff;padding: 10px 105px;margin-top: 10px;}
+

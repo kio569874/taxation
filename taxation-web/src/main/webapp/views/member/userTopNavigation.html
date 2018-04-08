@@ -1,0 +1,10 @@
+<div id="brands" class="pjh-container">
+	<dl>
+		<dd><a href="javascript: void(0)" ng-click = "gotoIndex()"><i class="fa fa-home"></i> 首页</a></dd>
+		<dd class="split-sign"><i class="fa fa-angle-right"></i></dd>
+		<dd><a href="javascript: void(0)" ng-click = "gotoUcenter()">用户中心</a></dd>
+		<dd ng-if="threeFlag == 'true'" class="split-sign"><i class="fa fa-angle-right"></i></dd>
+		<dd ng-if="threeFlag == 'true'" ><a href="{{threeUrl}}">{{threeName}}</a></dd>
+	</dl>
+	<div class="clearfix"></div>
+</div>

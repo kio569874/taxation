@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+
+#providerList{margin-top: 20px;}
+#providerList .title{height: 20px;border-bottom: 1px solid #e3e3e3;}
+#providerList .title .info{width: 160px;text-align: center;margin-left: 520px;height: 40px;line-height: 40px;background-color: #fff;font-size: 20px;font-weight: bold;color: #666;}
+#providerList .ul-provider{margin-top: 20px;}
+#providerList .ul-provider .li-provider{border-radius: 5px;background: #f7f7f7;float: left;width: 190px;height: 270px;margin-right: 10px;margin-bottom: 10px;}
+#providerList .ul-provider .li-provider .head{width: 100%;}
+#providerList .ul-provider .li-provider h4{margin: 0px 10px;}
+#providerList .ul-provider .li-provider p{margin: 0px 10px;}
+#providerList .ul-provider .li-provider p .contact{background-color: #f0f0f0;color: #555;padding: 2px 12px;float: right;display: block;margin-top: -5px;border-radius: 3px;}
+#providerList .ul-provider .li-provider:hover p .contact{background-color: #C33610;color: #fff;}

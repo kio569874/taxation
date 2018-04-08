@@ -1,0 +1,101 @@
+/**
+ * @system: Jxcms;
+ * @desc: 购物步骤CSS;
+ * @author: JustFresh;
+ * @time: 2017-06-15 23:36;
+ */
+.buy-step{margin-top: 15px;}
+.buy-step header ul{width: 840px;margin-top: 25px;}
+.buy-step header ul li{float: left;font-size: 12px;vertical-align: top;letter-spacing: normal;word-spacing: normal;display: inline-block;width: 20%;
+    height: 70px;position: relative;z-index: 1;text-align: center;}
+.buy-step header ul li i{font-size: 25px;}
+.buy-step header ul li .hr{background-color: #DDD;width: 100%;height: 1px;border: none 0;position: absolute;z-index: 1;top: 35px;left: 0;}
+.buy-step header ul li p{color: #666;text-align: center;width: 100%;height: 24px;position: absolute;z-index: 2;left: 0;overflow: hidden;}
+.buy-step header ul li sub{background-color: #FFF;width: 8px;height: 8px;margin-left: -3px;border: solid 1px #CCC;border-radius: 4px;position: absolute;z-index: 2;top: 30px;left: 50%;}
+.buy-step header ul li.current,.buy-step ul li.current p{color: #c33610;font-weight: bold;}
+.buy-step header ul li.current .hr{background-color: #c33610;}
+.buy-step header ul li.current sub{background-color: #c33610;border: 1px solid #f30;box-shadow: 0px 0px 5px #f30;}
+.buy-step .main{margin-top: 35px;}
+.buy-step .main .title h3{color: #666;font-size: 25px;font-weight: bold;margin: 0px;padding: 0px;}
+.buy-step .main .title p{color: #999;margin: 3px;}
+.buy-step .main table{border-top: 2px solid #999;margin-top: 20px;border-left: 1px solid #e3e3e3;border-right: 1px solid #e3e3e3;}
+.buy-step .main table thead{background-color: #f0f0f0;}
+.buy-step .main table thead tr td{height: 40px;line-height: 40px;}
+.buy-step .main table thead tr.provider-info{background-color: #DAF0FE;border-top: 1px solid #e3e3e3;border-bottom: 1px solid #e3e3e3;}
+.buy-step .main table tbody tr{border-bottom: 1px solid #e3e3e3;}
+.buy-step .main table tbody tr td{height: 50px;line-height: 50px;}
+.buy-step .main table tbody tr td input.check-radio{margin-left: 15px;}
+.buy-step .main table tbody tr td .thumb{width: 30px;height: 30px;border-radius: 2px;margin: 5px 20px -10px 5px;display: inline-block;}
+.buy-step .main table tbody tr td a.opt{border: 1px solid #e3e3e3;display: inline-block;width: 22px;height: 22px;padding: 0px;line-height: 20px;text-align: center;font-size: 16px;}
+.buy-step .main table tbody tr td a.opt.reduce{margin: 0px -4px;}
+.buy-step .main table tbody tr td a.opt.add{margin: 0px -4px;}
+.buy-step .main table tbody tr td input.number{padding-left: 5px;width: 40px;outline: none;border: 1px solid #e3e3e3;height: 20px;margin-top: -4px;}
+.buy-step .main table tfoot{border-bottom: 2px solid #999;}
+.buy-step .main table tfoot tr td{height: 50px;line-height: 50px;text-align: right;}
+.buy-step .main table tfoot tr td b{color: #c33610;}
+
+.buy-step .main .order-info{border: 1px solid #e3e3e3;border-bottom: 2px solid #999;margin-top: 20px;}
+.buy-step .main .order-info .receipt-info{padding: 15px;border-bottom: 1px solid #e3e3e3;width: 1170px;}
+.buy-step .main .order-info .receipt-info h3{margin: 0px;}
+.buy-step .main .order-info .receipt-info h3 a{margin-left: 8px;font-size: 12px;color: #c33610;font-weight: normal;}
+.buy-step .main .order-info .receipt-info p{margin: 0px;}
+.buy-step .main .order-info .receipt-info p span{margin-right: 10px;}
+.buy-step .main .order-info .receipt-info ul.receipt-info-list{margin-top: 5px;}
+.buy-step .main .order-info .receipt-info ul.receipt-info-list li{height: 30px;line-height: 30px;}
+.buy-step .main .order-info .receipt-info form.add-address{margin: 10px;}
+.buy-step .main .order-info .receipt-info form.add-address .form-group{margin-bottom: 10px;}
+.buy-step .main .order-info .receipt-info form.add-address .form-group label{line-height: 30px;width: 80px;display: inline-block;text-align: right;margin-right: 15px;}
+.buy-step .main .order-info .receipt-info form.add-address .form-group label em{color: #c33610;margin-right: 3px;}
+.buy-step .main .order-info .receipt-info form.add-address .form-group .input-text{outline: none;border: 1px solid #e3e3e3;height: 30px;width: 600px;padding-left: 10px;}
+.buy-step .main .order-info .receipt-info form.add-address .form-group .input-select{outline: none;border: 1px solid #e3e3e3;height: 30px;width: 150px;padding-left: 10px;}
+a.save-receipt-info{display: inline-block;background-color: #c33610;color: #fff;padding: 10px 50px;margin: 5px 0px 15px 30px;}
+
+.buy-step .main .order-info .pay-info{padding: 15px;border-bottom: 1px solid #e3e3e3;width: 1170px;}
+.buy-step .main .order-info .pay-info h3{margin: 0px;}
+.buy-step .main .order-info .pay-info ul li{cursor: pointer;float: left;margin-right: 15px;margin-top: 15px;padding: 5px 10px;background-color: #f0f0f0;border: 1px solid #e3e3e3;}
+.buy-step .main .order-info .pay-info ul li.selected{border: 1px solid #c33610;}
+.buy-step .main .order-info .pay-info ul li img{height: 25px;}
+.buy-step .main .order-info .order-services-info{padding: 15px;width: 1170px;}
+.buy-step .main table tbody tr.messages td label{margin-left: 15px;}
+.buy-step .main table tbody tr.messages td textarea{margin-top: 15px;width: 1000px;padding: 5px;}
+.buy-step .main table tfoot p{margin: 5px 25px 0px;line-height: 20px;}
+.buy-step .main table tfoot p:first-child{margin-top: 15px;}
+.buy-step .main table tfoot p:last-child{margin-bottom: 15px;}
+a.go-next{margin-top: 20px;display: inline-block;background-color: #c33610;color: #fff;padding: 12px 60px;margin-bottom: 30px;}
+
+.buy-step .main .ensure-info{background-color: #fafafa;margin-top: 10px;padding-bottom: 25px;}
+.buy-step .main .ensure-info i.success{font-size: 75px;display: block;color: #78c340;float: left;margin: 50px 30px;}
+.buy-step .main .ensure-info .detail{}
+.buy-step .main .ensure-info .detail h4{font-size: 18px;margin-top: 40px;}
+.buy-step .main .ensure-info .detail p a{margin-left: 5px;color: #c33610;}
+.buy-step .main .go-pay a{display: inline-block;background-color: #c33610;color: #fff;padding: 8px 30px;float: right;margin-top: 20px;}
+.buy-step .main .go-pay a:hover{background-color: #6D1F0B;}
+
+#modalBg{display: none;position: fixed;width: 100%;height: 100%;background-color: rgba(0,0,0,0.3);z-index: 4;left: 0px;top: 0px;}
+#addAddressDialog{display: none;position: fixed;z-index: 5;width: 600px;height: 450px;border: 10px solid #999;box-shadow: 0px 0px 40px #fff;left: 50%;margin-left: -300px;top: 150px;background-color: #fff;}
+#addAddressDialog .dialog-header{width: 100%;background-color: #c33610;height: 50px;}
+#addAddressDialog .dialog-header img{height: 30px;margin: 10px;}
+#addAddressDialog .dialog-header a{position: absolute;right: 10px;top: 10px;color: #fff;font-size: 20px;}
+#addAddressDialog .dialog-body h4{color: #c33610;margin: 10px 15px;}
+#addAddressDialog .dialog-body form{}
+#addAddressDialog .dialog-body form .form-group{margin-bottom: 15px;}
+#addAddressDialog .dialog-body form .form-group label{display: inline-block;text-align: right;width: 100px;margin-right: 10px;}
+#addAddressDialog .dialog-body form .form-group label em{margin-right: 4px;color: #c33610;}
+#addAddressDialog .dialog-body form .form-group .input-text{outline: none;padding-left: 10px;height: 35px;width: 440px;border: 1px solid #e3e3e3;}
+#addAddressDialog .dialog-body form .form-group .select-text{width: 148px;height: 35px;padding: 5px;}
+#addAddressDialog .dialog-body form .form-group textarea{width: 440px;height: 60px;border: 1px solid #e3e3e3;outline: none;padding: 5px;}
+#addAddressDialog .dialog-footer a.save-address-btn{display: block;background-color: #c33610;color: #fff;margin: 0px 30px;text-align: center;height: 45px;line-height: 45px;}
+
+#updateAddressDialog{display: none;position: fixed;z-index: 5;width: 600px;height: 500px;border: 10px solid #999;box-shadow: 0px 0px 40px #fff;left: 50%;margin-left: -300px;top: 150px;background-color: #fff;}
+#updateAddressDialog .dialog-header{width: 100%;background-color: #c33610;height: 50px;}
+#updateAddressDialog .dialog-header img{height: 30px;margin: 10px;}
+#updateAddressDialog .dialog-header a{position: absolute;right: 10px;top: 10px;color: #fff;font-size: 20px;}
+#updateAddressDialog .dialog-body h4{color: #c33610;margin: 10px 15px;}
+#updateAddressDialog .dialog-body form{}
+#updateAddressDialog .dialog-body form .form-group{margin-bottom: 15px;}
+#updateAddressDialog .dialog-body form .form-group label{display: inline-block;text-align: right;width: 100px;margin-right: 10px;}
+#updateAddressDialog .dialog-body form .form-group label em{margin-right: 4px;color: #c33610;}
+#updateAddressDialog .dialog-body form .form-group .input-text{outline: none;padding-left: 10px;height: 35px;width: 440px;border: 1px solid #e3e3e3;}
+#updateAddressDialog .dialog-body form .form-group .select-text{width: 148px;height: 35px;padding: 5px;}
+#updateAddressDialog .dialog-body form .form-group textarea{width: 440px;height: 60px;border: 1px solid #e3e3e3;outline: none;padding: 5px;}
+#updateAddressDialog .dialog-footer a.save-address-btn{display: block;background-color: #c33610;color: #fff;margin: 0px 30px;text-align: center;height: 45px;line-height: 45px;}

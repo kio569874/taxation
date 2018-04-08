@@ -1,0 +1,38 @@
+<!-- JustFresh 2017-03-20 begin 用户中心主体部分 -->
+<div class="main pjh-container" >
+	<div class="box">
+		<h2 align="center">财税服务</h2>
+	<div class="recommend-services">
+
+		<ul>
+			<li ng-repeat="item in providerList">
+				<a  href="#" ng-click="gotoServiceDetail(item.providerId)">
+					<img ng-src="{{item.imageName}}" class="head" />
+				</a>
+				<h4><a href="#">{{item.providerContext|limitTo:50}}</a></h4>
+				<div class="info">
+					<div class="price pull-left">
+						￥{{item.totalPrice}}
+					</div>
+					<div class="star pull-right">
+						星级：
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<input type="hidden" value="{{item.providerId}}"/>
+				<a href="#" ng-click="gotoServiceDetail(item.providerId)" class="buy-btn">查看服务</a>
+			</li>
+
+		</ul>
+	</div>
+	</div>
+</div>
+<div class="clearfix"></div>
+<div class="pjh-container"><div class="pull-right"><tm-pagination conf="paginationConf"></tm-pagination></div></div>
+<div class="clearfix"></div>
+<!-- JustFresh 2017-03-20 end 用户中心主体部分 -->

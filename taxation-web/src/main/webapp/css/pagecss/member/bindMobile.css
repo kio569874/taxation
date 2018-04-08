@@ -1,0 +1,22 @@
+/**
+ * [radius description]
+ * @type {[type]}
+ */
+.ucenter .box{}
+.ucenter .box .tab-nav{width: 100%;border-bottom: 1px solid #f0f0f0;height: 33px;margin-bottom: 15px;}
+.ucenter .box .tab-nav li{position: relative;cursor: pointer;float: left;width: 100px;height: 33px;text-align: center;line-height: 33px;}
+.ucenter .box .tab-nav li.selected{border-bottom: 2px solid #C33610;line-height: 32px;height: 32px;}
+.ucenter .box .tab-nav li em{position: absolute;background-color: #C33610;padding: 3px 8px;line-height: 12px;font-size: 10px;color: #fff;border-radius: 10px;}
+
+.ucenter .box .warning{padding: 10px 15px;background-color: #fafafa;}
+.ucenter .box .warinng h4{}
+
+.ucenter .box .bind-form{width: 100%;margin-top: 15px;}
+.ucenter .box .bind-form .input-block{border-bottom: 1px dotted #e3e3e3;padding: 15px;}
+.ucenter .box .bind-form .input-block:last-child{border-bottom: none;}
+.ucenter .box .bind-form .input-block label{width: 110px;text-align: right;display: inline-block;margin-right: 15px;}
+.ucenter .box .bind-form .input-block .input-text{padding: 8px;width: 250px;}
+.ucenter .box .bind-form .input-block .check-code{padding: 8px;width: 160px;}
+.ucenter .box .bind-form .input-block .input-select{padding: 8px;width: 180px;}
+.ucenter .box .bind-form .input-block img{height: 35px;margin: 0px 5px -14px;}
+.ucenter .box .bind-form .input-block .input-btn{padding: 10px 50px;color: #fff;border:none;cursor: pointer;}

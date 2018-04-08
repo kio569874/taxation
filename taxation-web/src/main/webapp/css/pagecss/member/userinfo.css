@@ -1,0 +1,42 @@
+/**
+ * [radius description]
+ * @type {[type]}
+ */
+.ucenter .box .basic-info{width: 905px;border-bottom: 1px solid #f0f0f0;padding: 0px 15px 15px;}
+.ucenter .box .basic-info .head-thumb{width: 100px;height: 100px;position: relative;}
+.ucenter .box .basic-info .head-thumb img{border-radius: 50%;}
+.ucenter .box .basic-info .head-thumb em{position: absolute;right: 0px;z-index: 3;top: 5px;line-height: 18px;padding: 0px 7px;background-color: #C33610;border: 2px solid #f0f0f0;border-radius: 5px;}
+.ucenter .box .basic-info .head-thumb em a{color: #fff;}
+.ucenter .box .basic-info .ext{margin-left: 25px;}
+.ucenter .box .basic-info .ext p{height: 20px;line-height: 20px;}
+.ucenter .box .basic-info .ext p em{color: #C33610;font-weight: bold;font-style: normal;}
+.ucenter .box .basic-info .ext p i{font-style: normal;}
+.ucenter .box .basic-info .ext p .level,.ucenter .box .basic-info .ext p .check,.ucenter .box .basic-info .ext p .last-login-time{font-style: normal;}
+.ucenter .box .basic-info .ext p .check .yes{color: #009f3b;}
+.ucenter .box .basic-info .ext p .check label{margin-left: 10px;}
+.ucenter .box .basic-info .ext p .check label:first-child{margin-left: 0px;}
+.ucenter .box .basic-info .ext p .split-line{padding: 0px 15px;}
+.ucenter .box .basic-info .ext p label.update-head,.ucenter .box .basic-info .ext p label.update-info,.ucenter .box .basic-info .ext p label.quit{padding: 5px 15px;}
+.ucenter .box .basic-info .ext p label.update-head{background-color: #5cb85c;color: #fff;}
+.ucenter .box .basic-info .ext p label.update-head:hover{background-color: #397939;}
+.ucenter .box .basic-info .ext p label.update-info{background-color: #eea236;color: #fff;}
+.ucenter .box .basic-info .ext p label.update-info:hover{background-color: #B57C2A;}
+.ucenter .box .basic-info .ext p label.quit{background-color: #C33610;color: #fff;}
+.ucenter .box .basic-info .ext p label.quit:hover{background: #79230C;}
+.ucenter .box .basic-info .ext p label.update-head a,.ucenter .box .basic-info .ext p label.update-info a,.ucenter .box .basic-info .ext p label.quit a{color: #fff;}
+
+.ucenter .box .balance-info{width: 935px;border-bottom: 1px solid #f0f0f0;padding: 0px 0px 20px;margin-top: 20px;}
+.ucenter .box .balance-info ul li{float: left;text-align: center;width: 310px;border-left: 1px solid #f0f0f0;}
+.ucenter .box .balance-info ul li:first-child{border-left: none;}
+.ucenter .box .balance-info ul li:hover{background-color: #fafafa;}
+.ucenter .box .balance-info ul li p i{font-size: 25px;}
+
+.ucenter .box .new-orders{}
+.ucenter .box .new-orders .title h3{border-bottom: 1px solid #f0f0f0;padding: 0px 0px 10px;color: #C33610;}
+.ucenter .box .new-orders .title h3 span{border-bottom: 2px solid #C33610;padding: 0px 35px 10px 0px;}
+.ucenter .box .new-orders table{text-align: center;border: 1px solid #f0f0f0;}
+.ucenter .box .new-orders table tr{border-bottom: 1px solid #f0f0f0;}
+.ucenter .box .new-orders table tr th{padding: 10px 0px;}
+.ucenter .box .new-orders table tr td{padding: 8px 0px;}
+.ucenter .box .new-orders table tr td img{max-width: 50px;border-radius: 2px}
+.ucenter .box .new-orders table thead{background-color: #f7f7f7;}

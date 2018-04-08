@@ -1,0 +1,154 @@
+/** 
+* @描述：公用CSS样式文件 
+* @作者：彭建红 
+* @时间：2015-11-15 17:30 pm 
+* @版本：beta 1.0 
+*/
+#top-nav{z-index: 10000;width: 100%;background: #F5F5F5;border-bottom: 1px solid #EEE;height: 30px;line-height: 30px;}
+#tl-site-nav{height: 30px;line-height: 30px;float: left;}
+#tl-site-nav li{float: left;margin-right: 8px;}
+#tr-site-nav{height: 30px;line-height: 30px;float: right;}
+#tr-site-nav > li{float: left;text-align: center;padding: 0px 15px 0px 8px;position: relative;}
+#tr-site-nav > li:hover{background-color: #fff;border-left: 1px solid #EEE;border-right: 1px solid #EEE;border-bottom: none;}
+#tr-site-nav > li.spanjj{padding: 0px 5px;font-size: 9px;color: #dddddd;}
+#tr-site-nav > li.spanjj:hover{background-color: #F5F5F5;}
+#tr-site-nav > li i{width: 10px;height: 6px;overflow: hidden;display: block;position: absolute;right: 2px;top: 13px;background: url(../images/icons.gif) no-repeat;background-position: -25px -3px;}
+#tr-site-nav > li:hover i{background-position: -25px -26px;}
+#tr-site-nav > li .top-nav-bg{position: absolute;top: 30px;right: -1px;padding: 8px 0px;background-color: #fff;z-index: 2000;display: none;min-width: 95px;z-index: 100;border-left: 1px solid #EEE;border-right: 1px solid #EEE;border-bottom: 1px solid #EEE;}
+#tr-site-nav > li .new-user-help{width: 1200px;height: 200px;z-index: 2000;}
+/* PJH 1102 end 顶部CSS结束 */
+/* PJH 1102 beign Logo和搜索框部分开始 */
+#logo{margin-top: 15px;float: left;}
+#logo img{max-width:100px}
+#logo-desc{margin-top: 15px;float: left;}
+#top-search{float: left;padding: 25px 0px 8px 0px;width: 620px;text-align: left;margin-left: 25px;}
+#top-search .search-form{position: relative;margin-left: 40px;}
+#top-search .search-form .header-search-tab{position: absolute;top: 3px;left: 2px;width: 82px;overflow: hidden;height: 32px;line-height: 32px;border-right: solid 1px #e5e5e5;border-left: solid 1px #e5e5e5;_top: 4px;_left: 2px;}
+#top-search .search-form .header-search-tab i{width: 10px;height: 6px;overflow: hidden;display: block;position: absolute;right: 5px;top: 15px;background: url(../images/icons.gif) no-repeat;background-position: -25px -3px;}
+#top-search .search-form .header-search-tab:hover i{background-position: -25px -26px;}
+#top-search .search-form .header-search-tab ul{}
+#top-search .search-form .header-search-tab ul:hover{background-color: red;}
+#top-search .search-form .header-search-tab ul li{background: #fff;text-align: center;-webkit-transition: background .1s linear;-moz-transition: background .1s linear;-o-transition: background .1s linear;transition: background .1s linear;cursor: pointer;text-indent: -5px;}
+#top-search .search-form .header-search-tab ul li.selected{background: #fbfbfb;}
+#top-search .search-form form .skey{margin-top: 1px;border: 2px solid #C33610;padding: 0px 4px 0px 95px;font-size: 14px;width: 395px;color: #a9a9a9;line-height: 34px;height: 34px;display: inline-block;vertical-align: middle;}
+/* PJH 1102 beign 顶部CSS开始 */
+#top-search .search-form form .btnSearch{width: 80px;border: none;height: 38px;margin-top: 1px;/* background: url(../images/search.gif) no-repeat center #C33610; */background-color: #C33610;color: #fff;cursor: pointer;display: inline-block;vertical-align: middle;overflow: hidden;margin-left: -3px;font-weight: bold;font-size: 15px;}
+#top-search > .key-words{color: #999;margin-top: 2px;height: 22px;line-height: 22px;margin-left: 3px;}
+#top-search > .search-key-words{margin: 5px 40px;}
+#top-cart{position: relative;margin-top: 25px;border-radius: 5px;}
+#top-cart .cart-bd{position:relative; z-index: 99;width: 100px;height: 38px;border: 1px solid #ddd;padding: 0 28px 0 36px;background: #F9F9F9;text-align: center;line-height: 38px;}
+#top-cart .cart-bd:hover{background-color: #fff;border-top: 1px solid #ddd;border-left: 1px solid #ddd;border-right: 1px solid #ddd;border-bottom:none;}
+#top-cart .cart-bd .tc-left{position:absolute; top: 12px;left: 36px;width: 18px;height: 16px;background: url(../images/jd1.png) 0 -58px no-repeat;_background: url(../images/jd1.png) 0 -91px no-repeat;}
+#top-cart .cart-bd .tc-right{position:absolute; top: 13px;right: 12px;width: 7px;height: 13px;overflow: hidden;font: 400 13px/13px simsun;color: #999;}
+#top-cart .cart-bd .tc-count{position: absolute;top: -2px;left: 110px;display: inline-block;padding: 1px 2px;font-size: 12px;line-height: 12px;color: #fff;background-color: #c81623;border-radius: 7px 7px 7px 0;min-width: 12px;text-align: center;}
+#top-cart .cart-hd{display:none;position: absolute;z-index: 98;top: 38px;right: 0px;min-width: 320px;border: 1px solid #ddd;background-color: #fff;}
+#top-cart .cart-hd .title{padding: 8px 15px;font-size: 13px;font-weight: 600;}
+#top-cart .cart-hd .cart-goods-list{margin: 0px;padding: 0px;max-height: 300px;overflow-y: scroll;}
+#top-cart .cart-hd .cart-goods-list li{height: 72px;border-bottom: 1px dotted #f0f0f0;}
+#top-cart .cart-hd .cart-goods-list li .good-thumb{margin: 8px 15px;}
+#top-cart .cart-hd .cart-goods-list li .good-thumb img{max-width: 50px;}
+#top-cart .cart-hd .cart-goods-list li .good-name{width: 140px;height: 50px;margin: 12px 0px;}
+#top-cart .cart-hd .cart-goods-list li .good-name a{margin: 0px;padding: 0px;}
+#top-cart .cart-hd .cart-goods-list li .cart-opt{margin: 12px 3px;color: #999;}
+#top-cart .cart-hd .cart-goods-list li .cart-opt a{float: right;color: #999}
+#top-cart .cart-hd .go-to-cart{background-color: #F5F5F5;height: 40px;width: 100%;}
+#top-cart .cart-hd .go-to-cart .cart-count{padding: 8px 15px;color: #999;}
+#top-cart .cart-hd .go-to-cart .cart-count em{font-weight: 600;color: #f30;}
+#top-cart .cart-hd .go-to-cart .go{padding: 8px 15px;}
+#top-cart .cart-hd .go-to-cart .go a{padding: 5px 10px;background-color: #f30;color: #fff;border-radius: 3px;}
+/* PJH 1102 end Logo和搜索框部分结束 */
+/* PJH 1102 beign 导航条部分 */
+#navbar{width: 100%;height: 40px;}
+#categorys{float: left;position: relative;z-index: 10;width: 210px;height: 42px;line-height: 42px;overflow: visible;background: #C33610;text-align: center;}
+#categorys dt{height: 42px;line-height: 42px;}
+#categorys a{color: #ffffff;font-size: 15px;font-family: "Microsoft YaHei";}
+#categorys .site-list{display:none;text-align: left;position: absolute;background: #ff5931;margin-top: 2px;top: 40px;left: 0px;width: 208px;border-left: 1px solid #f60;border-right: 1px solid #f60;border-bottom: 1px solid #f60;}
+#categorys .site-list li{width: 200px;float: left;position: relative;z-index: 999;display: block;cursor: pointer;padding-left: 10px;border-bottom: 1px dotted #fff;line-height: 38px;margin-top: -2px;}
+#categorys .site-list li:hover > a{padding-left: 5px;}
+#categorys .site-list li .bg{position: absolute;top: 0px; left: 0px; width: 100%;height: 100%;background-color: rgba(0,0,0,0.1);display: none;color: #fff;}
+#categorys .site-list li i.fa-angle-right{position: absolute;z-index: 1;top: 12px;right: 18px;color: #fff;font-size: 15px;}
+#sitemenu{float: left;}
+#sitemenu ul{margin: 0px;padding: 0px;margin-left: 30px;}
+#sitemenu ul li{padding: 9px 30px;float: left;}
+#sitemenu ul li a{color: #C33610;font-size: 14px;font-weight: 600;}
+/* PJH 1102 end 导航条部分 */
+
+/*PJH 1113 begin 底部ICONS部分*/
+.bottom-icons{width: 100%;padding: 20px 0px;margin-top: 20px;background-color: #F5F5F5;height: 50px;line-height: 50px;}
+.bottom-icons .pjh-container > ul{margin: 0px;padding: 0px;}
+.bottom-icons .pjh-container > ul > li{width: 300px;float: left;}
+/*PJH 1113 end 底部ICONS部分*/
+
+/*PJH 1113 begin 底部文章列表部分 */
+#bottom-articles{width: 900px;text-align: center;padding-bottom: 23px;overflow: hidden;}
+#bottom-articles > li{float: left;width: 175px;}
+#bottom-articles > li dl{display: block;width: 100%;margin: 10px 0px 0px 0px;}
+#bottom-articles > li dl dt{font: 14px/1.5 "Lucida Grande",tahoma,arial,\5b8b\4f53;margin-bottom: 4px;font-weight: bold;}
+#bottom-articles > li dl dd{font: 12px/1.5 "Lucida Grande",tahoma,arial,\5b8b\4f53;line-height: 24px;white-space: nowrap;margin-left:0px;}
+.bottom-help{padding-right: 55px;}
+.bottom-help .phone-number{margin-top: 12px;color: #ff9900;font-size: 20px;font-weight: 600;}
+.bottom-help .phone-number img{max-width: 22px;}
+.bottom-help .email-address{margin-top: 5px;color: #999;font-size: 15px;}
+.bottom-help .email-address img{max-width: 22px;}
+.bottom-help .download-apk{color: #999;}
+.bottom-help .download-apk ul{margin-top: -10px;padding: 0px;}
+.bottom-help .download-apk ul li{float: left;margin-right: 15px;text-align: center;}
+.bottom-help .download-apk ul li dt{}
+.bottom-help .download-apk ul li dt a{font-size: 10px !important;font-family: Microsoft YaHei;text-overflow: ellipsis;}
+.bottom-help .download-apk ul li dd{margin-left: 0px;margin-top: 4px;}
+/*PJH 1113 end 底部文章列表部分 */
+
+/*PJH 1113 begin 友情链接及版权部分*/
+#site-version{width:100%;bottom:10px;}
+#site-version .links{width: 100%;text-align: center;margin: 13px 0px 5px;color: #999;}
+#site-version .links a{margin: 0px 13px;color: #999;}
+#site-version .copyright{width: 100%;text-align: center;margin: 5px 0px 10px;color: #999;}
+#site-version .copyright span{margin-right: 12px;}
+#site-version .copyright span a{color: #999;}
+/*PJH 1113 begin 友情链接及版权部分*/
+
+#lfloorbar{display: none;position: fixed;z-index: 100;left: 50%;margin-left: -655px;top: 250px;width: 42px;text-align: center;}
+#lfloorbar ul li{border-bottom: 1px dotted #fff;padding: 3px 4px;line-height: 22px;background-color: #a2a2a2;}
+#lfloorbar ul li:hover{background-color: #C33610;}
+#lfloorbar ul li a{color: #fff;}
+#lfloorbar ul li a i{font-size: 18px;}
+
+#rtoolbar{position: fixed;z-index: 100;top: 0;right: -250px;-webkit-transition: right .6s;transition: right .6s;width: 285px;min-height: 600px;height: 100%;background-color: #666;}
+#rtoolbar .rtoolbar-top{position: absolute;top: 100px;}
+#rtoolbar .rtoolbar-top li{text-align: center;color: #fff;position: relative;padding: 6px;width: 24px;cursor: pointer;}
+#rtoolbar .rtoolbar-top li i{font-size: 22px;}
+#rtoolbar .rtoolbar-top li:hover{background-color: #C33610;}
+#rtoolbar .rtoolbar-top li.selected{background-color: #C33610;}
+#rtoolbar .rtoolbar-top li .list-text-intro{display: none;position: absolute;right: 36px;top: 0;padding: 12px 6px;width: 24px;color: #fff;background-color: #333;line-height: 14px;font-size: 12px;}
+#rtoolbar .rtoolbar-top li .list-text-intro .fa-caret-right{position: absolute;right: -7px;top: 7px;color: #333;}
+#rtoolbar .rtoolbar-bottom{position: absolute;bottom: 50px;}
+#rtoolbar .rtoolbar-bottom .rtoolbar-list{color: #fff;position: relative;padding: 6px;width: 24px;height: 24px;cursor: pointer;}
+#rtoolbar .rtoolbar-bottom .rtoolbar-list a{color: #fff;}
+#rtoolbar .rtoolbar-bottom .rtoolbar-list:hover{background-color: #C33610;}
+#rtoolbar .rtoolbar-bottom .rtoolbar-list i{font-size: 22px;}
+#rtoolbar .rtoolbar-bottom .rtoolbar-list .codes-poptip{display: none;position: absolute;right: 36px;top: 0;padding: 12px 6px;width: 65px;color: #fff;background-color: #333;line-height: 12px;font-size: 12px;}
+#rtoolbar .rtoolbar-bottom .rtoolbar-list i.fa-caret-right{position: absolute;right: -7px;top: 7px;color: #333;}
+#rtoolbar .rtoolbar-bottom .selected{background-color: #C33610;}
+#rtoolbar .rtoolbar-content{position: relative;margin-left: 36px;overflow-y: auto;width: 247px;height: 100%;border: 1px solid #e7e7e7;background-color: #eee;z-index: 100;}
+#rtoolbar .rtoolbar-content .seller-list{}
+#rtoolbar .rtoolbar-content .seller-list li{margin: 10px 10px 0px;}
+#rtoolbar .rtoolbar-content .seller-list li:last-child{margin-bottom: 10px;}
+#rtoolbar .rtoolbar-content .seller-list li img{width: 205px;}
+#rtoolbar .rtoolbar-content .service-list{}
+#rtoolbar .rtoolbar-content .service-list li{margin: 10px 10px 0px;}
+#rtoolbar .rtoolbar-content .service-list li:last-child{margin-bottom: 10px;}
+#rtoolbar .rtoolbar-content .service-list li img{width: 205px;}
+#rtoolbar .rtoolbar-content .attract{margin: 50px 10px 0px;}
+#rtoolbar .rtoolbar-content .attract a{background-color: #C33610;padding: 10px 30px;color: #fff;margin: 20px 40px;display: block;text-align: center;border-radius: 5px;}
+#rtoolbar .rtoolbar-content .consult-list{}
+#rtoolbar .rtoolbar-content .consult-list li{margin: 10px 10px 0px;background-color: #fff;text-align: center;padding: 20px 0px;}
+#rtoolbar .rtoolbar-content .consult-list li i{font-size: 40px;}
+#rtoolbar .rtoolbar-content .consult-list li h3{margin: 0px;padding: 0px;}
+#rtoolbar .rtoolbar-content .consult-list li p{margin: 0px;padding: 0px;}
+#rtoolbar .rtoolbar-content .app-list li{margin: 10px 10px 0px;background-color: #fff;text-align: center;padding: 20px 0px;}
+#rtoolbar .rtoolbar-content .app-list li .info{margin-left: 20px;margin-top: 30px;}
+#rtoolbar .rtoolbar-content .app-list li img{margin-left: 20px;width: 100px;}
+#rtoolbar .rtoolbar-content .app-list li h3{margin: 0px;padding: 0px;}
+#rtoolbar .rtoolbar-content .app-list li p{margin: 0px;padding: 0px;}
+#rtoolbar .rtoolbar-content .no-login{margin: 300px 78px;}
+#rtoolbar .rtoolbar-content .no-login a{color: #C33610;}

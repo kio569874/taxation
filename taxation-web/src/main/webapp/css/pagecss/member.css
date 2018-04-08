@@ -1,0 +1,14 @@
+#brands{}
+#brands dl{margin: 0px;padding: 0px;}
+#brands dl dd{margin: 10px 0px;float: left;}
+#brands dl dd.split-sign{padding: 0px 10px;}
+.ucenter .left-layout{width: 210px;border: 1px solid #f0f0f0;}
+.ucenter .left-layout ul li{width: 180;overflow: hidden;padding: 8px 15px;border-top: 1px solid #f0f0f0;}
+.ucenter .left-layout ul li .fold a{color: #333;font-weight: bold;}
+.ucenter .left-layout ul li i{color: #C33610;}
+.ucenter .left-layout ul li .fold span{margin-top: 5px;}
+.ucenter .left-layout ul li dl{margin: 0px;padding: 0px;}
+.ucenter .left-layout ul li dl dd{padding: 3px 15px;color: #999;margin: 0px;}
+.ucenter .left-layout ul li dl dd:hover{background-color: #f7f7f7}
+.ucenter .left-layout ul li dl dd.selected{background-color: #f7f7f7}
+.ucenter .box{width: 935px;min-height: 570px;border: 1px solid #f0f0f0;padding: 20px;}

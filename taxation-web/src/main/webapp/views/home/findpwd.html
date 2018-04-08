@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="taxationApp">
+<head>
+	<meta name="Keywords" content="捷迅财税服务网,比价网,导购网站平台,数码比价,家电比价，购物比价" />
+    <meta name="Description" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>捷迅财税服务网-登录页面</title>
+	<link rel="shortcut icon" href="/taxation-web/taxation-web/images/favicon.ico" type="image/x-icon">
+	<link href="/taxation-web/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="/taxation-web/css/style.css" rel="stylesheet" type="text/css">
+	<link href="/taxation-web/css/common.css" rel="stylesheet" type="text/css">
+	<link href="/taxation-web/css/pagecss/findpwd.css" rel="stylesheet" type="text/css">
+	<link href="/taxation-web/css/angular/angular-toastr.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<!-- PJH 1102 begin 顶部导航 -->
+<div id="top-nav" data-ng-include="'/taxation-web/views/common/header.html'" data-ng-controller="HeaderController" ></div>
+<div class="clearfix"></div>
+<!-- PJH 1102 end 顶部导航 -->
+
+<!-- PJH 1102 begin Logo和搜索框部分 -->
+<div class="pjh-container">
+	<!-- Logo -->
+	<div id="logo">
+		<a href="/taxation-web/views/index.html"><img src="/taxation-web/images/logo.png" alt="捷迅财税服务网" title="捷迅财税服务网"/></a>
+		<span style="font-size: 30px;font-weight: bold;color:#666;">找回密码</span>
+	</div>
+	<!-- 搜索框 -->
+	<div id="top-search">
+		<div class="search-form">
+			
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<!-- 购物车下拉 -->
+	<div id="top-cart" class="pull-right">
+		
+	</div>
+</div>
+<div class="clearfix"></div>
+<!-- PJH 1102 end Logo和搜索框部分 -->
+
+<!-- JustFresh 2017-04-10 begin 注册主体部分 -->
+<div class="pjh-container">
+	<div class="find-pwd-box">
+		<h5><i class="fa fa-info-circle"></i> 请输入你需要找回登录密码的账户名</h5>
+		<div class="input-form" ng-controller="FindPwController">
+			<form name="findPwForm" novalidate="novalidate">
+				<div class="input-block">
+					<label>手机号</label>
+					<input type="text" required="required" placeholder="请输入您的手机号码" ng-model="user.userPhone" ng-blur="checkFindPwUserAccount()" name="userPhone" class="input-text" />
+					<span ng-if="pass == '1' " class="info">×&nbsp;该手机号未注册，请前往<a href="javascript: void(0)" ng-click="gotoRegister()">注册</a></span>
+					<span ng-if="pass == '2' " class="info" >√&nbsp;手机号检查通过</span>
+					<span ng-if="pass == '3' " class="info" >{{result}}</span>
+				</div>
+				<div class="input-block">
+					<label>验证码</label>
+					<input type="text" ng-model="user.phoneCheckCode" ng-change="checkPhoneCheckCode()"  name="phoneCheckCode"  placeholder="请输入你收到的验证码" class="check-code" />
+					<a href="javascript: void(0)" ng-if="!checksend" ng-click="getSmsCheckCode()" class="time-limit-btn">免费获取验证码</a>
+					<a href="javascript: void(0)" ng-if="checksend" class="time-limit-btn">重发验证码({{checksendsec}})秒</a>
+				</div>
+				<label></label>
+				<span ng-if="checkResult == 'true' ">验证码正确</span>
+				<span ng-if="checkResult == 'false' ">验证码错误</span>
+				<div class="input-block">
+					<label></label>
+					<input type="button" ng-click="nextStp2()" ng-if="checkResult == 'true' " ng-disabled="false" class="input-btn" value="下一步"></a>
+					<input type="button" ng-click="nextStp2()" ng-if="checkResult != 'true' " ng-disabled="true" class="input-btn" value="下一步"></a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- JustFresh 2017-04-10 end 注册主体部分 -->
+
+<!-- PJH 1113 begin 友情链接及版权部分 -->
+<div data-ng-include="'/taxation-web/views/common/footer.html'" data-ng-controller="FooterController" ></div>
+<!-- PJH 1113 end 友情链接及版权部分 -->
+
+<script type="text/javascript" src="/taxation-web/js/scripts/jquery.js"></script>
+<script type="text/javascript" src="/taxation-web/js/scripts/common.js"></script>
+
+<!-- angular js api-->
+<script type="text/javascript" src="/taxation-web/js/angular/angular.min.js"></script>
+<script type="text/javascript" src="/taxation-web/js/angular/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="/taxation-web/js/angular/angular-toastr.tpls.js"></script>
+<!-- local js -->
+<script type="text/javascript" src="/taxation-web/js/main.js"></script>
+<script type="text/javascript" src="/taxation-web/js/global.js"></script>
+<script type="text/javascript" src="/taxation-web/js/controller/userController.js"></script>
+<script type="text/javascript" src="/taxation-web/js/service/userService.js"></script>
+</body>
+</html>

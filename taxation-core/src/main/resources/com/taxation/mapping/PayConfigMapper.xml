@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.taxation.dao.PayConfigDao">
+	<resultMap id="BaseResultMap" type="com.taxation.bean.PayConfigEntity">
+		<id column="pay_config_id" property="payConfigId" jdbcType="VARCHAR" />
+		<result column="pay_key" property="payKey" jdbcType="VARCHAR" />
+		<result column="pay_type" property="payType" jdbcType="VARCHAR" />
+		<result column="pay_name" property="payName" jdbcType="VARCHAR" />
+		<result column="pay_desc" property="payDesc" jdbcType="VARCHAR" />
+		<result column="config_status" property="configStatus"
+			jdbcType="CHAR" />
+		<result column="send_url" property="sendUrl" jdbcType="VARCHAR" />
+		<result column="return_url" property="returnUrl" jdbcType="VARCHAR" />
+		<result column="notify_url" property="notifyUrl" jdbcType="VARCHAR" />
+		<result column="app_id" property="appId" jdbcType="VARCHAR" />
+		<result column="app_private_key" property="appPrivateKey"
+			jdbcType="VARCHAR" />
+		<result column="app_public_key" property="appPublicKey"
+			jdbcType="VARCHAR" />
+		<result column="exosys_public_key" property="exosysPublicKey"
+			jdbcType="VARCHAR" />
+		<result column="sign_type" property="signType" jdbcType="VARCHAR" />
+		<result column="impl_class" property="implClass" jdbcType="VARCHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		pay_config_id, pay_key, pay_type, pay_name, pay_desc, config_status, send_url,
+		return_url,
+		notify_url, app_id, app_private_key, app_public_key, exosys_public_key,
+		sign_type,
+		impl_class
+	</sql>
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.String">
+		select
+		<include refid="Base_Column_List" />
+		from t_pay_config
+		where pay_config_id = #{payConfigId,jdbcType=VARCHAR}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+		delete from t_pay_config
+		where pay_config_id = #{payConfigId,jdbcType=VARCHAR}
+	</delete>
+	<insert id="insert" parameterType="com.taxation.bean.PayConfigEntity">
+		insert into t_pay_config (pay_config_id, pay_key, pay_type,
+		pay_name, pay_desc, config_status,
+		send_url, return_url, notify_url,
+		app_id, app_private_key, app_public_key,
+		exosys_public_key, sign_type, impl_class
+		)
+		values (#{payConfigId,jdbcType=VARCHAR}, #{payKey,jdbcType=VARCHAR},
+		#{payType,jdbcType=CHAR},
+		#{payName,jdbcType=VARCHAR}, #{payDesc,jdbcType=VARCHAR}, #{configStatus,jdbcType=CHAR},
+		#{sendUrl,jdbcType=VARCHAR}, #{returnUrl,jdbcType=VARCHAR},
+		#{notifyUrl,jdbcType=VARCHAR},
+		#{appId,jdbcType=VARCHAR}, #{appPrivateKey,jdbcType=VARCHAR}, #{appPublicKey,jdbcType=VARCHAR},
+		#{exosysPublicKey,jdbcType=VARCHAR}, #{signType,jdbcType=VARCHAR},
+		#{implClass,jdbcType=VARCHAR}
+		)
+	</insert>
+	<insert id="insertSelective" parameterType="com.taxation.bean.PayConfigEntity">
+		insert into t_pay_config
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="payConfigId != null">
+				pay_config_id,
+			</if>
+			<if test="payKey != null">
+				pay_key,
+			</if>
+			<if test="payType != null">
+				pay_type,
+			</if>
+			<if test="payName != null">
+				pay_name,
+			</if>
+			<if test="payDesc != null">
+				pay_desc,
+			</if>
+			<if test="configStatus != null">
+				config_status,
+			</if>
+			<if test="sendUrl != null">
+				send_url,
+			</if>
+			<if test="returnUrl != null">
+				return_url,
+			</if>
+			<if test="notifyUrl != null">
+				notify_url,
+			</if>
+			<if test="appId != null">
+				app_id,
+			</if>
+			<if test="appPrivateKey != null">
+				app_private_key,
+			</if>
+			<if test="appPublicKey != null">
+				app_public_key,
+			</if>
+			<if test="exosysPublicKey != null">
+				exosys_public_key,
+			</if>
+			<if test="signType != null">
+				sign_type,
+			</if>
+			<if test="implClass != null">
+				impl_class,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="payConfigId != null">
+				#{payConfigId,jdbcType=VARCHAR},
+			</if>
+			<if test="payKey != null">
+				#{payKey,jdbcType=VARCHAR},
+			</if>
+			<if test="payType != null">
+				#{payType,jdbcType=CHAR},
+			</if>
+			<if test="payName != null">
+				#{payName,jdbcType=VARCHAR},
+			</if>
+			<if test="payDesc != null">
+				#{payDesc,jdbcType=VARCHAR},
+			</if>
+			<if test="configStatus != null">
+				#{configStatus,jdbcType=CHAR},
+			</if>
+			<if test="sendUrl != null">
+				#{sendUrl,jdbcType=VARCHAR},
+			</if>
+			<if test="returnUrl != null">
+				#{returnUrl,jdbcType=VARCHAR},
+			</if>
+			<if test="notifyUrl != null">
+				#{notifyUrl,jdbcType=VARCHAR},
+			</if>
+			<if test="appId != null">
+				#{appId,jdbcType=VARCHAR},
+			</if>
+			<if test="appPrivateKey != null">
+				#{appPrivateKey,jdbcType=VARCHAR},
+			</if>
+			<if test="appPublicKey != null">
+				#{appPublicKey,jdbcType=VARCHAR},
+			</if>
+			<if test="exosysPublicKey != null">
+				#{exosysPublicKey,jdbcType=VARCHAR},
+			</if>
+			<if test="signType != null">
+				#{signType,jdbcType=VARCHAR},
+			</if>
+			<if test="implClass != null">
+				#{implClass,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective" parameterType="com.taxation.bean.PayConfigEntity">
+		update t_pay_config
+		<set>
+			<if test="payKey != null">
+				pay_key = #{payKey,jdbcType=VARCHAR},
+			</if>
+			<if test="payType != null">
+				pay_type = #{payType,jdbcType=VARCHAR},
+			</if>
+			<if test="payName != null">
+				pay_name = #{payName,jdbcType=VARCHAR},
+			</if>
+			<if test="payDesc != null">
+				pay_desc = #{payDesc,jdbcType=VARCHAR},
+			</if>
+			<if test="configStatus != null">
+				config_status = #{configStatus,jdbcType=CHAR},
+			</if>
+			<if test="sendUrl != null">
+				send_url = #{sendUrl,jdbcType=VARCHAR},
+			</if>
+			<if test="returnUrl != null">
+				return_url = #{returnUrl,jdbcType=VARCHAR},
+			</if>
+			<if test="notifyUrl != null">
+				notify_url = #{notifyUrl,jdbcType=VARCHAR},
+			</if>
+			<if test="appId != null">
+				app_id = #{appId,jdbcType=VARCHAR},
+			</if>
+			<if test="appPrivateKey != null">
+				app_private_key = #{appPrivateKey,jdbcType=VARCHAR},
+			</if>
+			<if test="appPublicKey != null">
+				app_public_key = #{appPublicKey,jdbcType=VARCHAR},
+			</if>
+			<if test="exosysPublicKey != null">
+				exosys_public_key = #{exosysPublicKey,jdbcType=VARCHAR},
+			</if>
+			<if test="signType != null">
+				sign_type = #{signType,jdbcType=VARCHAR},
+			</if>
+			<if test="implClass != null">
+				impl_class = #{implClass,jdbcType=VARCHAR},
+			</if>
+		</set>
+		where pay_config_id = #{payConfigId,jdbcType=VARCHAR}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="com.taxation.bean.PayConfigEntity">
+		update t_pay_config
+		set pay_key = #{payKey,jdbcType=VARCHAR},
+		pay_type = #{payType,jdbcType=VARCHAR},
+		pay_name = #{payName,jdbcType=VARCHAR},
+		pay_desc = #{payDesc,jdbcType=VARCHAR},
+		config_status = #{configStatus,jdbcType=CHAR},
+		send_url = #{sendUrl,jdbcType=VARCHAR},
+		return_url = #{returnUrl,jdbcType=VARCHAR},
+		notify_url = #{notifyUrl,jdbcType=VARCHAR},
+		app_id = #{appId,jdbcType=VARCHAR},
+		app_private_key = #{appPrivateKey,jdbcType=VARCHAR},
+		app_public_key = #{appPublicKey,jdbcType=VARCHAR},
+		exosys_public_key = #{exosysPublicKey,jdbcType=VARCHAR},
+		sign_type = #{signType,jdbcType=VARCHAR},
+		impl_class = #{implClass,jdbcType=VARCHAR}
+		where pay_config_id = #{payConfigId,jdbcType=VARCHAR}
+	</update>
+	<select id="queryPayConfigList" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from t_pay_config
+	</select>
+</mapper>

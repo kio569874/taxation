@@ -1,0 +1,96 @@
+
+<!-- JustFresh 2017-05-25 begin 热门推荐开始 -->
+<!--<div id="hotRecommends" class="pjh-container">-->
+	<!--<div class="info pull-left">热门推荐</div>-->
+	<!--<div class="services pull-right">-->
+		<!--<ul>-->
+			<!--<li>-->
+				<!--<div class="thumb pull-left">-->
+					<!--<a href="service.html"><img src="assets/images/services/12.jpg" /></a>-->
+				<!--</div>-->
+				<!--<div class="opt pull-right">-->
+					<!--<p class="name"><a href="service.html">铜仁****税务服务铜仁****税务服务铜仁****税务服务</a></p>-->
+					<!--<p class="price">-->
+						<!--￥1200.00-->
+					<!--</p>-->
+					<!--<p class="buy-btn"><a href="#">购买服务</a></p>-->
+				<!--</div>-->
+				<!--<div class="clearfix"></div>-->
+			<!--</li>-->
+			<!--<li>-->
+				<!--<div class="thumb pull-left">-->
+					<!--<a href="service.html"><img src="assets/images/services/13.jpg" /></a>-->
+				<!--</div>-->
+				<!--<div class="opt pull-right">-->
+					<!--<p class="name"><a href="service.html">铜仁****税务服务铜仁****税务服务铜仁****税务服务</a></p>-->
+					<!--<p class="price">-->
+						<!--￥1200.00-->
+					<!--</p>-->
+					<!--<p class="buy-btn"><a href="#">购买服务</a></p>-->
+				<!--</div>-->
+				<!--<div class="clearfix"></div>-->
+			<!--</li>-->
+			<!--<li>-->
+				<!--<div class="thumb pull-left">-->
+					<!--<a href="service.html"><img src="assets/images/services/14.jpg" /></a>-->
+				<!--</div>-->
+				<!--<div class="opt pull-right">-->
+					<!--<p class="name"><a href="service.html">铜仁****税务服务铜仁****税务服务铜仁****税务服务</a></p>-->
+					<!--<p class="price">-->
+						<!--￥1200.00-->
+					<!--</p>-->
+					<!--<p class="buy-btn"><a href="#">购买服务</a></p>-->
+				<!--</div>-->
+				<!--<div class="clearfix"></div>-->
+			<!--</li>-->
+			<!--<li>-->
+				<!--<div class="thumb pull-left">-->
+					<!--<a href="service.html"><img src="assets/images/services/15.jpg" /></a>-->
+				<!--</div>-->
+				<!--<div class="opt pull-right">-->
+					<!--<p class="name"><a href="service.html">铜仁****税务服务铜仁****税务服务铜仁****税务服务</a></p>-->
+					<!--<p class="price">-->
+						<!--￥1200.00-->
+					<!--</p>-->
+					<!--<p class="buy-btn"><a href="#">购买服务</a></p>-->
+				<!--</div>-->
+				<!--<div class="clearfix"></div>-->
+			<!--</li>-->
+		<!--</ul>-->
+	<!--</div>-->
+	<!--<div class="clearfix"></div>-->
+<!--</div>-->
+<!-- JustFresh 2017-05-25 end 热门推荐结束 -->
+
+<!-- JustFresh 2017-05-25 end 条件查询部分结束 -->
+
+<!-- JustFresh 2017-05-25 begin 产品列表部分 -->
+<div id="serviceList" class="pjh-container">
+	<ul>
+		<li ng-repeat="item in serviceList">
+			<a href="#" ng-click="gotoServiceInfo(item.serviceId)">
+				<img ng-src="{{item.imageName}}" class="head" />
+			</a>
+			<h4><a href="#">{{item.context}}</a></h4>
+			<div class="info">
+				<div class="price pull-left">
+					￥{{item.price}}
+				</div>
+				<div class="star pull-right">
+					星级：
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="opt" align="center">
+				<a href="#" ng-click="gotoServiceInfo(item.serviceId)" class="buy-btn"><i class="fa fa-cart-plus"></i> 服务详情</a>
+			</div>
+		</li>
+	</ul>
+	<div class="clearfix"></div>
+</div>
+<!-- JustFresh 2017-05-25 end 产品列表部分 -->

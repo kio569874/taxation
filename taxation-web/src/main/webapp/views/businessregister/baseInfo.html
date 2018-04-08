@@ -1,0 +1,105 @@
+<!-- PJH 1102 begin Logo和搜索框部分 -->
+<div class="pjh-container">
+	<!-- Logo -->
+	<div id="logo">
+		<a href="javascript: void(0)"><img src="/taxation-web/images/logo.png" alt="捷迅财税服务网" title="捷迅财税服务网"/></a>
+		<span style="font-size: 30px;font-weight: bold;color:#666;">工商注册</span>
+	</div>
+	<!-- 搜索框 -->
+	<div id="top-search">
+		<div class="search-form">
+			
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<!-- 购物车下拉 -->
+	<div id="top-cart" class="pull-right">
+		
+	</div>
+</div>
+<div class="clearfix"></div>
+<!-- PJH 1102 end Logo和搜索框部分 -->
+
+<!-- JustFresh 2017-04-10 begin 注册主体部分 -->
+<div class="pjh-container">
+	<div class="steps">
+		<ul>
+			<li class="selected">
+				<i class="fa fa-male"></i>
+				<p>选择服务商</p>
+				<p class="num">1</p>
+			</li>
+			<li class="selected">
+				<i class="fa fa-database"></i>
+				<p>基本信息填写</p>
+				<p class="num">2</p>
+			</li>
+			<li>
+				<i class="fa fa-cubes"></i>
+				<p>生产经营地填写</p>
+				<p class="num">3</p>
+			</li>
+			<li>
+				<i class="fa fa-server"></i>
+				<p>选择支付类型</p>
+				<p class="num">4</p>
+			</li>
+			<li>
+				<i class="fa fa-upload"></i>
+				<p>附件上传</p>
+				<p class="num">5</p>
+			</li>
+			<li>
+				<i class="fa fa-child"></i>
+				<p>确认注册信息</p>
+				<p class="num">6</p>
+			</li>
+			<li>
+				<i class="fa fa-check"></i>
+				<p>注册成功</p>
+				<p class="num">7</p>
+			</li>
+		</ul>
+	</div>
+	<div class="clearfix"></div>
+	<div class="box">
+		<div class="box-form">
+			<div class="input-line colspan">
+				工商注册——基本信息填写
+			</div>
+			<div class="input-line">
+				<label>姓名：</label>
+				<input type="text" name="userName" ng-change="checkUserName()" ng-model="companyService.userName" class="input-text" placeholder="请输入您要注册的姓名" required="required" />
+				<span ng-if="flagUserName == '1' " style="color: lightseagreen;">&nbsp;√</span>
+				<span ng-if="flagUserName == '2' " style="color: red;">&nbsp;×&nbsp;姓名长度不能超过64</span>
+				<span ng-if="flagUserName == '3' " style="color: red;">&nbsp;×&nbsp;姓名不能为空</span>
+			</div>
+			<div class="input-line">
+				<label>性别：</label>
+				<input type="radio" name="userSex" ng-model="companyService.userSex" ng-value="0"/>男
+				<input type="radio" name="userSex" ng-model="companyService.userSex" ng-value="1"/>女
+				<span ng-if="flagUserSex == '1' " style="color: lightseagreen;margin-left:563px">&nbsp;√</span>
+				<span ng-if="flagUserSex == '2' " style="color: red;;margin-left:563px">&nbsp;×&nbsp;请选择性别</span>
+			</div>
+			<div class="input-line">
+				<label>身份证号：</label>
+				<input type="text" name="userIdcard" ng-change="checkIdCard()" ng-model="companyService.userIdcard" class="input-text" placeholder="请输入您要注册的身份证号" required="required"/>
+				<span ng-if="flagIdCard == '1' " style="color: lightseagreen;">&nbsp;√</span>
+				<span ng-if="flagIdCard == '2' " style="color: red;">&nbsp;×&nbsp;请输入15或18位有效身份证号</span>
+				<span ng-if="flagIdCard == '3' " style="color: red;">&nbsp;×&nbsp;身份证号不能为空</span>
+			</div>
+			<div class="input-line">
+				<label>联系电话：</label>
+				<input type="text" name="userPhone" ng-change="checkUserPhone()" ng-model="companyService.userPhone" class="input-text" placeholder="请输入您要注册的联系电话" required="required" />
+				<span ng-if="flagUserPhone == '1' " style="color: lightseagreen;">&nbsp;√</span>
+				<span ng-if="flagUserPhone == '2' " style="color: red;">&nbsp;×&nbsp;请输入有效手机号码</span>
+				<span ng-if="flagUserPhone == '3' " style="color: red;">&nbsp;×&nbsp;手机号码不能为空</span>
+			</div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+	<div class="operation">
+		<a href="javascript: void(0)" class="prev" ui-sref="index.busregister">信息有误，返回上一步</a>
+		<a href="javascript: void(0)" class="next" ng-click="gotoProductionSite()">信息正确，进入下一步</a>
+	</div>
+</div>

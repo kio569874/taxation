@@ -1,0 +1,16 @@
+/**
+ * [radius description]
+ * @type {[type]}
+ */
+.ucenter .box{}
+.ucenter .box .tab-nav{width: 100%;border-bottom: 1px solid #f0f0f0;height: 33px;margin-bottom: 15px;}
+.ucenter .box .tab-nav li{position: relative;cursor: pointer;float: left;width: 100px;height: 33px;text-align: center;line-height: 33px;}
+.ucenter .box .tab-nav li.selected{border-bottom: 2px solid #C33610;line-height: 32px;height: 32px;}
+.ucenter .box .tab-nav li em{position: absolute;background-color: #C33610;padding: 3px 8px;line-height: 12px;font-size: 10px;color: #fff;border-radius: 10px;}
+
+.ucenter .box .info-table{width: 100%;}
+.ucenter .box .info-table tr{border-bottom: 1px solid #f0f0f0;}
+.ucenter .box .info-table tr td{padding: 10px 0px;}
+.ucenter .box .info-table tr td.info{font-weight: bold;color: #666;width: 170px;text-align: right;padding-right: 15px;}
+.ucenter .box .info-table .input-text{padding: 5px;width: 200px;}
+.ucenter .box .info-table .input-btn{border: none;padding: 10px 45px;color: #fff;background-color: #ff9000;cursor: pointer;}

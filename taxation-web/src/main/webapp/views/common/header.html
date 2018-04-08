@@ -1,0 +1,65 @@
+<div id="top-nav">
+	<div class="pjh-container">
+		<!-- 顶部左侧导航 -->
+		<ul id="tl-site-nav">
+			<li>欢迎来到<strong><a href="javascript: void(0)" ng-click = "gotoIndex()">捷迅财税服务网!</a></strong></li>
+			<li ng-if="user.userAccount != null "><a href="javascript: void(0)"  ng-click="gotoUcenter()">我的捷迅</a></li>
+			<li ng-if="user.userAccount != null "><a href="javascript: void(0)"  ng-click="loginOut()">退出</a></li>
+			<li ng-if="user.userAccount == null ">[<a ui-sref="index.login">你好，请登录</a>]</li>
+			<li ng-if="user.userAccount == null ">[<a ui-sref="index.userregstep1">免费注册</a>]</li>
+			<li >[<a ui-sref="index.pay">支付</a>]</li>
+		</ul>
+		<!-- 顶部右侧导航 -->
+		<ul id="tr-site-nav">
+			<li>
+				<a href="javascript: void(0)"><span class="fa fa-home"></span> 服务商管理</a><i></i>
+				<div class="top-nav-bg">
+					<ul>
+						<li>
+							<a href="javascript: void(0)">服务商入驻</a>
+						</li>
+						<li><a href="javascript: void(0)">服务商登录</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="spanjj">|</li>
+			<li>
+				<a href="javascript: void(0)"><span class="fa fa-mobile-phone"></span> 手机捷迅</a><i></i>
+				<div class="top-nav-bg">
+					<ul>
+						<li>
+							<a href="javascript: void(0)">Android版本</a>
+						</li>
+						<li><a href="javascript: void(0)">IOS版本</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="spanjj">|</li>
+			<li>
+				<a href="javascript: void(0)"><span class="fa fa-reorder"></span> 我的订单</a><i></i>
+				<div class="top-nav-bg">
+					<ul>
+						<li>
+							<a href="javascript: void(0)">待付款订单</a>
+						</li>
+						<li><a href="javascript: void(0)">已支付订单</a></li>
+						<li><a href="javascript: void(0)">待评价订单</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="spanjj">|</li>
+			<li>
+				<a href="javascript: void(0)">新手帮助</a><i></i>
+				<div class="top-nav-bg">
+					<ul>
+						<li>
+							<a href="javascript: void(0)">关于捷迅</a>
+						</li>
+						<li><a href="javascript: void(0)">如何购买</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="clearfix"></div>

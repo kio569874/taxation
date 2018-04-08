@@ -1,0 +1,186 @@
+<!-- JustFresh 2017-04-10 begin 注册主体部分 -->
+
+<!-- JustFresh 2017-06-17 begin 添加收货地址Dialog -->
+<div id="modalBg"></div>
+<div id="addAddressDialog">
+	<div class="dialog-header">
+		<img src="/taxation-web/images/logo-white.png" />
+		<a title="关闭窗口" href="javascript: void(0)" ng-click="closeDialog('#addAddressDialog')">
+			<i class="fa fa-close"></i>
+		</a>
+	</div>
+
+	<div class="dialog-body">
+		<h4>请填写收货人姓名、联系电话、收货区域、收货详细地址、是否默认收货地址</h4>
+		<form action="" method="post">
+			<div class="form-group">
+				<label><em>*</em> 默认收货地址</label>
+				<input type="radio" name="is_default" ng-model="addressDefault_add" ng-value="0"/>否
+				<input type="radio" name="is_default" ng-model="addressDefault_add" ng-value="1"/>是
+			</div>
+			<div class="form-group">
+				<label><em>*</em> 收货人姓名</label>
+				<input type="text" name="userName_add" ng-model="userName_add" placeholder="请输入收货人姓名" class="input-text" />
+			</div>
+			<div class="form-group">
+				<label><em>*</em> 联系电话</label>
+				<input type="text" name="" ng-model="userPhone_add" placeholder="请输入联系电话" class="input-text" />
+			</div>
+			<div class="form-group">
+				<label><em>*</em> 所在城市</label>
+				<select class="select-text" ng-model="addressProvince_add" ng-options="s.name for s in list" ng-change="c()">
+					<option value="">省份</option>
+				</select>
+				<select class="select-text" ng-model="addressCity_add" ng-options="sh.name for sh in addressProvince_add.child" ng-change="c2()">
+					<option value="">市/区</option>
+				</select>
+				<select class="select-text" ng-model="addressArea_add" ng-options="x.value for x in addressCity_add.child" ng-change="c3()">
+					<option value="">县级/区域</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label><em>*</em> 详细地址</label>
+				<textarea ng-model="addressText_add"></textarea>
+			</div>
+		</form>
+	</div>
+
+	<div class="dialog-footer">
+		<a href="javascript: void(0)" class="save-address-btn" ng-click="saveAddress()">提交</a>
+	</div>
+</div>
+
+<div id="updateAddressDialog">
+	<div class="dialog-header">
+		<img src="/taxation-web/images/logo-white.png" />
+		<a title="关闭窗口" href="javascript: void(0)" ng-click="closeDialog('#updateAddressDialog')">
+			<i class="fa fa-close"></i>
+		</a>
+	</div>
+
+	<div class="dialog-body">
+		<h4>请填写收货人姓名、联系电话、收货区域、收货详细地址、是否默认收货地址</h4>
+		<form action="" method="post">
+			<div class="form-group">
+				<label><em>*</em> 默认收货地址</label>
+				<input type="radio" name="is_default" ng-model="updateAddress.addressDefault_update" ng-value="0"/>否
+				<input type="radio" name="is_default" ng-model="updateAddress.addressDefault_update" ng-value="1"/>是
+			</div>
+			<div class="form-group">
+				<label><em>*</em> 收货人姓名</label>
+				<input type="text" name="userName_update" ng-model="updateAddress.userName_update"  placeholder="请输入收货人姓名" class="input-text" />
+			</div>
+			<div class="form-group">
+				<label><em>*</em> 联系电话</label>
+				<input type="text" name="userPhone_update" ng-model="updateAddress.userPhone_update" placeholder="请输入联系电话" class="input-text" />
+			</div>
+			<div class="form-group">
+				<label> 原有地址</label>
+				<input type="text" class="input-text" ng-model="updateAddress.oldAddress" disabled />
+			</div>
+			<div class="form-group">
+				<label><em>*</em> 所在城市</label>
+				<select class="select-text" ng-model="updateAddress.addressProvince_update" ng-options="s.name for s in list" ng-change="c()">
+					<option value="">省份</option>
+				</select>
+				<select class="select-text" ng-model="updateAddress.addressCity_update" ng-options="sh.name for sh in updateAddress.addressProvince_update.child" ng-change="c2()">
+					<option value="">市/区</option>
+				</select>
+				<select class="select-text" ng-model="updateAddress.addressArea_update" ng-options="x.value for x in updateAddress.addressCity_update.child" ng-change="c3()">
+					<option value="">县级/区域</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label><em>*</em> 详细地址</label>
+				<textarea ng-model="updateAddress.addressText_update"></textarea>
+			</div>
+			<input type="hidden" value="{{updateAddress.addressId_update}}">
+		</form>
+	</div>
+
+	<div class="dialog-footer">
+		<a href="javascript: void(0)" class="save-address-btn" ng-click="updateOldAddress()">提交</a>
+	</div>
+</div>
+<!-- JustFresh 2017-06-17 end 添加收货地址Dialog -->
+
+<div class="buy-step pjh-container">
+	<div class="steps">
+		<ul>
+			<li class="selected">
+				<i class="fa fa-male"></i>
+				<p>选择服务商</p>
+				<p class="num">1</p>
+			</li>
+			<li class="selected">
+				<i class="fa fa-database"></i>
+				<p>基本信息填写</p>
+				<p class="num">2</p>
+			</li>
+			<li class="selected">
+				<i class="fa fa-cubes"></i>
+				<p>生产经营地填写</p>
+				<p class="num">3</p>
+			</li>
+			<li class="selected">
+				<i class="fa fa-server"></i>
+				<p>选择支付类型</p>
+				<p class="num">4</p>
+			</li>
+			<li>
+				<i class="fa fa-upload"></i>
+				<p>附件上传</p>
+				<p class="num">5</p>
+			</li>
+			<li>
+				<i class="fa fa-child"></i>
+				<p>确认注册信息</p>
+				<p class="num">6</p>
+			</li>
+			<li>
+				<i class="fa fa-check"></i>
+				<p>注册成功</p>
+				<p class="num">7</p>
+			</li>
+		</ul>
+	</div>
+	<div class="clearfix"></div>
+	<div class="main">
+		<div class="order-info">
+			<!-- JustFresh 2017-06-17 begin 收货人信息开始 -->
+			<div class="receipt-info">
+				<ul class="receipt-info-list">
+					<li ng-repeat="item in myAddressList">
+						<input type="radio" name="default_address"  ng-value="{{item.addressId}}" ng-checked="{{item.addressDefault}}"/>
+						<b>{{item.userName}}</b> <span>{{item.addressProvince}}</span>
+						<span class="">{{item.addressCity}}</span>
+						<span class="">{{item.addressArea}}</span>
+						<span class="">{{item.addressText}}</span>
+						<span class=""><i class="fa fa-mobile"></i> {{item.userPhone}}</span>
+						<a href="javascript: void(0)" ng-click="updateReceiptInfo(item.addressId)">[修改]</a>
+					</li>
+					<!--<input type="radio" name="accept_address" value="-1" id="newAddress" />-->
+				</ul>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)" ng-click="addNewAddress()"><i class="fa fa-plus"></i> <span>添加新地址</span></a>
+			</div>
+			<div class="clearfix"></div>
+			<!-- JustFresh 2017-06-17 begin 收货人信息开始 -->
+			<div class="pay-info">
+				<!--<h3>请选择支付方式</h3>-->
+				<ul>
+					<li>
+						<img src="/taxation-web/images/alipay.png" /><input type="hidden" value="1"/>
+					</li>
+					<li>
+						<img src="/taxation-web/images/wechat.png" /><input type="hidden" value="2"/>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="clearfix"></div><p/>
+	<div class="operation">
+		<a href="javascript: void(0)" class="prev" ui-sref="index.baseInfo">信息有误，返回上一步</a>
+		<a href="javascript: void(0)" class="next" ng-click="gotoEnclosure()">信息正确，进入下一步</a>
+	</div>
+</div>
+<!-- JustFresh 2017-04-10 end 注册主体部分 -->

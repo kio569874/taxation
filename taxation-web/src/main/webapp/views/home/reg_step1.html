@@ -1,0 +1,65 @@
+<!-- PJH 1102 begin Logo和搜索框部分 -->
+<div class="pjh-container">
+	<div id="logo">
+		<a href="javascript: void(0)"><img src="/taxation-web/images/logo.png" /></a>
+		<span style="font-size: 30px;font-weight: bold;color:#666;">欢迎注册</span>
+	</div>
+</div>
+<div class="clearfix"></div>
+
+<!-- JustFresh 2017-04-10 begin 注册主体部分 -->
+<div class="pjh-container">
+	<div class="steps">
+		<ul>
+			<li class="selected">
+				<i>1</i><span>设置用户名</span>
+			</li>
+			<li>
+				<i>2</i><span>填写账号信息</span>
+			</li>
+			<li>
+				<i>3</i><span>注册成功</span>
+			</li>
+		</ul>
+	</div>
+	<div class="reg-form" ng-controller="UserRegisterController">
+		<div class="input-block">
+			<label>手机号</label>
+			<input type="text" required="required" placeholder="请输入您的手机号码" ng-model="user.userPhone" ng-blur="checkUserAccount()" name="userPhone" class="input-text" />
+			<span ng-if="pass == '1' " class="info">该手机号已注册，请<a ui-sref="index.login">登录</a></span>
+			<span ng-if="pass == '2' " class="info" >&nbsp;√</span>
+			<span ng-if="pass == '3' " class="info" ><font color="red">{{result}}</font></span>
+		</div>
+		<div class="input-block">
+			<label>验证码</label>
+			<input type="text" required="required"  ng-model="user.phoneCheckCode" ng-change="checkPhoneCheckCode()"  name="phoneCheckCode"  placeholder="请输入您收到的验证码" class="check-code" />
+			<a href="javascript: void(0)" ng-if="!checksend" ng-click="getSmsCheckCode()" class="time-limit-btn">免费获取验证码</a>
+			<a href="javascript: void(0)" ng-if="checksend" class="time-limit-btn1">重发验证码({{checksendsec}})秒</a>
+			<span ng-if="checkResult == 'true' " class="info" >&nbsp;√</span>
+			<span ng-if="checkResult == 'false' " class="info" >&nbsp;×</span>
+		</div>
+		<div class="input-block">
+			<label></label>
+			<input type="checkbox" name="agree" checked="false" ng-checked="{{agree}}" />阅读并同意
+			<a href="javascript: void(0)"  onclick="openDialog('#agreementDialog')">《捷迅用户注册协议》</a>
+		</div>
+		<div class="input-block">
+			<label></label>
+			<a  href="javascript: void(0)" ng-click="nextStp2()" class="input-btn">下一步</a>
+		</div>
+	</div>
+</div>
+<!-- JustFresh 2017-06-23 begin 用户注册协议Dialog -->
+<div id="dialogBg"></div> <!-- 模态框背景层 -->
+<div id="agreementDialog">
+	<h4>捷迅用户注册协议</h4>
+	<a href="javascript: void(0)" class="close-btn" onclick="closeDialog('#agreementDialog')"><i class="fa fa-close"></i></a>
+	<div class="content">
+		<h5>用户注册协议</h5>
+		<p>协议内容，超出高度会自动滚动</p>
+	</div>
+	<div class="opt">
+		<a href="javascript: void(0)" onclick="goNextStep()" class="agree-btn">同意并继续</a>
+	</div>
+</div>
+<!-- JustFresh 2017-06-23 end 用户注册协议Dialog -->

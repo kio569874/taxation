@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.taxation.dao.ServiceDao">
+	<resultMap id="BaseResultMap" type="com.taxation.bean.ServiceEntity">
+		<id column="service_id" property="serviceId" jdbcType="VARCHAR" />
+		<result column="provider_id" property="providerId" jdbcType="VARCHAR" />
+		<result column="service_code" property="serviceCode" jdbcType="VARCHAR" />
+		<result column="price" property="price" jdbcType="DECIMAL" />
+		<result column="image_name" property="imageName" jdbcType="VARCHAR" />
+		<result column="context" property="context" jdbcType="VARCHAR" />
+		<result column="start_time" property="startTime" jdbcType="VARCHAR" />
+		<result column="end_time" property="endTime" jdbcType="VARCHAR" />
+		<result column="service_type" property="serviceType" jdbcType="CHAR" />
+	</resultMap>
+	<resultMap id="ServiceResultMap" type="com.taxation.bean.ServiceDto">
+		<id column="provider_id" property="providerId" jdbcType="VARCHAR" />
+		<id column="service_id" property="serviceId" jdbcType="VARCHAR" />
+		<result column="service_code" property="serviceCode" jdbcType="VARCHAR" />
+		<result column="provider_acount" property="providerAcount"
+			jdbcType="VARCHAR" />
+		<result column="provider_password" property="providerPassword"
+			jdbcType="VARCHAR" />
+		<result column="provider_phone" property="providerPhone"
+			jdbcType="VARCHAR" />
+		<result column="provider_image_name" property="providerImageName"
+			jdbcType="VARCHAR" />
+		<result column="provider_context" property="providerContext"
+			jdbcType="VARCHAR" />
+		<result column="provider_level" property="providerLevel"
+			jdbcType="VARCHAR" />
+		<result column="provider_type" property="providerType"
+			jdbcType="CHAR" />
+		<result column="company_name" property="companyName" jdbcType="VARCHAR" />
+		<result column="company_address" property="companyAddress"
+			jdbcType="VARCHAR" />
+		<result column="company_type" property="companyType" jdbcType="VARCHAR" />
+		<result column="company_code" property="companyCode" jdbcType="VARCHAR" />
+		<result column="company_image" property="companyImage"
+			jdbcType="VARCHAR" />
+		<result column="company_mobile" property="companyMobile"
+			jdbcType="VARCHAR" />
+		<result column="legal_person" property="legalPerson" jdbcType="VARCHAR" />
+		<result column="legal_phone" property="legalPhone" jdbcType="VARCHAR" />
+		<result column="legal_id_no" property="legalIdNo" jdbcType="VARCHAR" />
+		<result column="legal_frontal_image" property="legalFrontalImage"
+			jdbcType="VARCHAR" />
+		<result column="legal_opposite_image" property="legalOppositeImage"
+			jdbcType="VARCHAR" />
+		<result column="provider_name" property="providerName"
+			jdbcType="VARCHAR" />
+		<result column="provider_id_no" property="providerIdNo"
+			jdbcType="VARCHAR" />
+		<result column="qualifications" property="qualifications"
+			jdbcType="VARCHAR" />
+		<result column="provider_status" property="providerStatus"
+			jdbcType="CHAR" />
+		<result column="approval_status" property="approvalStatus"
+			jdbcType="CHAR" />
+		<result column="approval_remark" property="approvalRemark"
+			jdbcType="VARCHAR" />
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+		<result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+		<result column="last_login_time" property="lastLoginTime"
+			jdbcType="DATE" />
+		<result column="last_login_ip" property="lastLoginIp" jdbcType="VARCHAR" />
+		<result column="login_num" property="loginNum" jdbcType="INTEGER" />
+		<result column="price" property="price" jdbcType="DECIMAL" />
+		<result column="service_image_name" property="serviceImageName"
+			jdbcType="VARCHAR" />
+		<result column="context" property="context" jdbcType="VARCHAR" />
+		<result column="start_time" property="startTime" jdbcType="VARCHAR" />
+		<result column="end_time" property="endTime" jdbcType="VARCHAR" />
+		<result column="service_type" property="serviceType" jdbcType="CHAR" />
+	</resultMap>
+	<sql id="Service_Column_List">
+		b.provider_acount,
+		b.provider_password,
+		b.provider_phone,
+		b.image_name as provider_image_name,
+		b.provider_context,
+		b.provider_level,
+		b.provider_type,
+		b.company_name,
+		b.company_address,
+		b.company_type,
+		b.company_code,
+		b.company_image,
+		b.company_mobile,
+		b.legal_person,
+		b.legal_phone,
+		b.legal_id_no,
+		b.legal_frontal_image,
+		b.legal_opposite_image,
+		b.provider_name,
+		b.provider_id_no,
+		b.qualifications,
+		b.provider_status,
+		b.approval_status,
+		b.approval_remark,
+		a.service_id,
+		a.provider_id,
+		a.service_code,
+		a.image_name as
+		service_image_name,
+		a.price,
+		a.context,
+		a.start_time,
+		a.end_time,
+		a.service_type
+	</sql>
+	<sql id="Base_Column_List">
+		service_id, provider_id, service_code, price, context,
+		start_time,image_name,
+		end_time, service_type
+	</sql>
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.String">
+		select
+		<include refid="Base_Column_List" />
+		from t_service
+		where service_id = #{serviceId,jdbcType=VARCHAR}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+		delete from
+		t_service
+		where service_id = #{serviceId,jdbcType=VARCHAR}
+	</delete>
+	<insert id="insert" parameterType="com.taxation.bean.ServiceEntity">
+		insert into t_service (service_id, provider_id, service_code,
+		image_name, price, context,
+		start_time, end_time, service_type
+		)
+		values (#{serviceId,jdbcType=VARCHAR}, #{providerId,jdbcType=VARCHAR},
+		#{serviceCode,jdbcType=VARCHAR},
+		#{imageName,jdbcType=VARCHAR}, #{price,jdbcType=DECIMAL}, #{context,jdbcType=VARCHAR},
+		#{startTime,jdbcType=VARCHAR}, #{endTime,jdbcType=VARCHAR},
+		#{serviceType,jdbcType=CHAR}
+		)
+	</insert>
+	<insert id="insertSelective" parameterType="com.taxation.bean.ServiceEntity">
+		insert into t_service
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="serviceId != null">
+				service_id,
+			</if>
+			<if test="providerId != null">
+				provider_id,
+			</if>
+			<if test="serviceCode != null">
+				service_code,
+			</if>
+			<if test="imageName != null">
+				image_name,
+			</if>
+			<if test="price != null">
+				price,
+			</if>
+			<if test="context != null">
+				context,
+			</if>
+			<if test="startTime != null">
+				start_time,
+			</if>
+			<if test="endTime != null">
+				end_time,
+			</if>
+			<if test="serviceType != null">
+				service_type,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="serviceId != null">
+				#{serviceId,jdbcType=VARCHAR},
+			</if>
+			<if test="providerId != null">
+				#{providerId,jdbcType=VARCHAR},
+			</if>
+			<if test="serviceCode != null">
+				#{serviceCode,jdbcType=VARCHAR},
+			</if>
+			<if test="imageName != null">
+				#{imageName,jdbcType=VARCHAR},
+			</if>
+			<if test="price != null">
+				#{price,jdbcType=DECIMAL},
+			</if>
+			<if test="context != null">
+				#{context,jdbcType=VARCHAR},
+			</if>
+			<if test="startTime != null">
+				#{startTime,jdbcType=VARCHAR},
+			</if>
+			<if test="endTime != null">
+				#{endTime,jdbcType=VARCHAR},
+			</if>
+			<if test="serviceType != null">
+				#{serviceType,jdbcType=CHAR},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective" parameterType="com.taxation.bean.ServiceEntity">
+		update t_service
+		<set>
+			<if test="providerId != null">
+				provider_id = #{providerId,jdbcType=VARCHAR},
+			</if>
+			<if test="serviceCode != null">
+				service_code = #{serviceCode,jdbcType=VARCHAR},
+			</if>
+			<if test="imageName != null">
+				image_name = #{imageName,jdbcType=VARCHAR},
+			</if>
+			<if test="price != null">
+				price = #{price,jdbcType=DECIMAL},
+			</if>
+			<if test="context != null">
+				context = #{context,jdbcType=VARCHAR},
+			</if>
+			<if test="startTime != null">
+				start_time = #{startTime,jdbcType=VARCHAR},
+			</if>
+			<if test="endTime != null">
+				end_time = #{endTime,jdbcType=VARCHAR},
+			</if>
+			<if test="serviceType != null">
+				service_type = #{serviceType,jdbcType=CHAR},
+			</if>
+		</set>
+		where service_id = #{serviceId,jdbcType=VARCHAR}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="com.taxation.bean.ServiceEntity">
+		update t_service
+		set provider_id = #{providerId,jdbcType=VARCHAR},
+		service_code = #{serviceCode,jdbcType=VARCHAR},
+		image_name = #{imageName,jdbcType=VARCHAR},
+		price = #{price,jdbcType=DECIMAL},
+		context = #{context,jdbcType=VARCHAR},
+		start_time = #{startTime,jdbcType=VARCHAR},
+		end_time = #{endTime,jdbcType=VARCHAR},
+		service_type = #{serviceType,jdbcType=CHAR}
+		where service_id = #{serviceId,jdbcType=VARCHAR}
+	</update>
+
+	<select id="getAllServiceCount" resultType="int">
+		select count(1)
+		from t_service a INNER JOIN t_provider b ON a.provider_id =
+		b.provider_id and a.service_type = '2'
+	</select>
+
+	<select id="queryAllServiceByPage" resultMap="ServiceResultMap"
+		parameterType="int">
+		select
+		<include refid="Service_Column_List" />
+		from t_service a INNER JOIN t_provider b ON a.provider_id =
+		b.provider_id and a.service_type = '2'
+		order by a.service_id ASC
+		limit
+		#{0,jdbcType=INTEGER},#{1,jdbcType=INTEGER}
+	</select>
+	<select id="queryServiceByProviderId" parameterType="java.lang.String" resultType="com.taxation.bean.ServiceInfoDto">
+		select
+		a.service_id as serviceId, a.provider_id as providerId, a.service_code as serviceCode, a.price, context,
+		a.start_time as startTime,a.image_name as imageName,
+		a.end_time as endTime, a.service_type serviceType,b.service_name serviceName
+		from t_service a INNER JOIN t_service_def b ON a.service_code = b.service_code
+		where provider_id= #{providerId,jdbcType=VARCHAR}
+	</select>
+	<select id="getServiceInfoDetail" resultType="com.taxation.bean.ServiceInfoDto" parameterType="java.lang.String">
+		select
+		a.service_id as serviceId, a.provider_id as providerId, a.service_code as serviceCode, a.price, context,
+		a.start_time as startTime,a.image_name as imageName,
+		a.end_time as endTime, a.service_type serviceType,b.service_name serviceName
+		from t_service a INNER JOIN t_service_def b ON a.service_code = b.service_code
+		where a.service_id = #{serviceId,jdbcType=VARCHAR}
+	</select>
+</mapper>

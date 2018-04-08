@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="taxationApp">
+<head>
+	<meta name="Keywords" content="捷迅财税服务网" />
+    <meta name="Description" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>绑定邮箱|捷迅财税服务网</title>
+	<link rel="shortcut icon" href="/taxation-web/taxation-web/images/favicon.ico" type="image/x-icon">
+	<link href="/taxation-web/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="/taxation-web/css/style.css" rel="stylesheet" type="text/css">
+	<link href="/taxation-web/css/common.css" rel="stylesheet" type="text/css">
+	<link href="/taxation-web/css/pagecss/member.css" rel="stylesheet" type="text/css">
+	<link href="/taxation-web/css/pagecss/member/bindEmail.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<!-- PJH 1102 begin 顶部导航 -->
+	<div id="top-nav" data-ng-include="'/taxation-web/views/common/header.html'" data-ng-controller="HeaderController" ></div>
+	<div class="clearfix"></div>
+
+	<!-- JustFresh 2017-03-20 begin 面包屑导航部分开始 -->
+	<div data-ng-include="'userTopNavigation.html'" data-ng-controller="UserTopNavController" ></div>
+	<!-- JustFresh 2017-03-20 end 面包屑导航部分结束 -->
+
+	<!-- JustFresh 2017-03-20 begin 用户中心主体部分 -->
+	<div class="ucenter pjh-container">
+
+		<div data-ng-include="'userUcenterLeft.html'" data-ng-controller="UserUcenterLeftController" ></div>
+
+		<div class="box pull-right" ng-controller="UpdateEmailController">
+			<ul class="tab-nav">
+				<li><a href="accountSecurity.html">账号安全</a></li>
+				<li class="selected"><a href="javascript: void(0)">修改邮箱</a></li>
+			</ul>
+			<div class="clearfix"></div>
+
+			<div class="warning color-warning">
+				<h4>操作提示：</h4>
+				<p>1. 此邮箱将接收密码找回，订单通知等敏感性安全服务及提醒使用，请务必填写正确地址。</p>
+				<p>2. 设置提交后，系统将自动发送验证邮件到您绑定的信箱，您需在24小时内登录邮箱并完成验证。</p>
+				<p>3. 更改邮箱时，请通过安全验证后重新输入新邮箱地址绑定。</p>
+			</div>
+			<div class="bind-form">
+				<div class="input-block">
+					<label><em class="color-danger">*</em> 绑定邮箱地址</label>
+					<input type="text" class="input-text" ng-model="user.email" ng-change="checkEmail()" name="email" placeholder="请输入邮箱地址" required="required"/>
+					<span ng-if="checkResult == 'true' " style="color: lightseagreen;">&nbsp;√&nbsp;邮箱格式正确</span>
+					<span ng-if="checkResult == 'false' " style="color: red;">&nbsp;×&nbsp;邮箱格式错误</span>
+				</div>
+				<div class="input-block">
+					<label></label>
+					<input type="button" ng-click="bindEmail()" ng-if="checkResult == 'true' " ng-disabled="false" class="input-btn bg-success" value="发送验证邮件"></a>
+					<input type="button" ng-click="bindEmail()" ng-if="checkResult != 'true' " ng-disabled="true" class="input-btn bg-danger" value="发送验证邮件"></a>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+<!-- JustFresh 2017-03-20 end 用户中心主体部分 -->
+
+	<!-- PJH 1113 begin 友情链接及版权部分 -->
+	<div data-ng-include="'/taxation-web/views/common/footer.html'" data-ng-controller="FooterController" ></div>
+	<!-- PJH 1113 end 友情链接及版权部分 -->
+	<script type="text/javascript" src="/taxation-web/js/scripts/jquery.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/scripts/common.js"></script>
+
+
+	<!-- angular js api-->
+	<script type="text/javascript" src="/taxation-web/js/angular/angular.min.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/angular/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/angular/angular-toastr.tpls.js"></script>
+
+	<script type="text/javascript" src="/taxation-web/js/angular/angular-sanitize.min.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/angular/angular-touch.min.js"></script>
+
+	<script type="text/javascript" src="/taxation-web/js/angular/ocLazyLoad.min.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/angular/angular-file-upload.min.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/angular/ui-bootstrap-tpls.min.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/angular/ui-select/select.min.js"></script>
+	<script type="text/javascript" src="/taxation-web/plugin/pagination/js/pagination.js"></script>
+	<!-- local js -->
+	<script type="text/javascript" src="/taxation-web/js/main.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/controller/userController.js"></script>
+	<script type="text/javascript" src="/taxation-web/js/service/userService.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<meta charset="utf-8" />
+<header ng-app="myApp" class="container-fluid" ng-controller="ModuleController">
+	<h3 class="pull-left">捷讯软件管理系统</h3>
+	<ul class="module-list">
+		<li ng-repeat="module in moduleList">
+	 		<a ng-if="module.mod=='admin'" href="{{module.linkUrl}}" class="active">{{module.title}}</a>
+	 		<a ng-if="module.mod=='cms'" href="{{module.linkUrl}}">{{module.title}}</a>
+		</li>
+	</ul>
+	<div class="opt pull-right">
+		<ul>
+			<li><a href="/beadhouse-web/views/home/index.html" target="_blank"><i class="fa fa-home"></i><p>首页</p></a></li>
+			<li class="split-line"></li>
+			<li><a href="#"><i class="fa fa-close"></i><p>退出</p></a></li>
+		</ul>
+		<div class="clearfix"></div>
+	</div>
+</header>

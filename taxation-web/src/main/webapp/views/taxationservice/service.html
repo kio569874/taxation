@@ -1,0 +1,598 @@
+<!-- PJH 1102 begin 面包屑导航开始 -->
+<div id="brands" class="pjh-container">
+	<a href="index.html">首页</a>
+	<i class="fa fa-angle-right"></i>
+	<a href="index.html">税务服务</a>
+	<i class="fa fa-angle-right"></i>
+	<a href="index.html">****税务处理</a>
+</div>
+<!-- PJH 1102 end 面包屑导航结束 -->
+
+<!-- JustFresh 2017-05-26 begin 面包屑导航开始 -->
+<div id="main" class="pjh-container">
+	<div class="baseinfo">
+		<div class="imgs pull-left">
+			<div class="big-img-list">
+				<ul class="service-content">
+					<li><img ng-src="{{serviceInfo.imageName}}" /></li>
+				</ul>
+				<span class="prev"><i class="fa fa-angle-left"></i></span>
+				<span class="next"><i class="fa fa-angle-right"></i></span>
+			</div>
+		</div>
+		<div class="service-info pull-left">
+			<h4>{{serviceInfo.serviceName}}</h4>
+			<p class="price">
+				价格：￥{{serviceInfo.price}}
+			</p>
+			<div class="info-list">
+				<table>
+					<tr>
+						<td class="info"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="info">星级：</td>
+						<td>
+							<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+						</td>
+					</tr>
+					<tr>
+						<td class="info"></td>
+						<td></td>
+					</tr>
+				</table>
+			</div>
+			<div class="buy pull-left">
+				<div class="num">
+				</div>
+				<div class="btns">
+					<a href="#" ng-click="addToCart()" class="add-to-cart">
+						<i class="fa fa-cart-plus"></i> 加入购物车
+					</a>
+					<a href="#" ng-click="buyNow()" class="buy-now">
+						<i class="fa fa-credit-card"></i> 立即购买
+					</a>
+				</div>
+			</div>
+			<div class="qrcode-buy pull-right">
+				<img src="/taxation-web/images/qr-code.png" title="捷迅财税服务网" />
+				<p>扫码购买服务</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="provider-info pull-right">
+			<h4>服务商信息</h4>
+			<div class="box">
+				<table>
+					<tr>
+						<td class="info">服务商名称：</td>
+						<td>铜仁****服务商</td>
+					</tr>
+					<tr>
+						<td class="info">营业时间：</td>
+						<td>24小时营业</td>
+					</tr>
+					<tr>
+						<td class="info">配送说明：</td>
+						<td>200.00元起免配送费</td>
+					</tr>
+					<tr>
+						<td class="info">店铺地址：</td>
+						<td>贵州省铜仁市江口县***镇</td>
+					</tr>
+					<tr>
+						<td class="info">服务电话：</td>
+						<td>400-899***01</td>
+					</tr>
+					<tr>
+						<td class="info">QQ咨询：</td>
+						<td>9910**975</td>
+					</tr>
+				</table>
+			</div>
+			<div class="num">
+				<dl>
+					<dd>
+						<h5>服务</h5>
+						<p>5.0 <i class="fa fa-arrow-up"></i></p>
+					</dd>
+					<dd>
+						<h5>时效</h5>
+						<p>5.0 <i class="fa fa-arrow-up"></i></p>
+					</dd>
+					<dd>
+						<h5>描述</h5>
+						<p>4.8 <i class="fa fa-arrow-up"></i></p>
+					</dd>
+				</dl>
+				<div class="clearfix"></div>
+			</div>
+			<div class="links">
+				<a href="#">进入商家店铺</a>
+				<a href="#">关注商家店铺</a>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+
+	<div class="ext-info">
+		<!--<div class="left-recommends pull-left">-->
+			<!--<div class="recommend-services hot-services">-->
+				<!--<h3><i class="fa fa-fire"></i> 热览服务</h3>-->
+				<!--<ul>-->
+					<!--<li>-->
+						<!--<div class="thumb pull-left">-->
+							<!--<a href="service.html">-->
+								<!--<img src="/taxation-web/images/services/21.jpg" />-->
+							<!--</a>-->
+						<!--</div>-->
+						<!--<div class="info pull-right">-->
+							<!--<h4><a href="seller.html">铜仁****税务服务铜仁****税务铜仁****税务...</a></h4>-->
+							<!--<p class="price">￥1245.00</p>-->
+						<!--</div>-->
+						<!--<div class="clearfix"></div>-->
+					<!--</li>-->
+					<!--<li>-->
+						<!--<div class="thumb pull-left">-->
+							<!--<a href="service.html">-->
+								<!--<img src="/taxation-web/images/services/11.jpg" />-->
+							<!--</a>-->
+						<!--</div>-->
+						<!--<div class="info pull-right">-->
+							<!--<h4><a href="seller.html">铜仁****税务服务铜仁****税务铜仁****税务...</a></h4>-->
+							<!--<p class="price">￥1245.00</p>-->
+						<!--</div>-->
+						<!--<div class="clearfix"></div>-->
+					<!--</li>-->
+					<!--<li>-->
+						<!--<div class="thumb pull-left">-->
+							<!--<a href="service.html">-->
+								<!--<img src="/taxation-web/images/services/12.jpg" />-->
+							<!--</a>-->
+						<!--</div>-->
+						<!--<div class="info pull-right">-->
+							<!--<h4><a href="seller.html">铜仁****税务服务铜仁****税务铜仁****税务...</a></h4>-->
+							<!--<p class="price">￥1245.00</p>-->
+						<!--</div>-->
+						<!--<div class="clearfix"></div>-->
+					<!--</li>-->
+					<!--<li>-->
+						<!--<div class="thumb pull-left">-->
+							<!--<a href="service.html">-->
+								<!--<img src="/taxation-web/images/services/13.jpg" />-->
+							<!--</a>-->
+						<!--</div>-->
+						<!--<div class="info pull-right">-->
+							<!--<h4><a href="seller.html">铜仁****税务服务铜仁****税务铜仁****税务...</a></h4>-->
+							<!--<p class="price">￥1245.00</p>-->
+						<!--</div>-->
+						<!--<div class="clearfix"></div>-->
+					<!--</li>-->
+					<!--<li>-->
+						<!--<div class="thumb pull-left">-->
+							<!--<a href="service.html">-->
+								<!--<img src="/taxation-web/images/services/14.jpg" />-->
+							<!--</a>-->
+						<!--</div>-->
+						<!--<div class="info pull-right">-->
+							<!--<h4><a href="seller.html">铜仁****税务服务铜仁****税务铜仁****税务...</a></h4>-->
+							<!--<p class="price">￥1245.00</p>-->
+						<!--</div>-->
+						<!--<div class="clearfix"></div>-->
+					<!--</li>-->
+					<!--<li>-->
+						<!--<div class="thumb pull-left">-->
+							<!--<a href="service.html">-->
+								<!--<img src="/taxation-web/images/services/15.jpg" />-->
+							<!--</a>-->
+						<!--</div>-->
+						<!--<div class="info pull-right">-->
+							<!--<h4><a href="seller.html">铜仁****税务服务铜仁****税务铜仁****税务...</a></h4>-->
+							<!--<p class="price">￥1245.00</p>-->
+						<!--</div>-->
+						<!--<div class="clearfix"></div>-->
+					<!--</li>-->
+					<!--<li>-->
+						<!--<div class="thumb pull-left">-->
+							<!--<a href="service.html">-->
+								<!--<img src="/taxation-web/images/services/21.jpg" />-->
+							<!--</a>-->
+						<!--</div>-->
+						<!--<div class="info pull-right">-->
+							<!--<h4><a href="seller.html">铜仁****税务服务铜仁****税务铜仁****税务...</a></h4>-->
+							<!--<p class="price">￥1245.00</p>-->
+						<!--</div>-->
+						<!--<div class="clearfix"></div>-->
+					<!--</li>-->
+					<!--<li>-->
+						<!--<div class="thumb pull-left">-->
+							<!--<a href="service.html">-->
+								<!--<img src="/taxation-web/images/services/11.jpg" />-->
+							<!--</a>-->
+						<!--</div>-->
+						<!--<div class="info pull-right">-->
+							<!--<h4><a href="seller.html">铜仁****税务服务铜仁****税务铜仁****税务...</a></h4>-->
+							<!--<p class="price">￥1245.00</p>-->
+						<!--</div>-->
+						<!--<div class="clearfix"></div>-->
+					<!--</li>-->
+					<!--<li>-->
+						<!--<div class="thumb pull-left">-->
+							<!--<a href="service.html">-->
+								<!--<img src="/taxation-web/images/services/12.jpg" />-->
+							<!--</a>-->
+						<!--</div>-->
+						<!--<div class="info pull-right">-->
+							<!--<h4><a href="seller.html">铜仁****税务服务铜仁****税务铜仁****税务...</a></h4>-->
+							<!--<p class="price">￥1245.00</p>-->
+						<!--</div>-->
+						<!--<div class="clearfix"></div>-->
+					<!--</li>-->
+					<!--<li>-->
+						<!--<div class="thumb pull-left">-->
+							<!--<a href="service.html">-->
+								<!--<img src="/taxation-web/images/services/13.jpg" />-->
+							<!--</a>-->
+						<!--</div>-->
+						<!--<div class="info pull-right">-->
+							<!--<h4><a href="seller.html">铜仁****税务服务铜仁****税务铜仁****税务...</a></h4>-->
+							<!--<p class="price">￥1245.00</p>-->
+						<!--</div>-->
+						<!--<div class="clearfix"></div>-->
+					<!--</li>-->
+					<!--<li>-->
+						<!--<div class="thumb pull-left">-->
+							<!--<a href="service.html">-->
+								<!--<img src="/taxation-web/images/services/14.jpg" />-->
+							<!--</a>-->
+						<!--</div>-->
+						<!--<div class="info pull-right">-->
+							<!--<h4><a href="seller.html">铜仁****税务服务铜仁****税务铜仁****税务...</a></h4>-->
+							<!--<p class="price">￥1245.00</p>-->
+						<!--</div>-->
+						<!--<div class="clearfix"></div>-->
+					<!--</li>-->
+				<!--</ul>-->
+			<!--</div>-->
+
+			<!--<div class="recommend-services hot-services">-->
+				<!--<h3><i class="fa fa-heart"></i> 本店其他</h3>-->
+				<!--<ul>-->
+					<!--<li>-->
+						<!--<div class="thumb pull-left">-->
+							<!--<a href="service.html">-->
+								<!--<img src="/taxation-web/images/services/17.jpg" />-->
+							<!--</a>-->
+						<!--</div>-->
+						<!--<div class="info pull-right">-->
+							<!--<h4><a href="seller.html">铜仁****税务服务铜仁****税务铜仁****税务...</a></h4>-->
+							<!--<p class="price">￥1245.00</p>-->
+						<!--</div>-->
+						<!--<div class="clearfix"></div>-->
+					<!--</li>-->
+					<!--<li>-->
+						<!--<div class="thumb pull-left">-->
+							<!--<a href="service.html">-->
+								<!--<img src="/taxation-web/images/services/18.jpg" />-->
+							<!--</a>-->
+						<!--</div>-->
+						<!--<div class="info pull-right">-->
+							<!--<h4><a href="seller.html">铜仁****税务服务铜仁****税务铜仁****税务...</a></h4>-->
+							<!--<p class="price">￥1245.00</p>-->
+						<!--</div>-->
+						<!--<div class="clearfix"></div>-->
+					<!--</li>-->
+					<!--<li>-->
+						<!--<div class="thumb pull-left">-->
+							<!--<a href="service.html">-->
+								<!--<img src="/taxation-web/images/services/19.jpg" />-->
+							<!--</a>-->
+						<!--</div>-->
+						<!--<div class="info pull-right">-->
+							<!--<h4><a href="seller.html">铜仁****税务服务铜仁****税务铜仁****税务...</a></h4>-->
+							<!--<p class="price">￥1245.00</p>-->
+						<!--</div>-->
+						<!--<div class="clearfix"></div>-->
+					<!--</li>-->
+					<!--<li>-->
+						<!--<div class="thumb pull-left">-->
+							<!--<a href="service.html">-->
+								<!--<img src="/taxation-web/images/services/20.jpg" />-->
+							<!--</a>-->
+						<!--</div>-->
+						<!--<div class="info pull-right">-->
+							<!--<h4><a href="seller.html">铜仁****税务服务铜仁****税务铜仁****税务...</a></h4>-->
+							<!--<p class="price">￥1245.00</p>-->
+						<!--</div>-->
+						<!--<div class="clearfix"></div>-->
+					<!--</li>-->
+					<!--<li>-->
+						<!--<div class="thumb pull-left">-->
+							<!--<a href="service.html">-->
+								<!--<img src="/taxation-web/images/services/21.jpg" />-->
+							<!--</a>-->
+						<!--</div>-->
+						<!--<div class="info pull-right">-->
+							<!--<h4><a href="seller.html">铜仁****税务服务铜仁****税务铜仁****税务...</a></h4>-->
+							<!--<p class="price">￥1245.00</p>-->
+						<!--</div>-->
+						<!--<div class="clearfix"></div>-->
+					<!--</li>-->
+					<!--<li>-->
+						<!--<div class="thumb pull-left">-->
+							<!--<a href="service.html">-->
+								<!--<img src="/taxation-web/images/services/22.jpg" />-->
+							<!--</a>-->
+						<!--</div>-->
+						<!--<div class="info pull-right">-->
+							<!--<h4><a href="seller.html">铜仁****税务服务铜仁****税务铜仁****税务...</a></h4>-->
+							<!--<p class="price">￥1245.00</p>-->
+						<!--</div>-->
+						<!--<div class="clearfix"></div>-->
+					<!--</li>-->
+					<!--<li>-->
+						<!--<div class="thumb pull-left">-->
+							<!--<a href="service.html">-->
+								<!--<img src="/taxation-web/images/services/23.jpg" />-->
+							<!--</a>-->
+						<!--</div>-->
+						<!--<div class="info pull-right">-->
+							<!--<h4><a href="seller.html">铜仁****税务服务铜仁****税务铜仁****税务...</a></h4>-->
+							<!--<p class="price">￥1245.00</p>-->
+						<!--</div>-->
+						<!--<div class="clearfix"></div>-->
+					<!--</li>-->
+					<!--<li>-->
+						<!--<div class="thumb pull-left">-->
+							<!--<a href="service.html">-->
+								<!--<img src="/taxation-web/images/services/24.jpg" />-->
+							<!--</a>-->
+						<!--</div>-->
+						<!--<div class="info pull-right">-->
+							<!--<h4><a href="seller.html">铜仁****税务服务铜仁****税务铜仁****税务...</a></h4>-->
+							<!--<p class="price">￥1245.00</p>-->
+						<!--</div>-->
+						<!--<div class="clearfix"></div>-->
+					<!--</li>-->
+					<!--<li>-->
+						<!--<div class="thumb pull-left">-->
+							<!--<a href="service.html">-->
+								<!--<img src="/taxation-web/images/services/11.jpg" />-->
+							<!--</a>-->
+						<!--</div>-->
+						<!--<div class="info pull-right">-->
+							<!--<h4><a href="seller.html">铜仁****税务服务铜仁****税务铜仁****税务...</a></h4>-->
+							<!--<p class="price">￥1245.00</p>-->
+						<!--</div>-->
+						<!--<div class="clearfix"></div>-->
+					<!--</li>-->
+					<!--<li>-->
+						<!--<div class="thumb pull-left">-->
+							<!--<a href="service.html">-->
+								<!--<img src="/taxation-web/images/services/12.jpg" />-->
+							<!--</a>-->
+						<!--</div>-->
+						<!--<div class="info pull-right">-->
+							<!--<h4><a href="seller.html">铜仁****税务服务铜仁****税务铜仁****税务...</a></h4>-->
+							<!--<p class="price">￥1245.00</p>-->
+						<!--</div>-->
+						<!--<div class="clearfix"></div>-->
+					<!--</li>-->
+					<!--<li>-->
+						<!--<div class="thumb pull-left">-->
+							<!--<a href="service.html">-->
+								<!--<img src="/taxation-web/images/services/17.jpg" />-->
+							<!--</a>-->
+						<!--</div>-->
+						<!--<div class="info pull-right">-->
+							<!--<h4><a href="seller.html">铜仁****税务服务铜仁****税务铜仁****税务...</a></h4>-->
+							<!--<p class="price">￥1245.00</p>-->
+						<!--</div>-->
+						<!--<div class="clearfix"></div>-->
+					<!--</li>-->
+					<!--<li>-->
+						<!--<div class="thumb pull-left">-->
+							<!--<a href="service.html">-->
+								<!--<img src="/taxation-web/images/services/18.jpg" />-->
+							<!--</a>-->
+						<!--</div>-->
+						<!--<div class="info pull-right">-->
+							<!--<h4><a href="seller.html">铜仁****税务服务铜仁****税务铜仁****税务...</a></h4>-->
+							<!--<p class="price">￥1245.00</p>-->
+						<!--</div>-->
+						<!--<div class="clearfix"></div>-->
+					<!--</li>-->
+					<!--<li>-->
+						<!--<div class="thumb pull-left">-->
+							<!--<a href="service.html">-->
+								<!--<img src="/taxation-web/images/services/19.jpg" />-->
+							<!--</a>-->
+						<!--</div>-->
+						<!--<div class="info pull-right">-->
+							<!--<h4><a href="seller.html">铜仁****税务服务铜仁****税务铜仁****税务...</a></h4>-->
+							<!--<p class="price">￥1245.00</p>-->
+						<!--</div>-->
+						<!--<div class="clearfix"></div>-->
+					<!--</li>-->
+					<!--<li>-->
+						<!--<div class="thumb pull-left">-->
+							<!--<a href="service.html">-->
+								<!--<img src="/taxation-web/images/services/20.jpg" />-->
+							<!--</a>-->
+						<!--</div>-->
+						<!--<div class="info pull-right">-->
+							<!--<h4><a href="seller.html">铜仁****税务服务铜仁****税务铜仁****税务...</a></h4>-->
+							<!--<p class="price">￥1245.00</p>-->
+						<!--</div>-->
+						<!--<div class="clearfix"></div>-->
+					<!--</li>-->
+					<!--<li>-->
+						<!--<div class="thumb pull-left">-->
+							<!--<a href="service.html">-->
+								<!--<img src="/taxation-web/images/services/21.jpg" />-->
+							<!--</a>-->
+						<!--</div>-->
+						<!--<div class="info pull-right">-->
+							<!--<h4><a href="seller.html">铜仁****税务服务铜仁****税务铜仁****税务...</a></h4>-->
+							<!--<p class="price">￥1245.00</p>-->
+						<!--</div>-->
+						<!--<div class="clearfix"></div>-->
+					<!--</li>-->
+					<!--<li>-->
+						<!--<div class="thumb pull-left">-->
+							<!--<a href="service.html">-->
+								<!--<img src="/taxation-web/images/services/22.jpg" />-->
+							<!--</a>-->
+						<!--</div>-->
+						<!--<div class="info pull-right">-->
+							<!--<h4><a href="seller.html">铜仁****税务服务铜仁****税务铜仁****税务...</a></h4>-->
+							<!--<p class="price">￥1245.00</p>-->
+						<!--</div>-->
+						<!--<div class="clearfix"></div>-->
+					<!--</li>-->
+				<!--</ul>-->
+			<!--</div>-->
+		<!--</div>-->
+
+		<div class="box pull-left">
+			<ul class="tab-nav">
+				<li class="selected">服务详情</li>
+				<li>累计评价（3213）</li>
+				<li>交易保障</li>
+			</ul>
+			<ul class="tab-panel">
+				<li>
+					<dl>
+						<dd>
+							<strong>服务名称：</strong>
+							<span>铜仁***税务服务</span>
+						</dd>
+						<dd>
+							<strong>专业领域：</strong>
+							<span>铜仁***税务服务</span>
+						</dd>
+						<dd>
+							<strong>服务名称：</strong>
+							<span>铜仁***税务服务</span>
+						</dd>
+						<dd>
+							<strong>专业领域：</strong>
+							<span>铜仁***税务服务</span>
+						</dd>
+						<dd>
+							<strong>服务名称：</strong>
+							<span>铜仁***税务服务</span>
+						</dd>
+						<dd>
+							<strong>专业领域：</strong>
+							<span>铜仁***税务服务</span>
+						</dd>
+						<dd>
+							<strong>专业领域：</strong>
+							<span>铜仁***税务服务</span>
+						</dd>
+						<dd>
+							<strong>服务名称：</strong>
+							<span>铜仁***税务服务</span>
+						</dd>
+						<dd>
+							<strong>专业领域：</strong>
+							<span>铜仁***税务服务</span>
+						</dd>
+					</dl>
+					<div class="clearfix"></div>
+					<div class="about-info">
+						<h3>【关于我们】</h3>
+						<p>
+							我们是一家实体税务公司，有多名资深议员从事专职英语翻译工作，所有译员均为英语专八，具备多年专职英语翻译经验，受到过良好训练，一贯坚持纯人工翻译与校对。我们精通公司文件、产品说明书、网站、法律合同、学术文章、留学文件、简历、工程、医学等多方面的笔译及视频听译。入驻猪八戒六年以来，所有提交给客户的译文都是经过认真翻译并校对的，得到新老客户的一致好评。
+						</p>
+						<p>公司地址：苏州工业园区通园路80号56文创园内</p>
+						<p>Tel.: 0512 - 6529 9805</p>
+					</div>
+					<div class="about-info">
+						<h3>【服务宗旨】</h3>
+						<p><b>守时、保质、保密</b></p>
+						<p>守时，即我们承诺一定会在与客户约定的时间之前，将译稿发给客户。</p>
+						<p>保质，即我们承诺一定会为客户提供高质量的翻译服务，提交高质量的译文。</p>
+						<p>保密，即我们承诺一定会对客户的文件保密，这也是本公司恪守的职业道德。</p>
+					</div>
+					<div class="about-info">
+						<h3>【报价范围】</h3>
+						<p>注： 1. 本服务为“易凡翻译”总服务，具体可以查阅每个细分类的说明，但最终报价都是与客服人员沟通后而定的。2. 影响价格的因素包括内容长短、专业程度、交稿时间、排版要求等。3.默认报价均为不含发票价格，如果需要开发票，请提前告知客服人员。）</p>
+					</div>
+					<div class="about-info">
+						<h3>【交易流程】</h3>
+						<p>1. 将需要翻译的文件发给客服人员，沟通报价与交稿时间</p>
+						<p>2. 翻译费用和将时间确认后，在猪八戒网下单（如果不太了解下单步骤，客服人员会提供协助）</p>
+						<p>3. 安排翻译</p>
+						<p>4. 翻译完成，交稿给客户</p>
+						<p>5. 如果翻译有任何问题，积极配合解决；如果翻译没有问题，则可以确认付款</p>
+					</div>
+
+					<div class="img-list">
+						<img src="/taxation-web/images/services/22.jpg" title="捷讯咨询" />
+						<img src="/taxation-web/images/services/22.jpg" title="捷讯咨询" />
+						<img src="/taxation-web/images/services/22.jpg" title="捷讯咨询" />
+						<img src="/taxation-web/images/services/22.jpg" title="捷讯咨询" />
+						<img src="/taxation-web/images/services/22.jpg" title="捷讯咨询" />
+						<img src="/taxation-web/images/services/22.jpg" title="捷讯咨询" />
+					</div>
+				</li>
+				<li>
+					
+				</li>
+			</ul>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+
+<!-- PJH 1113 begin 底部关于网站的ICONS展示部分 -->
+<div class="bottom-icons">
+	<div class="pjh-container">
+		<ul>
+			<li><img src="/taxation-web/images/bottom/icon1.png" /></li>
+			<li><img src="/taxation-web/images/bottom/icon2.png" /></li>
+			<li><img src="/taxation-web/images/bottom/icon3.png" /></li>
+			<li><img src="/taxation-web/images/bottom/icon4.png" /></li>
+		</ul>
+	</div>
+</div>
+<div class="clearfix"></div>
+<!-- PJH 1113 end 底部关于网站的ICONS展示部分 -->
+
+<div id="modalBg"></div>
+<!-- JustFresh 20170615 begin 添加购物车成功部分开始 -->
+<div id="addToCartSuccessDialog">
+    <dl>
+      	<dt>成功添加到购物车<a title="关闭" class="close-dialog" href="javascript: void(0)" onclick="closeDialog('#addToCartSuccessDialog')">X</a></dt>
+      	<dd>购物车共有 <strong id="bold_num">1</strong> 种商品 总金额为：<em id="bold_mly" class="saleP">¥4.80</em></dd>
+      	<dd class="btns"><a href="buy_step1.html" class="ncs-btn-green">查看购物车</a> <a href="javascript:void(0);" class="ncs-btn-mini" value="" onclick="closeDialog('#addToCartSuccessDialog')">继续购物</a></dd>
+    </dl>
+</div>
+<!-- JustFresh 20170615 end 添加购物车成功部分开始 -->
+
+<!-- JustFresh 20170617 begin 登录Dialog -->
+<div id="loginDialog">
+	<div class="header">
+		<img src="/taxation-web/images/logo-white.png" />
+		<a title="关闭登录窗口" href="javascript: void(0)" onclick="closeDialog('#loginDialog')"><i class="fa fa-close"></i></a>
+	</div>
+	<form action="">
+		<div class="login-form">
+			<div class="form-group">
+				<label><i class="fa fa-user"></i></label>
+				<input type="text" class="input-text" name="" placeholder="会员名/电话号码/邮箱" />
+			</div>
+			<div class="form-group">
+				<label><i class="fa fa-key"></i></label>
+				<input type="password" class="input-text" name="" placeholder="请验证登录密码" />
+			</div>
+		</div>
+		<div class="footer-opt">
+			<a href="buy_step2.html" class="login-btn">登录</a>
+		</div>
+	</form>
+</div>
+<!-- JustFresh 20170617 begin 登录Dialog -->

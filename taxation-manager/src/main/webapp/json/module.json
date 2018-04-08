@@ -1,0 +1,9 @@
+{
+	"msg": "后台菜单列表",
+	"success": true,
+	"obj": [{
+		"mod":"admin",
+		"title": "系统管理",
+		"linkUrl":"/beadhouse-web/views/admin/index.html#/index.html"
+	}]
+}

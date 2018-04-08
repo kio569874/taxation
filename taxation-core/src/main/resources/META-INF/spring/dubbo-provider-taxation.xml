@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+	<!-- ============================================================= -->
+	<!-- dubbo service info 非dubbo:annotation方式暴露服务时在此定义(推荐) -->
+	<!-- 最佳实践： -->
+	<!-- 1、尽可能多的定义provider配置信息； -->
+	<!-- 2、可按功能分多个配置文件，dubbo启动时会自动扫描加载； -->
+	<!-- ============================================================= -->
+
+	<!-- 暴露服务 -->
+	<dubbo:service group="user" version="1.0"
+		interface="com.taxation.api.service.IUserService" ref="userService"
+		protocol="dubbo" timeout="120000" />
+	<dubbo:service group="provider" version="1.0"
+		interface="com.taxation.api.service.IProviderService" ref="providerService"
+		protocol="dubbo" timeout="120000" />
+	<dubbo:service group="enterpriseEnroll" version="1.0"
+		interface="com.taxation.api.service.IEnterpriseEnrollService" ref="enterpriseEnrollService"
+		protocol="dubbo" timeout="120000" />
+	<dubbo:service group="serviceInfo" version="1.0"
+		interface="com.taxation.api.service.IServiceInfoService" ref="serviceInfoService"
+		protocol="dubbo" timeout="120000" />
+	<dubbo:service group="sms" version="1.0"
+		interface="com.taxation.api.service.ISmsService" ref="smsService"
+		protocol="dubbo" timeout="120000" />
+	<dubbo:service group="order" version="1.0"
+		interface="com.taxation.api.service.IOrderService" ref="orderService"
+		protocol="dubbo" timeout="120000" />
+	<dubbo:service group="user" version="1.0"
+		interface="com.taxation.api.service.ISystemUserService" ref="systemUserService"
+		protocol="dubbo" timeout="120000" />
+	<dubbo:service group="shoppingTrolley" version="1.0"
+		interface="com.taxation.api.service.IShoppingTrolleyService" ref="shoppingTrolleyService"
+		protocol="dubbo" timeout="120000" />
+	<dubbo:service group="pay" version="1.0"
+		interface="com.taxation.api.service.IAliPayService" ref="aliPayService"
+		protocol="dubbo" timeout="120000" />
+	<!-- -->
+	<dubbo:service group="pay" version="1.0"
+		interface="com.taxation.api.service.rest.IRestAliPayService" ref="restAliPayService"
+		protocol="rest" timeout="120000" />
+		
+	<!-- JustFresh 2017-08-05 begin 彭建红添加部分 -->
+	<dubbo:service group="user" version="1.0"
+		interface="com.taxation.api.service.ICityAreaService" ref="cityAreaService"
+		protocol="dubbo" timeout="120000" />
+	<!-- JustFresh 2017-08-05 end 彭建红添加部分 -->
+
+</beans>

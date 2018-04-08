@@ -1,0 +1,12 @@
+{
+	"msg": "CMS菜单列表",
+	"success": true,
+	"obj": [{
+		"id":2,"title":"CMS版块","icon":"fa fa-cogs","linkUrl":"index","target":"","reorder":1,
+		"children": [
+			{"id":21,"title":"文章管理","icon":"fa fa-list","linkUrl":"index.content","target":"","reorder":1},
+			{"id":22,"title":"入住状况","icon":"fa fa-at","linkUrl":"index.check_status","target":"","reorder":2},
+			{"id":23,"title":"出入住记录","icon":"fa fa-server","linkUrl":"index.checkin","target":"","reorder":3}
+		]
+	}]
+}

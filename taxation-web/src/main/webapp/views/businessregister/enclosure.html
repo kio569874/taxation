@@ -1,0 +1,105 @@
+<!-- PJH 1102 begin Logo和搜索框部分 -->
+<div class="pjh-container">
+	<!-- Logo -->
+	<div id="logo">
+		<a href="javascript: void(0)"><img src="/taxation-web/images/logo.png" alt="捷迅财税服务网" title="捷迅财税服务网"/></a>
+		<span style="font-size: 30px;font-weight: bold;color:#666;">工商注册</span>
+	</div>
+	<!-- 搜索框 -->
+	<div id="top-search">
+		<div class="search-form">
+			
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<!-- 购物车下拉 -->
+	<div id="top-cart" class="pull-right">
+		
+	</div>
+</div>
+<div class="clearfix"></div>
+<!-- PJH 1102 end Logo和搜索框部分 -->
+
+<!-- JustFresh 2017-04-10 begin 注册主体部分 -->
+<div class="pjh-container">
+	<div class="steps">
+		<ul>
+			<li class="selected">
+				<i class="fa fa-male"></i>
+				<p>选择服务商</p>
+				<p class="num">1</p>
+			</li>
+			<li class="selected">
+				<i class="fa fa-database"></i>
+				<p>基本信息填写</p>
+				<p class="num">2</p>
+			</li>
+			<li class="selected">
+				<i class="fa fa-cubes"></i>
+				<p>生产经营地填写</p>
+				<p class="num">3</p>
+			</li>
+			<li  class="selected">
+				<i class="fa fa-server"></i>
+				<p>选择支付类型</p>
+				<p class="num">4</p>
+			</li>
+			<li class="selected">
+				<i class="fa fa-upload"></i>
+				<p>附件上传</p>
+				<p class="num">5</p>
+			</li>
+			<li>
+				<i class="fa fa-child"></i>
+				<p>确认注册信息</p>
+				<p class="num">6</p>
+			</li>
+			<li>
+				<i class="fa fa-check"></i>
+				<p>注册成功</p>
+				<p class="num">7</p>
+			</li>
+		</ul>
+	</div>
+	<div class="clearfix"></div>
+	<div class="box">
+		<div class="box-form">
+				<table width="100%">
+					<thead>
+						<tr>
+							<th colspan="4" style="text-align: right;color: #333;"><a href="javascript:;"  name="file" ><input type="file" style="position: absolute;opacity: 0" nv-file-select="" uploader="uploader" multiple /><span style="border: 1px solid #00a1cc;color: #00a1cc;text-align: center;margin-right: 10px;"><i class="fa fa-plus"></i>&nbsp;&nbsp;添加附件</span></a> </th>
+						</tr>
+					</thead>
+					<tbody class="normal">
+						<tr  ng-repeat="item in uploader.queue">
+							<td align="right">
+								文件名称：
+							</td>
+							<td align="left">{{ item.file.name }}</td>
+							<td align="center">
+								<div style=" background-color: #f5f5f5;border-radius: 4px;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;height: 20px;overflow: hidden;">
+									<div  style="background-color: #428bca;box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15) inset;color: #fff;float: left;font-size: 12px;height: 100%;text-align: center;transition: width 0.6s ease 0s;width: 0;" ng-style="{ 'width': item.progress + '%' }"></div>
+								</div>
+
+							</td>
+							<td align="center">
+								<button style="background-color: #C33610;color: #fff;" ng-click="item.remove()"><i class="fa fa-trash"></i>&nbsp;&nbsp;删除</button>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="4" align="center">
+								<button style="background-color: #5cb85c;color: #fff;" ng-click="uploader.uploadAll()" ng-disabled="!uploader.getNotUploadedItems().length"><i class="fa fa-upload"></i>&nbsp;&nbsp;上传所有</button>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button style="background-color: #C33610;color: #fff;" ng-click="uploader.clearQueue()" ng-disabled="!uploader.queue.length"><i class="fa fa-trash"></i>&nbsp;&nbsp;移除所有</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+	<div class="operation">
+		<a href="javascript: void(0)" class="prev" ui-sref="index.productionSite">信息有误，返回上一步</a>
+		<a href="javascript: void(0)" class="next" ng-click="gotoEnsure()">信息正确，进入下一步</a>
+	</div>
+</div>
+<!-- JustFresh 2017-04-10 end 注册主体部分 -->

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.taxation.dao.PrividerScopeElementDefDao" >
+  <resultMap id="BaseResultMap" type="com.taxation.bean.PrividerScopeElementDefEntity" >
+    <id column="element_code" property="elementCode" jdbcType="VARCHAR" />
+    <result column="element_name" property="elementName" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    element_code, element_name
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_t_privider_scope_element_def
+    where element_code = #{elementCode,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from t_t_privider_scope_element_def
+    where element_code = #{elementCode,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.taxation.bean.PrividerScopeElementDefEntity" >
+    insert into t_privider_scope_element_def (element_code, element_name)
+    values (#{elementCode,jdbcType=VARCHAR}, #{elementName,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.taxation.bean.PrividerScopeElementDefEntity" >
+    insert into t_privider_scope_element_def
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="elementCode != null" >
+        element_code,
+      </if>
+      <if test="elementName != null" >
+        element_name,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="elementCode != null" >
+        #{elementCode,jdbcType=VARCHAR},
+      </if>
+      <if test="elementName != null" >
+        #{elementName,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.taxation.bean.PrividerScopeElementDefEntity" >
+    update t_privider_scope_element_def
+    <set >
+      <if test="elementName != null" >
+        element_name = #{elementName,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where element_code = #{elementCode,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.taxation.bean.PrividerScopeElementDefEntity" >
+    update t_privider_scope_element_def
+    set element_name = #{elementName,jdbcType=VARCHAR}
+    where element_code = #{elementCode,jdbcType=VARCHAR}
+  </update>
+</mapper>
